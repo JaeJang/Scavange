@@ -60,7 +60,7 @@ body{font-family: Courier New, Arial, sans-serif;
 
 #main{/*background-image: url(http://placehold.it/350x150);*/
 	  background-color: transparent;
-	  height: 800px;
+	  height: 100%;
 	  width: auto;
 			/**border-radius: 25px;
 			border: 2px solid orange;
@@ -69,11 +69,13 @@ body{font-family: Courier New, Arial, sans-serif;
 	  }
 
 #ingredient{letter-spacing: 1px;}
-#info input[type=text] {width: 99%; height:150px;
+#info input[type=text] {width: 99%; height:170px;
 						border: 1px solid black;
 						border-radius: 25px;
 					}
-#info input[type=submit] {width:80px; height:25px;}
+#info input[type=submit] {width:80px; height:25px; 
+						  margin-left: 90%;
+						 }
 		
 #footer{text-align: center;
 padding: 1px;
