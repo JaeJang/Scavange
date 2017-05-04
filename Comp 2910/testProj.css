@@ -1,0 +1,82 @@
+body{font-family: Courier New, Arial, sans-serif;
+	 font-size: 24px;
+	 letter-spacing: 10px;
+	 margin: 0px;
+     background-image: url("food.jpg");
+     background-size: cover;
+     background-repeat: no-repeat;
+ }
+	
+#container{color: black;
+			min-width: 960px;
+		}
+
+#nav ul{margin: 0px;
+	   padding:0px;
+	   list-style-type: none;
+	   overflow: hidden;
+	   background-color: black;
+	   opacity: 0.5;
+	}
+	   
+#nav li{float: left;
+		letter-spacing: 3px;
+	}
+
+#nav a{display: block;
+	  color: white;
+	  text-decoration: none;
+	  text-align: center;
+	  padding: 14px 20px;
+	  background-color: transparent;
+	}
+
+#nav li a:hover {background-color: red;}	
+
+
+#headerContain{background-color: white;
+				margin: 0px;
+				opacity: 0.1;
+			}			
+
+#header{text-align: center;
+		color: orange;
+		font-size: 1.5em;
+		text-shadow: 2px 3px 3px black;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		background-image: url("Logo(white).png");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 220px;
+	}
+
+#mainContain{background-color: transparent;
+			border-radius: 25px;
+			border: 2px solid orange;
+			padding: 15px;
+			margin: 1px 100px 1px 100px;
+		}
+
+#main{/*background-image: url(http://placehold.it/350x150);*/
+	  background-color: transparent;
+	  height: 100%;
+	  width: auto;
+			/**border-radius: 25px;
+			border: 2px solid orange;
+			padding: 15px;
+			margin: 1px 100px 1px 100px;*/
+	  }
+
+#ingredient{letter-spacing: 1px;}
+#info input[type=text] {width: 99%; height:170px;
+						border: 1px solid black;
+						border-radius: 25px;
+					}
+#info input[type=submit] {width:80px; height:25px; 
+						  margin-left: 90%;
+						 }
+		
+#footer{text-align: center;
+padding: 1px;
+}
