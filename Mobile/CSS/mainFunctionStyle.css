@@ -1,7 +1,9 @@
-*{
-	font-size: 24px;
+#contentBox {
+	border-radius: 25px;
+	border: 3px solid orange;
+	padding: 15px;
+	margin: 1px, 100px;
 }
-
-.formSection {
-	margin-left: 30px;
+.ingredientSearch {
+	font-weight: bold;
 }
