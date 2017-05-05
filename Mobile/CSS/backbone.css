@@ -2,25 +2,33 @@
 	margin: 0;
 	padding: 0;
 }
+html {
+	height: 100%;
+}
 body {
 	width: 100%;
+	height: 100%;
 	margin: auto;
 	font-family: "Courier New";
+	background-image: url("../Images/food.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 h1 {
 	font-size: 54px;
+	opacity: 1;
 }
 .navIcon {
 	position: absolute;
 	left: 45px;
 }
 .topBar {
-	background-color: orange;
+	background-color: rgba(0, 0, 0, 0.6);
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
 .topBarTitle {
-	color: white;
+	color: orange;
 	text-align: center;
 	letter-spacing: 0.5em;
 }
@@ -30,7 +38,7 @@ h1 {
 }
 .navBarList {
 	display: inline-block;
-	color: white;
+	color: orange;
 	font-size: 28px;
 	text-align: center;
 	font-weight: bold;
@@ -43,7 +51,7 @@ h1 {
 	padding-left: 10px;
 }
 .navBarItem {
-	background-color: orange;
+	background-color: rgba(0, 0, 0, 0.6);
 	height: 150px;
 	line-height: 150px;
 	vertical-align: middle;
@@ -56,7 +64,7 @@ h1 {
 	color: white;
 }
 .navBarItem:active{
-	background-color: #FF7F50;
+	background-color: rgba(255, 0, 0, 0.6);
 }
 .navBarListAlt {
 	text-align: center;
