@@ -6,6 +6,7 @@
 		<link rel="stylesheet" href="CSS/backbone.css">
 		<link rel="stylesheet" href="CSS/mainFunctionStyle.css">
 		<script src="Javascript/navscripts.js"></script>
+		<script src="Javascript/mainFunctionScript.js"></script>
 	</head>
 	<body>
 		<div class="topBar">
@@ -37,10 +38,22 @@
 		</div>
 		<div id="contentBox">
 			<br><br>
-			<form class="ingredientSearch">
-				<label for="ingredientText">List your ingredients below:<br></label>
-				<input type="text" id="ingredientText" name="ingredientText"></input>
-			</form>
+			<div class="formBox">
+				<form class="ingredientSearch">
+					<label for="ingredientText">Enter your ingredients below:<br><br></label>
+					<input type="text" id="ingredientText" name="ingredientText">
+					<input type="button" id="submitButton" name="submitButton" value="Add" onclick="addIngredient">
+				</form>
+				<br>
+				<h4 class="subheadingText">Your Current Ingredients:</h4>
+				<br>
+				<form class="ingredientForm">
+					<textarea class="ingredientListAlt hidden"></textarea>
+					<div class="ingredientList">
+						<p id="myList" class="contentText"></p>
+					</div>
+				</form>
+			</div>
 		</div>
 	</body>
 </html>
