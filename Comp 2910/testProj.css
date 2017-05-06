@@ -6,7 +6,7 @@ body{font-family: Courier New, Arial, sans-serif;
      background-size: cover;
      background-repeat: no-repeat;
  }
-	
+
 #container{color: black;
 			min-width: 960px;
 		}
@@ -18,7 +18,7 @@ body{font-family: Courier New, Arial, sans-serif;
 	   background-color: black;
 	   opacity: 0.5;
 	}
-	   
+
 #nav li{float: left;
 		letter-spacing: 3px;
 	}
@@ -31,13 +31,13 @@ body{font-family: Courier New, Arial, sans-serif;
 	  background-color: transparent;
 	}
 
-#nav li a:hover {background-color: red;}	
+#nav li a:hover {background-color: red;}
 
 
 #headerContain{background-color: white;
 				margin: 0px;
 				opacity: 0.1;
-			}			
+			}
 
 #header{text-align: center;
 		color: orange;
@@ -56,12 +56,13 @@ body{font-family: Courier New, Arial, sans-serif;
 			border: 2px solid orange;
 			padding: 15px;
 			margin: 1px 100px 1px 100px;
+			width:auto;
 		}
 
 #main{/*background-image: url(http://placehold.it/350x150);*/
 	  background-color: transparent;
 	  height: 100%;
-	  width: auto;
+	  /**width: auto;*/
 			/**border-radius: 25px;
 			border: 2px solid orange;
 			padding: 15px;
@@ -73,10 +74,17 @@ body{font-family: Courier New, Arial, sans-serif;
 						border: 1px solid black;
 						border-radius: 25px;
 					}
-#info input[type=submit] {width:80px; height:25px; 
+#info input[type=submit] {width:80px; height:25px;
 						  margin-left: 90%;
 						 }
-		
+.ingText {width: 98%; height:170px;
+						border: 1px solid black;
+						border-radius: 25px;
+						padding:10px;
+
+}
+
+
 #footer{text-align: center;
 padding: 1px;
 }
