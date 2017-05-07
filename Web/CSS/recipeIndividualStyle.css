@@ -1,0 +1,45 @@
+.recipeContent {
+	background-color: rgba(0, 0, 0, 0.5);
+	margin-top: 30px;
+}
+.firstPicture {
+	text-align: center;
+	padding: 30px;
+}
+.topPicture {
+	width: 60%;
+}
+.recipeSubHeading {
+	color: orange;
+	font-weight: bold;
+}
+.recipeIngredientList {
+	color: white;
+	background-color: rgba(0, 0, 0, 0.4);
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+.recipeSteps {
+	color: white;
+	background-color: rgba(0, 0, 0, 0.4);
+	font-size: 18px;
+	padding: 20px;
+}
+.stepImage {
+	float: right;
+	padding-bottom: 10px;
+}
+.recipeTable {
+	color: white;
+	width: 100%;
+	font-size: 18px;
+}
+.recipeTable td {
+	padding-top: 10px;
+}
+.recipeTable tr:not(:last-child) {
+	border-bottom: 1px solid orange;
+}
+.alignTop {
+	vertical-align: top;
+}
