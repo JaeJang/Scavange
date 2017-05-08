@@ -42,13 +42,13 @@
 				<form class="ingredientSearch">
 					<label for="ingredientText">Enter your ingredients below:<br><br></label>
 					<input type="text" id="ingredientText" name="ingredientText">
-					<input type="button" id="submitButton" name="submitButton" value="Add" onclick="addIngredient">
+					<input type="button" id="submitButton" name="submitButton" value="Add" onclick="addIngredient('myList')">
 				</form>
 				<br>
 				<h4 class="subheadingText">Your Current Ingredients:</h4>
 				<br>
 				<form class="ingredientForm">
-					<textarea class="ingredientListAlt hidden"></textarea>
+					<textarea id="realList" class="ingredientListAlt hidden"></textarea>
 					<div class="ingredientList">
 						<p id="myList" class="contentText"></p>
 					</div>
