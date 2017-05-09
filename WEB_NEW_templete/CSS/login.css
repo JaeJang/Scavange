@@ -1,0 +1,31 @@
+.modal-header, h4, .close {
+      background-color: black;
+      color:white !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-footer {
+      background-color: #f9f9f9;
+  }
+.jae_login{
+  letter-spacing: 0;
+  }
+  .jae_a{
+    text-align: right;
+  }
+  h1{
+    font-size: 60px;
+  }
+
+  fieldset {width: 500px; border: 1px ridge #000000;
+        padding: 10px; margin-bottom: 10px;}
+  legend {
+      font-weight: bold;}
+  #labeL {font-family: Arial, sans-serif;
+      float: left;
+      width: 100px;
+      clear: left;
+      text-align: left;
+      padding-right: 110px;
+      margin-top: 10px;
+      display: block;}
