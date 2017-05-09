@@ -5,7 +5,7 @@
 	border-radius: 25px;
 	border: 3px solid orange;
 	padding: 40px 20px;
-	font-size: 36px;
+	font-size: 40px;
 	background-color: rgba(0, 0, 0, 0.6);
 }
 .ingredientSearch {
@@ -13,13 +13,13 @@
 	font-weight: bold;
 }
 #ingredientText {
-	font-size: 36px;
+	font-size: 40px;
 	width: 80%;
 }
-#submitButton {
+#addButton {
 	position: relative;
 	bottom: 3px;
-	font-size: 36px;
+	font-size: 40px;
 	width: 15%;
 	padding: 3px 5px;
 	/*background-color: rgba(0, 0, 0, 0.8);
@@ -39,11 +39,9 @@
 .ingredientListAlt {
 	width: 100%;
 }
-#myList {
+.ingredientList {
 	background-image: url("../Images/yellowPaper.jpg");
 	padding: 20px;
-}
-.contentText {
+	font-size: 40px;
 	color: black;
-	font-size: 28px;
 }
