@@ -45,3 +45,14 @@
 	font-size: 40px;
 	color: black;
 }
+#submitSection {
+	text-align: center;
+}
+#submitButton {
+	font-size: 36px;
+	margin-top: 30px;
+	padding: 10px;
+	border: none;
+	background-color: orange;
+	color: white;
+}
