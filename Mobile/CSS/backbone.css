@@ -16,17 +16,18 @@ body {
 	background-size: cover;
 }
 h1 {
-	font-size: 54px;
+	font-size: 56px;
 	opacity: 1;
 }
 .navIcon {
 	position: absolute;
-	left: 45px;
+	left: 60px;
+	top: 35px;
 }
 .topBar {
 	background-color: rgba(0, 0, 0, 0.6);
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 60px;
+	padding-bottom: 60px;
 }
 .topBarTitle {
 	color: orange;
@@ -40,7 +41,7 @@ h1 {
 .navBarList {
 	display: inline-block;
 	color: orange;
-	font-size: 28px;
+	font-size: 36px;
 	text-align: center;
 	font-weight: bold;
 }
@@ -53,10 +54,12 @@ h1 {
 }
 .navBarItem {
 	background-color: rgba(86, 79, 71, 1);
-	height: 150px;
-	line-height: 150px;
+	height: 200px;
+	width: 200px;
+	line-height: 200px;
 	vertical-align: middle;
-	margin-top: 1px;
+	/*margin-top: 1px;*/
+	border-top: 1px solid white;
 	padding-right: 10px;
 	padding-left: 10px;
 }
