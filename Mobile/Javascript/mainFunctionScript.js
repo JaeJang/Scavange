@@ -50,10 +50,17 @@ function removeIngredient(id) {
 	realList = document.getElementById('realList')
 	paragraphId = id.replace("myImage", "myList")
 	removeItem = document.getElementById(paragraphId).innerHTML
+	removeList = document.getElementById(paragraphId)
+	removeImage = document.getElementById(id)
 	
 	realList.value = realList.value.replace(removeItem + ",", "")
-	document.getElementById(id).style.display = "none"
-	document.getElementById(paragraphId).style.display = "none"
+	
+	var parent = removeList.parentNode
+	parent.removeChild(removeList)
+	parent.removeChild(removeImage)
+	
+	/*document.getElementById(id).style.display = "none"
+	document.getElementById(paragraphId).style.display = "none"*/
 	
 	//regex's not necessary!
 	/*var regex = new RegExp(removeItem)*/
