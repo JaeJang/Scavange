@@ -1,14 +1,20 @@
+html{
+	box-sizing: border-box;}
+
 body{font-family: Courier New, Arial, sans-serif;
 	 font-size: 24px;
 	 letter-spacing: 10px;
 	 margin: 0px;
      background-image: url("food.jpg");
-     background-size: cover;
      background-repeat: no-repeat;
+	 box-sizing: border-box;
+	 background-size: cover;
  }
-	
+
 #container{color: black;
-			min-width: 960px;
+		   min-width: 960px;
+		   height: 100%;
+		   /*min-height: 940px;*/
 		}
 
 #nav ul{margin: 0px;
@@ -18,7 +24,7 @@ body{font-family: Courier New, Arial, sans-serif;
 	   background-color: black;
 	   opacity: 0.5;
 	}
-	   
+
 #nav li{float: left;
 		letter-spacing: 3px;
 	}
@@ -31,13 +37,13 @@ body{font-family: Courier New, Arial, sans-serif;
 	  background-color: transparent;
 	}
 
-#nav li a:hover {background-color: red;}	
+#nav li a:hover {background-color: red;}
 
 
 #headerContain{background-color: white;
 				margin: 0px;
 				opacity: 0.1;
-			}			
+			}
 
 #header{text-align: center;
 		color: orange;
@@ -58,25 +64,31 @@ body{font-family: Courier New, Arial, sans-serif;
 			margin: 1px 100px 1px 100px;
 		}
 
-#main{/*background-image: url(http://placehold.it/350x150);*/
-	  background-color: transparent;
+#main{background-color: transparent;
 	  height: 100%;
-	  width: auto;
-			/**border-radius: 25px;
-			border: 2px solid orange;
-			padding: 15px;
-			margin: 1px 100px 1px 100px;*/
 	  }
 
-#ingredient{letter-spacing: 1px;}
+#ingredient{letter-spacing: 1px;
+			font-weight: 500}
+
 #info input[type=text] {width: 99%; height:170px;
 						border: 1px solid black;
 						border-radius: 25px;
 					}
-#info input[type=submit] {width:80px; height:25px; 
+#info input[type=submit] {width:80px; height:25px;
 						  margin-left: 90%;
 						 }
-		
+.ingText {/*max-width: 98%;
+	     max-height: 170px;*/
+		  resize: none;
+		  width: 98%; height:170px;
+		  border: 1px solid black;
+		  border-radius: 25px;
+		  padding:10px;
+		  font-size: 16px;
+		  font-weight: 100;
+}
+
 #footer{text-align: center;
-padding: 1px;
+		padding: 1px;
 }
