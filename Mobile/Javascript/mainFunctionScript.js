@@ -16,6 +16,7 @@ function addIngredient() {
 		foodList = document.createElement('p')
 		foodList.id = "myList" + counter
 		foodList.style.borderBottom = "1px solid black"
+		foodList.style.overflow = "scroll"
 		
 		/*Create text and add text to paragraph*/
 		var node = document.createTextNode(item)
@@ -27,7 +28,7 @@ function addIngredient() {
 		/*foodList.appendChild(img)*/
 		img.id = "myImage" + counter
 		img.style.cssFloat = "right"
-		img.style.marginTop = "10px"
+		img.style.marginTop = "8px"
 		img.onclick = function(){removeIngredient(img.id)}
 		
 		/*Appent list to masterList*/
@@ -50,10 +51,17 @@ function removeIngredient(id) {
 	realList = document.getElementById('realList')
 	paragraphId = id.replace("myImage", "myList")
 	removeItem = document.getElementById(paragraphId).innerHTML
+	removeList = document.getElementById(paragraphId)
+	removeImage = document.getElementById(id)
 	
 	realList.value = realList.value.replace(removeItem + ",", "")
-	document.getElementById(id).style.display = "none"
-	document.getElementById(paragraphId).style.display = "none"
+	
+	var parent = removeList.parentNode
+	parent.removeChild(removeList)
+	parent.removeChild(removeImage)
+	
+	/*document.getElementById(id).style.display = "none"
+	document.getElementById(paragraphId).style.display = "none"*/
 	
 	//regex's not necessary!
 	/*var regex = new RegExp(removeItem)*/
