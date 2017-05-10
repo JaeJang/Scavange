@@ -5,9 +5,9 @@
 		<title>SCAVANGE TEMPLATE</title>
 		<link rel="stylesheet" href="CSS/backbone.css">
 		<link rel="stylesheet" href="CSS/mainFunctionStyle.css">
+		<link rel="stylesheet" href="CSS/Registration.css">
 		<script src="Javascript/navscripts.js"></script>
 		<script src="Javascript/mainFunctionScript.js"></script>
-		<script src="Javascript/multiOnLoadEvent.js"></script>
 	</head>
 	<body>
 		<div class="topBar">
@@ -40,23 +40,21 @@
 		<div id="contentBox">
 			<br><br>
 			<div class="formBox">
-				<form class="ingredientSearch">
-					<label for="ingredientText">Enter your ingredients below:<br><br></label>
-					<input type="text" id="ingredientText" name="ingredientText">
-					<input type="button" id="addButton" name="addButton" value="Add" onclick="addIngredient()">
-				</form>
-				<br>
-				<h4 class="subheadingText">Your Current Ingredients:</h4>
-				<br>
-				<form class="ingredientForm">
-					<textarea id="realList" class="ingredientListAlt" ></textarea>
-					<div id="masterList" class="ingredientList">
-						<!--<p id="myList"></p>-->
-					</div>
-					<div id="submitSection">
-						<input type="submit" id="submitButton" name="submitButton">
-					</div>
-				</form>
+				<h2>Registration</h2><br><br><br>
+				 <label class="labeL" for="name">*Username: </label>
+        <input type="text" name="myName" id="name" placeholder=""
+                  required="required"><br><br><br><br>
+      <label class="labeL" for="email">*Email: </label>
+        <input type="text" name="email" id="email" placeholder="you@domail.com"
+                  required="required"><br><br><br><br>
+      <label class="labeL" for="password">*Password:</label>
+        <input type="password" name="myPword" id="password" required="required"
+                  minlength="6" maxlength="10"><br><br><br><br>
+      <label class="labeL" for="cpasword">*Password:<br>Confirm </label>
+        <input type="password" name="myPwordConfirm" id="cPassword" required="required"
+                  minlength="6" maxlength="10"><br><br><br><br><br>
+       <div class="field"> <input type="submit" name="" value="Submit" id="submit0"></div>
+				
 			</div>
 		</div>
 	</body>
