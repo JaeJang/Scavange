@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="form.js"></script>
 	<link rel="stylesheet" href="css/register.css">
 	<link rel="stylesheet" href="css/testProj.css">
 	<link rel="stylesheet" href="css/login.css">
@@ -20,10 +21,10 @@
 		<div id="navContain">
 			<div id="nav">
 				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="recipe.html">Recipes</a></li>
+					<li><a href="mainPage.html">Home</a></li>
+					<li><a href="recipepage.html">Recipes</a></li>
 					<li><a href="share.html">Share</a></li>
-					<li><a href="about.html">About Us</a></li>
+					<li><a href="aboutus.html">About Us</a></li>
 					<li><a href="#" id="myBtn">Login</a></li>
 				</ul>
 				<div class="modal fade" id="myModal" role="dialog">
@@ -38,11 +39,11 @@
 							<div class="modal-body" style="padding:40px 50px;">
 								<form role="form">
 									<div class="form-group">
-										<label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+										<label for="usrname" style="letter-spacing: 1px;"><span class="glyphicon glyphicon-user"></span> Username</label>
 										<input type="text" class="form-control" id="usrname" placeholder="Enter email">
 									</div>
 									<div class="form-group">
-										<label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+										<label for="psw" style="letter-spacing: 1px;"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
 										<input type="text" class="form-control" id="psw" placeholder="Enter password">
 									</div>
 
@@ -51,7 +52,7 @@
 							</div>
 							<div class="modal-footer">
 								<button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
-								<p>Not a member?<a href="register_form.php" class="jae_a" style="color:blue; text-align:right;">Sign Up</a></p>
+								<p style="letter-spacing: 1px;">Not a member?<a href="register_form.html" class="jae_a" style="color:blue; text-align:right;">Sign Up</a></p>
 							</div>
 						</div>
 					</div>
@@ -65,20 +66,21 @@
 <fieldset>
 	<legend>SIGN UP</legend>
 	<div class="jae_opc">
-	<form class="" action="index.html" method="post">
+	<form class="" action="index.html" method="post" onSubmit="return formValidate()">
 
 	<label class="labeL" for="myName">*Username: </label>
-		<input type="text" name="myName" id="myName" placeholder=""
-							required="required"><br><br>
+		<input type="text" name="myName" id="myName" placeholder="">
+							<br><div id="error3" class="error"></div><br>
 	<label class="labeL" for="myEmail">*Email: </label>
 		<input type="text" name="myEmail" id="myEmail" placeholder="you@domail.com"
-							required="required" style="opacity:1.0;"><br><br>
+							style="opacity:1.0;"><br><div id="error2"class="error"></div><br>
 	<label class="labeL" for="myPword">*Password:<br>(6~10characters) </label>
-		<input type="password" name="myPword" id="myPword" required="required"
+		<input type="password" name="myPword" id="myPword"
 							minlength="6" maxlength="10"><br><br>
 	<label class="labeL" for="myPword">*Password:<br>Confirm </label>
-		<input type="password" name="myPwordConfirm" id="myPwordConfirm" required="required"
+		<input type="password" name="myPwordConfirm" id="myPwordConfirm"
 							minlength="6" maxlength="10"><br><br>
+							<div id="error4"></div>
 		<input type="submit" name="" value="Submit" id="submiT">
 	</form>
 	</div>
