@@ -39,3 +39,16 @@ CREATE TABLE ingredientT(
   PRIMARY KEY(ingredient_id),
   FOREIGN KEY(recipe_id) REFERENCES recipesT(recipe_id) ON DELETE CASCADE
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE pictureT(
+  picture_id INT NOT NULL auto_increment,
+  image BLOB NOT NULL,
+  title varchar(100) NOT NULL default '',
+  width SMALLINT(6) NOT NULL default'0',
+  heigth SMALLINT(6) NOT NULL default'0',
+  file_size INT,
+  recipe_id INT,
+  FOREIGN KEY(recipe_id) REFERENCES recipesT(recipe_id) ON DELETE CASCADE,
+
+  PRIMARY KEY(picture_id)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
