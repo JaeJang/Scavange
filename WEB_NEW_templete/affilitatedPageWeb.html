@@ -6,9 +6,13 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="css/recipeIndividualStyle.css">
+	<link rel="stylesheet" href="css/mainPage.css">
 	<link rel="stylesheet" href="css/testProj.css">
-	<link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" href="css/affWeb.css">
+	<script>  if (screen.width <= 800) {
+    window.location = "affiliatedPageMobile.html";
+  }
+  </script>
 	<title>SCAVANGE</title>
 </head>
 <body>
@@ -20,7 +24,7 @@
 		<div id="navContain">
 			<div id="nav">
 				<ul>
-					<li><a href="mainPage.html">Home</a></li>
+					<li><a href="mainPge.html">Home</a></li>
 					<li><a href="recipepage.html">Recipes</a></li>
 					<li><a href="share.html">Share</a></li>
 					<li><a href="aboutus.html">About Us</a></li>
@@ -37,23 +41,22 @@
 								<h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
 							</div>
 							<div class="modal-body" style="padding:40px 50px;">
-								<form role="form" onsubmit="return loginValidate()">
-									<div class="form-group" >
-										<label for="usrname" style="letter-spacing: 1px;"><span class="glyphicon glyphicon-user"></span> Username</label>
+								<form role="form">
+									<div class="form-group">
+										<label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
 										<input type="text" class="form-control" id="usrname" placeholder="Enter email">
 									</div>
 									<div class="form-group">
-										<label for="psw" style="letter-spacing: 1px;"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+										<label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
 										<input type="text" class="form-control" id="psw" placeholder="Enter password">
 									</div>
-									<div id="error1"></div>
 
 										<button type="submit" class="btn btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
 								</form>
 							</div>
 							<div class="modal-footer">
 								<button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
-								<p style="letter-spacing: 1px;">Not a member?<a href="register_form.html" class="jae_a" style="color:blue; text-align:right;">Sign Up</a></p>
+								<p>Not a member?<a href="register_form.php" class="jae_a" style="color:blue; text-align:right;">Sign Up</a></p>
 							</div>
 						</div>
 					</div>
@@ -63,47 +66,30 @@
 		<div id="main">
 <!--START YOUR CODES FROM THIS LINE----------------------------------------------------------------->
 <!--START YOUR CODES FROM THIS LINE----------------------------------------------------------------->
+<div id="affPage">
+	<h2>Affiliated Webpages</h2>
+	<table>
+		<tr>
+			<td><img src="Images/fork.png" class="img1" name="logo1"></td>
+			<td><h3>Fork and Potato</h3><div class="content">An educational RPG for elementary children. Battle bad food and save the world, and money.
+			UX: Automatic sidescroller where you choose a variety of food saving attacks or use items to prevent food going bad that you encounter. Defeat bosses by answering food waste questions.</div></td>
+		</tr>
+		<tr>
+			<td><img src="Images/group5.png" class="img1" name="logo1"></td>
+			<td><h3>Vegi-Smart</h3> <div class="content">Food waste manager for fruits and vegetables. Compete with other users in a quest to become the number one non food waster!! Gives statistics and feedback based on your inputs.</div></td>
+		</tr>
+		<tr>
+			<td><img src="Images/basket.png" class="img1" name="logo1"></td>
+			<td><h3>Eco-List</h3> <div class="content">A BRIEF DIESCPRIOTN OF THE APP AND THE TIMES IT HAD ON THE WEB A BRIEF DIESCPRIOTN OF THE APP AND THE TIMES IT HAD ON THE WEBA BRIEF DIESCPRIOTN OF THE APP AND THE TIMES IT HAD ON THE WEBA BRIEF DIESCPRIOTN OF THE APP AND THE TIMES IT HAD ON THE WEBA BRIEF DIESCPRIOTN OF THE APP AND THE TIMES IT HAD ON THE WEBA BRIEF DIESCPRIOTN OF THE APP AND THE TIMES IT HAD ON THE WEBA BRIEF DIESCPRIOTN OF THE APP AND THE TIMES IT HAD ON THE WEBA BRIEF DIESCPRIOTN OF THE APP AND THE TIMES IT HAD ON THE WEBA BRIEF DIESCPRIOTN OF THE APP AND THE TIMES IT HAD ON THE WEB</div></td>
+		</tr>
+	</table>
 
-	<div class="page-header">
-		<h1 style="letter-spacing: 1px;" class="text-center"><strong> Who we are</strong><h1>
-	</div>
-	<div class="row">
-		<div class="col-sm-2"></div>
-	<div class="col-sm-8">
-	<img src="images/Layout(white borad).jpg" alt="" class="img-responsive">
-	</div>
-	<div class="col-sm-2"></div>
-	</div>
-
-	<div class="row" style="margin-top:30px;">
-		<div class="col-sm-2"></div>
-	<div class="col-sm-8" style=" ">
-		<div style="background-color: rgba(0, 0, 0, 0.7); color:white; letter-spacing:1px; padding:10px;">
-			<p>
-Why won't a state lark train a repetitive analysis? A fighter forks the technique beside each fooling thumb.
-The queen fellows an internal concrete. When will an intent project compliment the wary handler? Will the ground subroutine fudge?
-Under the collected antidote bobs whatever held sore.</p>
-		</div>
-
-	</div>
-	<div class="col-sm-2"></div>
-	</div>
-
-
-
-
-
-
-
-
-
-
-
+</div>
 <!--END----------------------------------------------------------------->
 <!--END----------------------------------------------------------------->
 <!--END----------------------------------------------------------------->
 <!--END----------------------------------------------------------------->
-		</div>
+		
 	<script>
 	$(document).ready(function(){
 	    $("#myBtn").click(function(){
