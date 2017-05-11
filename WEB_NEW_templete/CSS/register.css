@@ -42,7 +42,8 @@ input, textarea {margin-top: 10px;}
   font-family: Georgia, "Times New Roman", serif;
 }
 #myPwordConfirm{color: black;
-font-family: Georgia, "Times New Roman", serif;}
+font-family: Georgia, "Times New Roman", serif;
+}
 #submiT{
   color: black;
   font-family: Georgia, "Times New Roman", serif;
@@ -58,6 +59,8 @@ left: 200px;
 
 .error{
   margin-left: 50px;
+  margin-bottom: -20px;
   color: red;
   font-family: Georgia, "Times New Roman", serif;
+
 }
