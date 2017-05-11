@@ -55,3 +55,9 @@ left: 200px;
 .jae_register{
   width: auto;
 }
+
+.error{
+  margin-left: 50px;
+  color: red;
+  font-family: Georgia, "Times New Roman", serif;
+}
