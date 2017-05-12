@@ -2,13 +2,10 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8"/>
-		<title>SCAVANGE TEMPLATE</title>
-		<link rel="stylesheet" href="CSS/backbone.css">
-		<link rel="stylesheet" href="CSS/mainFunctionStyle.css">
-		<link rel="stylesheet" href="CSS/Registration.css">
+		<title>SCAVANGE</title>
+		<link rel="stylesheet" href="CSS/mobileUpload.css">
 		<script src="Javascript/navscripts.js"></script>
-		<script src="Javascript/mainFunctionScript.js"></script>
-		<script src="Javascript/form.js"></script>
+		<!--<script src="Javascript/multiOnLoadEvent.js"></script>-->
 	</head>
 	<body>
 		<div class="topBar">
@@ -21,7 +18,6 @@
 		</div>
 		<div id="navigationBar" class="navBar hidden">
 			<ul class="navBarList">
-				<!--<li class="navBarPlaceholder"></li>-->
 				<a class="navLink" href="mainFunctionPage.html"><li class="navBarItem">Home</li></a>
 				<a class="navLink" href="mobile_recipe.html"><li class="navBarItem">Recipes</li></a>
 				<a class="navLink" href="mobileUpload.html"><li class="navBarItem">Share</li></a>
@@ -40,27 +36,67 @@
 				<a class="navLink" href="mobile_affilated.html"><li class="navBarItem">Affilates</li></a>
 			</ul>
 		</div>
-		<div id="contentBox">
-			<br><br>
-			<div class="formBox">
-				<h2>Registration</h2><br><br><br>
-				<form action="" onsubmit="return formValidate()" method="post">
-				 <label class="labeL" for="name">*Username: </label>
-        <input type="text" name="myName" id="name" placeholder=""
-                ><br><div id="errorn" class="error"></div><br><br>
-      <label class="labeL" for="email">*Email: </label>
-        <input type="text" name="email" id="email" placeholder="you@domail.com"
-                  ><br><div id="errore" class="error"></div><br><br>
-      <label class="labeL" for="password">*Password:</label>
-        <input type="password" name="myPword" id="password"
-                  minlength="8"><br><div id="errorp" class="error"></div><br><br>
-      <label class="labeL" for="cpasword">*Password:<br>Confirm </label>
-        <input type="password" name="myPwordConfirm" id="cPassword"
-                  minlength="8"><br><br><div id="errorp2" class="error"></div><br><br><br><br>
-       <div class="field"> <input type="submit" name="" value="Submit" id="submit0"></div>
-		 </form>
 
-			</div>
+		
+	<div id="main">
+	
+		<div id="create">
+			<label id="recCreate">
+                <span style="color: white"><br>Recipe Creation</span>
+            </label>
 		</div>
+		
+		<div id="nameLabel">
+			<label id="recLabel" class="unbold">
+                <span style="color: white"><br>Recipe Name</span>
+            </label><br>
+		</div>
+		
+		<div id="name">
+			<input type="text" name="recName">
+		</div>
+
+		<div id="uploadLabel">
+			<label id="upLabel" class="unbold">
+                <span style="color: white"><br>Upload a picture:</span>
+            </label>
+		</div>
+		
+		<div id="placeholder">
+		<br>
+			<div id="myPicture">
+			<input type="file" name="pic"><br><br>
+			</div>
+
+		<div id="description">
+			<textarea name="describe" class="describe" cols="30" rows="10" placeholder="Short description of recipe"></textarea> 
+		</div> 
+
+		</div>
+	
+	    <div id=info>
+            <label id="ingredient">
+                <span style="color: white"><br>Ingredients:</span>
+            </label><br><br>
+				<textarea name="" class="ingText" cols="30" rows="10" placeholder="List your ingredients here"></textarea>
+                <br>
+		</div>
+		
+		<div id="stepLabel">
+			<label id="recStep" class="unbold">
+                <span style="color: white"><br>Directions:</span>
+            </label><br><br>
+		</div>
+		
+		<div id="steps">
+			<textarea name="step" class="ingText" placeholder="List the steps"></textarea>
+		</div>
+		
+		<div id="submit">
+            <input type="submit" value="Finish">
+        </div>
+
+	</div>
+
 	</body>
 </html>

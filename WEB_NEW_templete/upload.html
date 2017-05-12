@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>SCAVANGE</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<link href="CSS/upload.css" rel="stylesheet">
+		<link rel="stylesheet" href="CSS/login.css">
+
+	
+	<script type="text/javascript">
+		var counter = 1;
+
+			/*clears the value displayed for the particular element*/
+			function clearBar(id) {
+				document.getElementById(id).value = ""
+			}
+
+			function addInput(){
+			var x = document.getElementById("step").value;
+			
+				if(x != ""){
+
+					/*Initialize x*/
+					var myImg = document.createElement("IMG");				
+					myImg.src="x.png";
+					
+					/*Give id*/
+					myImg.id = "myImage" + counter; 
+					
+					/*Append cancel image/icon with input element and style it*/
+					document.getElementById('steps').appendChild(myImg);
+					myImg.style.cssFloat = "right";
+					myImg.style.marginRight = "10px";
+
+					myImg.style.marginTop = "10px";
+				
+					/*Set function to remove item when image is clicked*/
+					myImg.onclick = function(){removeInput(myImg.id)};
+
+
+
+					var newDiv = document.createElement('div');
+					var id = "newLine" + counter;
+				
+					/*assign newDiv an id*/
+					newDiv.id = id;
+	
+					/*Appends input element with new div*/
+					document.getElementById('steps').appendChild(newDiv);
+					
+
+					/*make value of textbox innerHTML*/				
+					newText = document.createElement('textarea');
+					newText.id = "newTextArea" + counter;
+					newText.value = x;
+
+					document.getElementById('steps').appendChild(newText);
+
+					/*Style the new text box*/
+					newText.style.resize = "none";
+					newText.style.width = "95%";
+					newText.rows = "1";
+					newText.style.border = "1px solid black";
+					newText.style.borderRadius = "25px";
+					newText.style.padding = "8px 0 8px 5px";
+					newText.style.fontSize = "18px";
+					newText.style.fontWeight = 100;
+
+					document.getElementById('steps').style.letterSpacing = "1px";
+					
+					/*Calls clearBar function to clear textbox*/
+					clearBar('step');
+					counter++
+				}
+			}
+			
+			function removeInput(id){
+				var myName = "newTextArea" + id.replace("myImage", "")
+				var list = document.getElementById(myName);
+				var parent = list.parentNode;
+				//removes step
+				parent.removeChild(list);
+				//removes the cancel image/icon
+				parent.removeChild(document.getElementById(id))
+			}
+
+	</script>
+</head>
+<body>
+
+<div id="container-fluid">
+
+	<div id="header">
+		<h1 class="myTitle">S C A V A N G E</h1>
+	</div>
+	<div id="headerContain">
+	</div>
+
+<div id="mainContain">
+
+	<div id="navContain">
+		<div id="nav">
+			<ul>
+				<li><a href="mainPage.html">Home</a></li>
+				<li><a href="recipepage.html">Recipes</a></li>
+				<li><a href="#">Share</a></li>
+				<li><a href="aboutus.html">About Us</a></li>
+					<li><a href="#" id="myBtn">Login</a></li>
+				<li><a href="affiliatedPageWeb.html">Affiliates</a></li>
+			</ul>
+			<div class="modal fade" id="myModal" role="dialog">
+					<div class="modal-dialog">
+
+						<!-- Modal content-->
+						<div class="modal-content" id="login_jae">
+							<div class="modal-header" style="padding:35px 50px;">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+							</div>
+							<div class="modal-body" style="padding:40px 50px;">
+								<form role="form">
+									<div class="form-group">
+										<label for="usrname" style="letter-spacing: 1px;"><span class="glyphicon glyphicon-user"></span> Username</label>
+										<input type="text" class="form-control" id="usrname" placeholder="Enter email">
+									</div>
+									<div class="form-group">
+										<label for="psw" style="letter-spacing: 1px;"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+										<input type="text" class="form-control" id="psw" placeholder="Enter password">
+									</div>
+
+										<button type="submit" class="btn btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+								<p style="letter-spacing: 1px;">Not a member?<a href="register_form.html" class="jae_a" style="color:blue; text-align:right;">Sign Up</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+
+	<div id="main">
+	
+		<div id="create">
+			<label id="recCreate">
+                <span style="color: white"><br>Recipe Creation</span>
+            </label>
+		</div>
+		
+		<div id="nameLabel" class="unbold">
+			<label id="recLabel" class="unbold">
+                <span style="color: white"><br>Recipe Name</span>
+            </label><br>
+		</div>
+		
+		<div id="name">
+			<input type="text" name="recName">
+		</div>
+
+		<div id="uploadLabel">
+			<label id="upLabel" class="unbold">
+                <span style="color: white"><br>Upload a picture:</span>
+            </label><br>
+		</div>
+		
+		<div id="placeholder" class="col-md-12">
+		<br>
+			<div id="myPicture" class="col-md-6">
+			<img src="http://placehold.it/350x150">&nbsp;
+
+			<input type="file" name="pic"><br><br> 
+			</div>
+
+		<div id="description" class="col-md-6">
+			<textarea name="" class="describe" cols="15" rows="10" placeholder="Short description of recipe"></textarea> 
+		</div> 
+
+		</div>
+	
+	    <div id=info class="col-md-12">
+            <label id="ingredient" class="unbold">
+                <span style="color: white"><br>Ingredients:</span>
+            </label><br><br>
+				<textarea name="" class="ingText" cols="30" rows="10" placeholder="List your ingredients here"></textarea>
+                <br>
+		</div>
+		
+		<div id="stepLabel">
+			<label id="recStep" class="unbold">
+                <span style="color: white"><br>Directions:</span>
+            </label><br><br>
+		</div>
+		
+	<form class = "formContain">
+
+		<!--<div id="steps">
+			<input type="text" name="step" id="step" placeholder="Press '+' after each step"><br><br>
+		</div>-->
+		<div id="steps">
+			<textarea name="step" id="step" class="direction" rows="1" placeholder="Press '+' after each step"></textarea>
+		</div>
+
+	</form>
+		
+		<div id="add">
+			<br>
+			<input type="image" src="Images/add.png" alt="Add Step" height="50" width="50" onClick="addInput()">
+		</div>
+		
+		<div id="submit">
+            <input type="submit" value="Finish">
+        </div>
+	</div>
+	</div>
+
+</div>
+
+
+</div>
+
+<script>
+	$(document).ready(function(){
+	    $("#myBtn").click(function(){
+	        $("#myModal").modal();
+	    });
+	});
+	</script>
+</body>
+
+
+<div id="footerContain">
+	<div id="footer">
+		<p> Copyright &copy; 2017 </p>
+	</div>
+</div>
+</html>

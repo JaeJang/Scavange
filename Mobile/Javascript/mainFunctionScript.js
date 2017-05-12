@@ -21,6 +21,7 @@ function addIngredient() {
 		/*Create text and add text to paragraph*/
 		var node = document.createTextNode(item)
 		foodList.appendChild(node)
+		foodList.style.fontSize = "40px"
 		
 		/*Initialize x image*/
 		var img = document.createElement('img')
@@ -28,6 +29,7 @@ function addIngredient() {
 		/*foodList.appendChild(img)*/
 		img.id = "myImage" + counter
 		img.style.cssFloat = "right"
+		img.style.clear = "both"
 		img.style.marginTop = "8px"
 		img.onclick = function(){removeIngredient(img.id)}
 		
@@ -55,7 +57,6 @@ function removeIngredient(id) {
 	removeImage = document.getElementById(id)
 	
 	realList.value = realList.value.replace(removeItem + ",", "")
-	
 	var parent = removeList.parentNode
 	parent.removeChild(removeList)
 	parent.removeChild(removeImage)
