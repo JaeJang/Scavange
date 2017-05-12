@@ -1,18 +1,22 @@
 #rightcol0{float:left;
 margin-left:80px;}
 
-.img1{width: 200px;
-height:200px;}
-
 #leftcol0{float:left;
 margin-left:90px;}
 
+/* Size for icons */
+.img1{width: 200px;
+height:200px;}
+
+/* The description boxes */
 .content{width:470px;
-		height:250px;
-		overflow:auto;
+height:250px;
+overflow:auto;
 font-size:30px;
 color:white;
-letter-spacing: 2px;}
+letter-spacing:2px;}
+
+/* The outside frame for box */
 .box {
 	border-radius: 25px;
 	border: 3px solid orange;
@@ -23,13 +27,13 @@ margin-top:50px;
 height:1400px;}
 
 
-
+/* The Main headings */
 h2{color:white;
 text-align:center;}
 
-
+/* The subheadings */
 h3{color:orange;}
 
+/* Stretches image to full */
 html{box-sizing:border-box}
-
 body{box-sizing:border-box}

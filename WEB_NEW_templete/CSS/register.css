@@ -1,3 +1,5 @@
+
+/*Register text input styling*/
 fieldset {width: 600px; border: 1px ridge #000000;
           padding: 50px; margin-bottom: 10px; margin-top: 40px;
           font-size: 18px;
@@ -8,7 +10,6 @@ fieldset {width: 600px; border: 1px ridge #000000;
   }
 legend {
   font-size: 50px;
-
   color:orange;
   font-weight: bold;}
 .labeL {
