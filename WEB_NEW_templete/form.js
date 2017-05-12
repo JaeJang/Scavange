@@ -67,16 +67,35 @@ function nameValidate(){
   return (nameRegex.test(username) && username !="");
 }
 
+function pswValidate(){
+  var psw = document.getElementById('myPword').value;
+  var psw2 = document.getElementById('myPwordConfirm').value;
+
+  return(psw == psw2);
+}
+
+function pswValidate2(){
+  var psw = document.getElementById('myPword').value;
+  var passwordRegex = /^[a-zA-Z0-9]{8,}/;
+  return (passwordRegex.test(psw));
+}
+
 
 function formValidate(){
+
+  if(!pswValidate2()){document.getElementById('error5').innerHTML="Only characters and numbers are allowed";}
+  else{document.getElementById('error5').innerHTML="";}
   if(!emailValidate()){ document.getElementById('error2').innerHTML="Please enter valid email";}
   else {document.getElementById('error2').innerHTML="";}
 
   if(!nameValidate()){ document.getElementById('error3').innerHTML="Please enter valid username. Only characters and numbers are allowed";}
   else {document.getElementById('error3').innerHTML="";}
 
+  if(!pswValidate()){document.getElementById('error4').innerHTML="Passwords are not same";}
+  else{document.getElementById('error4').innerHTML="";}
 
-  if(!emailValidate() || !nameValidate()){ return false;}
+
+  if(!emailValidate() || !nameValidate() || !pswValidate() || !pswValidate2()){ return false;}
   else{return true;}
 
 }

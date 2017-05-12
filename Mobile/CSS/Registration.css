@@ -4,6 +4,7 @@ font-weight:bold;}
 
 #name, #password, #cPassword, #email{width:400px;
 height: 80px;
+font-size: 1.5em;
 
 }
 
@@ -33,7 +34,7 @@ font-size:30px;}
     padding-right: 50px;
     margin-top: 10px;
     display: block;}
-	
+
 
 
 .formBox{
@@ -41,3 +42,7 @@ text-align:center;}
 .jae_1{
 text-align: center;
 color: white;}
+
+.error{
+  color: red;
+}
