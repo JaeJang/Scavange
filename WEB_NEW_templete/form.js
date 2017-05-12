@@ -1,4 +1,4 @@
-
+/*
 function loginValidate(){
   var name = document.getElementById('usrname').value;
   var password = document.getElementById('psw').value;
@@ -43,12 +43,16 @@ function Validate(){
     return false;
   }
 }
+*/
 
+/* return true if user wirte proper email */
 function emailCheck(){
   var email = document.getElementById('myEmail').value;
   var emailRegex =/^[a-z0-9._-]+@[a-z0-9.]+\.[a-z]{2,}$/i;
   return (emailRegex.test(email));
 }
+
+/*return true when email section is not empty*/
 function emailCheck2(){
   return (document.getElementById('myEmail').value != "");
 }
@@ -61,12 +65,14 @@ function emailValidate(){
   }
 }
 
+/*return true when username section is not empty and there are only characters and numbers*/
 function nameValidate(){
   var username = document.getElementById('myName').value;
   var nameRegex =/^[a-zA-Z0-9]+$/;
   return (nameRegex.test(username) && username !="");
 }
 
+/*return true when both passwords are same*/
 function pswValidate(){
   var psw = document.getElementById('myPword').value;
   var psw2 = document.getElementById('myPwordConfirm').value;
@@ -74,6 +80,7 @@ function pswValidate(){
   return(psw == psw2);
 }
 
+/*return true when there are only characters and numbers*/
 function pswValidate2(){
   var psw = document.getElementById('myPword').value;
   var passwordRegex = /^[a-zA-Z0-9]{8,}/;
@@ -81,6 +88,7 @@ function pswValidate2(){
 }
 
 
+/*print error message and return false when the forms are not validated*/
 function formValidate(){
 
   if(!pswValidate2()){document.getElementById('error5').innerHTML="Only characters and numbers are allowed";}

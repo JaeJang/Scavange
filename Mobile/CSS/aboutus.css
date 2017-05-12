@@ -1,39 +1,47 @@
-.sub{
-  border-bottom: 1px, solid, white;
-  color:white;
-  text-align:center;
-  font-weight:bold;
-  font-size: 3em;
+/*Title of page*/
+.sub {
+	border-bottom: 1px, solid, white;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	font-size: 3em;
 }
-.span2{
-  width:10%;
-  display: inline-block;
+/*division of page*/
+.span2 {
+	width: 10%;
+	display: inline-block;
 }
-.span8{
-  width:60.1%;
-  display: inline-block;
-}
-.span1{
-  width:15%;
-  display: inline-block;
-}
-.span3{
-  widows: 90px;%;
-  display: inline-block;
-}
-img{
-  display: block;
-  max-width: 130%;
-  height: auto;
-}
-.row{
-  margin-top: 20px;
-}
-.whoweare{
-  text-align: center;
-  color: white;
-  padding:0;
-  margin:20px;;
-  max-width:130%;
 
+.span8 {
+	width: 60.1%;
+	display: inline-block;
+}
+
+.span1 {
+	width: 15%;
+	display: inline-block;
+}
+
+.span3 {
+	widows: 90px; %;
+	display: inline-block;
+}
+/*our photo*/
+img {
+	display: block;
+	max-width: 130%;
+	height: auto;
+}
+
+.row {
+	margin-top: 20px;
+}
+
+/*description of what we are*/
+.whoweare {
+	text-align: center;
+	color: white;
+	padding: 0;
+	margin: 20px;;
+	max-width: 130%;
 }

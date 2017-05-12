@@ -1,33 +1,40 @@
+#input {
+	background-color: orange;
+	border: 2px solid black;
+	display: inline-block;
+	text-align: center;
+}
 
-/** my code */ 
+#contain {
+	margin-top: 70px;
+	min-height: 400px;
+	background-color: #d3d3d3;
+	border: 10px solid #A9A9A9;
+}
 
+#left {
+	float: left;
+}
 
-#input{background-color:orange;
-border: 2px solid black;
-display: inline-block;
+#right {
+	float: left;
+	margin-left: -65px;
+}
 
-text-align:center;}
+#middle {
+	width: 43%;
+}
 
-#contain{margin-top: 70px;
-min-height:400px;
-background-color:#d3d3d3;
-border: 10px solid #A9A9A9;}
+/*X marker for list-style*/
+#inglist {
+	list-style-image: url('../Images/x.png');
+}
 
-#left{float:left;}
-
-#right{float:left;
-	  margin-left:-65px;
-	  }
-
-#middle{width:43%;}
-
-#inglist{list-style-image: url('../Images/x.png');}
-
-#recipe{
- text-decoration: none;
- background-color:orange;
- border: 2px solid black;
- font-size:20px;
-text-align:center;
-margin:auto;
+#recipe {
+	text-decoration: none;
+	background-color: orange;
+	border: 2px solid black;
+	font-size: 20px;
+	text-align: center;
+	margin: auto;
 }

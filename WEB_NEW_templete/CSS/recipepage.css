@@ -2,37 +2,45 @@
 	margin: 0;
 	padding: 0;
 }
+
 body {
 	width: 100%;
 	margin: auto;
 	font-family: "Courier New";
 }
+
 .recipeContent {
 	background-color: rgba(0, 0, 0, 0.5);
 	margin-top: 30px;
-    clear:both;
+	clear: both;
 }
+
 h1 {
 	font-size: 54px;
 }
+
 .navIcon {
 	position: absolute;
 	left: 45px;
 }
+
 .topBar {
 	background-color: orange;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
+
 .topBarTitle {
 	color: white;
 	text-align: center;
 	letter-spacing: 0.5em;
 }
+
 .navBar {
 	position: absolute;
 	/*top: 0;*/
 }
+
 .navBarList {
 	display: inline-block;
 	color: white;
@@ -40,6 +48,7 @@ h1 {
 	text-align: center;
 	font-weight: bold;
 }
+
 .navBarPlaceholder {
 	height: 101.6px;
 	line-height: 101.6px;
@@ -47,6 +56,7 @@ h1 {
 	padding-right: 10px;
 	padding-left: 10px;
 }
+
 .navBarItem {
 	background-color: orange;
 	height: 150px;
@@ -56,86 +66,103 @@ h1 {
 	padding-right: 10px;
 	padding-left: 10px;
 }
+
 .navLink {
 	text-decoration: none;
 	color: white;
 }
-.navBarItem:active{
+
+.navBarItem:active {
 	background-color: #FF7F50;
 }
+
 .navBarListAlt {
 	text-align: center;
 	padding: 10px;
 	background-color: black;
 	opacity: 0.5;
 }
+
 .navBarItemAlt {
 	display: inline;
 	color: white;
 	font-size: 28px;
 	padding: 10px 20px;
 }
+
 .visible {
 	visibility: visible;
 }
+
 .hidden {
 	visibility: hidden;
 }
+
 .recipes {
-    font-size: 50px;
-    padding-top: 30px;
-    padding-left: 400px;
-    color:orange;
-    font-weight: bold;
+	font-size: 50px;
+	padding-top: 30px;
+	padding-left: 400px;
+	color: orange;
+	font-weight: bold;
 }
-.box{
-  padding-top: 20px;
-  padding-left: 50px;
-    
+
+.box {
+	padding-top: 20px;
+	padding-left: 50px;
 }
-.box input[type="search"] { width:800px;}
+
+.box input[type="search"] {
+	width: 800px;
+}
 
 #pic {
-    padding-left:50px;
-    padding-top: 40px;
-    
+	padding-left: 50px;
+	padding-top: 40px;
 }
-.Picture { width:500px; height: 400px;}
+
+.Picture {
+	width: 500px;
+	height: 400px;
+}
 
 #title {
-    font-size: 30px;
-    padding-left: 650px;
-    color:orange;
-    font-weight:bold;
-    padding-top: 50px;
+	font-size: 30px;
+	padding-left: 650px;
+	color: orange;
+	font-weight: bold;
+	padding-top: 50px;
 }
+
 #author {
-    font-size: 30px;
-    padding-left: 650px;
-    padding-top: 10px;
-    color:orange;
-    font-weight:bold;
-    
+	font-size: 30px;
+	padding-left: 650px;
+	padding-top: 10px;
+	color: orange;
+	font-weight: bold;
 }
 
 #random {
-    margin-right: 70px;
-    padding-left: 650px;
-    padding-top: 20px;
-    font-size:15px;
-    letter-spacing: 0;
-    font-weight:bold;
-    color:white;
+	margin-right: 70px;
+	padding-left: 650px;
+	padding-top: 20px;
+	font-size: 15px;
+	letter-spacing: 0;
+	font-weight: bold;
+	color: white;
 }
-#Star {
-    font-size: 70px;
-    padding-top: 40px;
-    padding-left: 120px;
-    color:orange;
-}
-#button {color:orange;}
 
-#left{
-    float: left;
-    clear: both;
+#Star {
+	font-size: 70px;
+	padding-top: 40px;
+	padding-left: 120px;
+	color: orange;
+}
+
+#button {
+	color: orange;
+}
+
+#left {
+	float: left;
+	clear: both;
 }
