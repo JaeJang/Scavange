@@ -1,3 +1,4 @@
+/*Title of page*/
 .sub{
   border-bottom: 1px, solid, white;
   color:white;
@@ -5,6 +6,7 @@
   font-weight:bold;
   font-size: 3em;
 }
+/*division of page*/
 .span2{
   width:10%;
   display: inline-block;
@@ -21,6 +23,7 @@
   widows: 90px;%;
   display: inline-block;
 }
+/*our photo*/
 img{
   display: block;
   max-width: 130%;
@@ -29,6 +32,8 @@ img{
 .row{
   margin-top: 20px;
 }
+
+/*description of what we are*/
 .whoweare{
   text-align: center;
   color: white;
