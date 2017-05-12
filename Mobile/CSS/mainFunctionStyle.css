@@ -1,6 +1,7 @@
 #contentBox {
 	margin: 20px;
 }
+
 .formBox {
 	border-radius: 25px;
 	border: 3px solid orange;
@@ -8,14 +9,17 @@
 	font-size: 40px;
 	background-color: rgba(0, 0, 0, 0.6);
 }
+
 .ingredientSearch {
 	color: white;
 	font-weight: bold;
 }
+
 #ingredientText {
 	font-size: 40px;
 	width: 80%;
 }
+
 #addButton {
 	position: relative;
 	bottom: 3px;
@@ -32,22 +36,27 @@
 	float: right;
 	clear: both;
 }
+
 .subheadingText {
 	color: white;
 	font-size: 36px;
 }
+
 .ingredientListAlt {
 	width: 100%;
 }
+
 .ingredientList {
 	background-image: url("../Images/yellowPaper.jpg");
 	padding: 20px;
 	font-size: 40px;
 	color: black;
 }
+
 #submitSection {
 	text-align: center;
 }
+
 #submitButton {
 	font-size: 36px;
 	margin-top: 30px;

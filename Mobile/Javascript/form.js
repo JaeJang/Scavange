@@ -43,69 +43,87 @@ function Validate(){
     return false;
   }
 }
-*/
+ */
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 /* return true if user wirte proper email */
-function emailCheck(){
-  var email = document.getElementById('email').value;
-  var emailRegex =/^[a-z0-9._-]+@[a-z0-9.]+\.[a-z]{2,}$/i;
-  return (emailRegex.test(email));
+function emailCheck() {
+	var email = document.getElementById('email').value;
+	var emailRegex = /^[a-z0-9._-]+@[a-z0-9.]+\.[a-z]{2,}$/i;
+	return (emailRegex.test(email));
 }
 
-/*return true when email section is not empty*/
-function emailCheck2(){
-  return (document.getElementById('email').value != "");
+/* return true when email section is not empty */
+function emailCheck2() {
+	return (document.getElementById('email').value != "");
 }
 
-function emailValidate(){
-  if(emailCheck() && emailCheck2()){
-    return true;
-  } else {
-    return false;
-  }
+function emailValidate() {
+	if (emailCheck() && emailCheck2()) {
+		return true;
+	} else {
+		return false;
+	}
 }
-/*return true when username section is not empty and there are only characters and numbers*/
+/*
+ * return true when username section is not empty and there are only characters
+ * and numbers
+ */
 
-function nameValidate(){
-  var username = document.getElementById('name').value;
-  var nameRegex =/^[a-zA-Z0-9]+$/;
-  return (nameRegex.test(username) && username !="");
+function nameValidate() {
+	var username = document.getElementById('name').value;
+	var nameRegex = /^[a-zA-Z0-9]+$/;
+	return (nameRegex.test(username) && username != "");
 }
-/*return true when both passwords are same*/
+/* return true when both passwords are same */
 
-function pswValidate(){
-  var psw = document.getElementById('password').value;
-  var psw2 = document.getElementById('cPassword').value;
+function pswValidate() {
+	var psw = document.getElementById('password').value;
+	var psw2 = document.getElementById('cPassword').value;
 
-  return(psw == psw2);
+	return (psw == psw2);
 }
-/*return true when there are only characters and numbers*/
+/* return true when there are only characters and numbers */
 
-function pswValidate2(){
-  var psw = document.getElementById('password').value;
-  var passwordRegex = /^[a-zA-Z0-9]{8,}/;
-  return (passwordRegex.test(psw));
+function pswValidate2() {
+	var psw = document.getElementById('password').value;
+	var passwordRegex = /^[a-zA-Z0-9]{8,}/;
+	return (passwordRegex.test(psw));
 }
 
-/*print error message and return false when the forms are not validated*/
+/* print error message and return false when the forms are not validated */
 
-function formValidate(){
+function formValidate() {
 
-  if(!pswValidate2()){document.getElementById('errorp').innerHTML="Only characters and numbers are allowed";}
-  else{document.getElementById('errorp').innerHTML="";}
+	if (!pswValidate2()) {
+		document.getElementById('errorp').innerHTML = "Only characters and numbers are allowed";
+	} else {
+		document.getElementById('errorp').innerHTML = "";
+	}
 
-  if(!emailValidate()){ document.getElementById('errore').innerHTML="Please enter valid email";}
-  else {document.getElementById('errore').innerHTML="";}
+	if (!emailValidate()) {
+		document.getElementById('errore').innerHTML = "Please enter valid email";
+	} else {
+		document.getElementById('errore').innerHTML = "";
+	}
 
-  if(!nameValidate()){ document.getElementById('errorn').innerHTML="Please enter valid username. Only characters and numbers are allowed";}
-  else {document.getElementById('errorn').innerHTML="";}
+	if (!nameValidate()) {
+		document.getElementById('errorn').innerHTML = "Please enter valid username. Only characters and numbers are allowed";
+	} else {
+		document.getElementById('errorn').innerHTML = "";
+	}
 
-  if(!pswValidate()){document.getElementById('errorp2').innerHTML="Passwords are not same";}
-  else{document.getElementById('errorp2').innerHTML="";}
+	if (!pswValidate()) {
+		document.getElementById('errorp2').innerHTML = "Passwords are not same";
+	} else {
+		document.getElementById('errorp2').innerHTML = "";
+	}
 
-
-  if(!emailValidate() || !nameValidate() || !pswValidate() || !pswValidate2()){ return false;}
-  else{return true;}
+	if (!emailValidate() || !nameValidate() || !pswValidate()
+			|| !pswValidate2()) {
+		return false;
+	} else {
+		return true;
+	}
 
 }

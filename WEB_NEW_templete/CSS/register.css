@@ -1,73 +1,86 @@
-<<<<<<< HEAD
-/* registration field*/
-=======
-
-/*Register text input styling*/
->>>>>>> e2729bf88c1e15e76f94acc4c74e066a802b50ea
-fieldset {width: 600px; border: 1px ridge #000000;
-          padding: 50px; margin-bottom: 10px; margin-top: 40px;
-          font-size: 18px;
-          position: relative;
-          left: 270px;
+<<<<<<<
+HEAD /* registration field*/ 
+ =======
+	/*Register text input styling*/ >>>>>>>
+	e2729bf88c1e15e76f94acc4c74e066a802b50ea
+fieldset {
+	width: 600px;
+	border: 1px ridge #000000;
+	padding: 50px;
+	margin-bottom: 10px;
+	margin-top: 40px;
+	font-size: 18px;
+	position: relative;
+	left: 270px;
 }
+
 legend {
-  font-size: 50px;
-  color:orange;
-  font-weight: bold;}
-.labeL {
-    float: left;
-    width: 220px;
-    clear: left;
-    text-align: right;
-    padding-right: 50px;
-    margin-top: 10px;
-    display: block;}
-
-.jae_opc{
-    background-color: black;
-    opacity: 0.8;
-    color: white;
-    padding: 5px;
-    padding-bottom: 20px;
-    letter-spacing: 1px;
-
+	font-size: 50px;
+	color: orange;
+	font-weight: bold;
 }
-input, textarea {margin-top: 10px;}
+
+.labeL {
+	float: left;
+	width: 220px;
+	clear: left;
+	text-align: right;
+	padding-right: 50px;
+	margin-top: 10px;
+	display: block;
+}
+
+.jae_opc {
+	background-color: black;
+	opacity: 0.8;
+	color: white;
+	padding: 5px;
+	padding-bottom: 20px;
+	letter-spacing: 1px;
+}
+
+input, textarea {
+	margin-top: 10px;
+}
 
 /*Input spaces*/
-#myName{
-  color: black;
-  font-family: Georgia, "Times New Roman", serif;
-}
-#myEmail{
-  color: black;
-  font-family: Georgia, "Times New Roman", serif;
-}
-#myPword{
-  color: black;
-  font-family: Georgia, "Times New Roman", serif;
-}
-#myPwordConfirm{color: black;
-font-family: Georgia, "Times New Roman", serif;
-}
-#submiT{
-  color: black;
-  font-family: Georgia, "Times New Roman", serif;
-  width: 100px;
-  position: relative;
-left: 200px;
-  opacity: 1.0;
+#myName {
+	color: black;
+	font-family: Georgia, "Times New Roman", serif;
 }
 
-.jae_register{
-  width: auto;
+#myEmail {
+	color: black;
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+#myPword {
+	color: black;
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+#myPwordConfirm {
+	color: black;
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+#submiT {
+	color: black;
+	font-family: Georgia, "Times New Roman", serif;
+	width: 100px;
+	position: relative;
+	left: 200px;
+	opacity: 1.0;
+}
+
+.jae_register {
+	width: auto;
 }
 
 /* form validation messages */
-.error{
-  margin-left: 50px;
-  margin-bottom: -20px;
-  color: red;
-  font-family: Georgia, "Times New Roman", serif;
-
+.error {
+	margin-left: 50px;
+	margin-bottom: -20px;
+	color: red;
+	font-family: Georgia, "Times New Roman", serif;
 }
