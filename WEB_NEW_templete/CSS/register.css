@@ -72,8 +72,7 @@ input, textarea {
 	color: black;
 	font-family: Georgia, "Times New Roman", serif;
 	width: 100px;
-	position: relative;
-	left: 200px;
+	
 	opacity: 1.0;
 }
 
