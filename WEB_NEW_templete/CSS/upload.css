@@ -61,7 +61,7 @@ body {font-family: "Courier New", Arial, sans-serif;
 		color: orange;
 		font-size: 1.5em;
 		text-shadow: 2px 3px 3px black;
-		padding: 60px 0;
+		padding: 70px 0;
 		background-image: url("../Images/Logo(white).png");
 		background-repeat: no-repeat;
 		background-position: center;
@@ -105,7 +105,10 @@ body {font-family: "Courier New", Arial, sans-serif;
 
 #placeholder input[type=file]{	display: inline-block;
 								color: transparent;
-								padding: 0;}
+								padding: 0;
+							}
+
+/*Upload div*/								
 #myPicture {
 	padding: 0;
 }
