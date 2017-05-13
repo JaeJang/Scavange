@@ -53,4 +53,7 @@ h2 {
 	letter-spacing: 2px;
 }
 
-html{min-width:1200px;}
+html{
+	box-sizing: border-box;
+	min-width: 1200px;
+}
