@@ -3,6 +3,17 @@
 	margin-top: 30px;
 }
 
+.headingBar {
+	color: orange;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+.title {
+	padding: 0;
+}
+
 .firstPicture {
 	text-align: center;
 	padding: 30px;
@@ -31,6 +42,7 @@
 	padding: 20px;
 }
 
+/*CSS styling for each step images*/
 .stepImage {
 	float: right;
 	padding-bottom: 10px;
@@ -46,10 +58,12 @@
 	padding-top: 10px;
 }
 
+/*underline with orange only on the middle elements*/
 .recipeTable tr:not (:last-child ) {
 	border-bottom: 1px solid orange;
 }
 
+/*align all table element to top left corner*/
 .alignTop {
 	vertical-align: top;
 }
