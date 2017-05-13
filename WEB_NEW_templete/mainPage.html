@@ -9,7 +9,7 @@
 	<script src="mainFunctionScript.js"></script>
 	<link rel="stylesheet" href="css/mainPage.css">
 	<link rel="stylesheet" href="css/testProj.css">
-	<link rel="stylesheet" href="css/login.css
+	<link rel="stylesheet" href="css/login.css">
 	<title>SCAVANGE</title>
 </head>
 <body>
@@ -72,7 +72,7 @@
 					<input type="button" id="addButton" name="addButton" value="Add" onclick="addIngredient()">
 				</form>
 				<br>
-				<h4 class="subheadingText">Your Current Ingredients:</h4>
+				<label class="subheadingText">Your Current Ingredients:</label>
 				<br>
 				<form class="ingredientForm">
 					<textarea id="realList" class="ingredientListAlt" ></textarea>
@@ -97,5 +97,13 @@
 	</div>
 </div>
 </div>
+
+<script>
+$(document).ready(function(){
+		$("#myBtn").click(function(){
+				$("#myModal").modal();
+		});
+});
+</script>
 </body>
 </html>
