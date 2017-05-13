@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="CSS/recipepage.css">
+	<link rel="stylesheet" href="recipepage.css">
 	<link rel="stylesheet" href="CSS/testProj.css">
 	<link rel="stylesheet" href="CSS/login.css">
 	<title>SCAVANGE</title>
@@ -20,12 +20,11 @@
 		<div id="navContain">
 			<div id="nav">
 				<ul>
-					<li><a href="mainPage.html">Home</a></li>
-					<li><a href="recipepage.html">Recipes</a></li>
-					<li><a href="upload.html">Share</a></li>
-					<li><a href="aboutus.html">About Us</a></li>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="recipe.html">Recipes</a></li>
+					<li><a href="share.html">Share</a></li>
+					<li><a href="about.html">About Us</a></li>
 					<li><a href="#" id="myBtn">Login</a></li>
-					<li><a href="affilitatedPageWeb.html">Affiliates</a></li>
 				</ul>
 				<div class="modal fade" id="myModal" role="dialog">
 					<div class="modal-dialog">
@@ -39,11 +38,11 @@
 							<div class="modal-body" style="padding:40px 50px;">
 								<form role="form">
 									<div class="form-group">
-										<label for="usrname" style="letter-spacing: 1px;"><span class="glyphicon glyphicon-user"></span> Username</label>
+										<label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
 										<input type="text" class="form-control" id="usrname" placeholder="Enter email">
 									</div>
 									<div class="form-group">
-										<label for="psw" style="letter-spacing: 1px;"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+										<label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
 										<input type="text" class="form-control" id="psw" placeholder="Enter password">
 									</div>
 
@@ -52,7 +51,7 @@
 							</div>
 							<div class="modal-footer">
 								<button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
-								<p style="letter-spacing: 1px;">Not a member?<a href="register_form.html" class="jae_a" style="color:blue; text-align:right;">Sign Up</a></p>
+								<p>Not a member?<a href="register_form.php" class="jae_a" style="color:blue; text-align:right;">Sign Up</a></p>
 							</div>
 						</div>
 					</div>
@@ -64,25 +63,31 @@
 <!--START YOUR CODES FROM THIS LINE----------------------------------------------------------------->
             <div class="recipeContent col-md-12">
         <div class="recipes"> <strong>Recipes</strong></div>
-      <div class="box"><span class="icon"><i class="fa fa-search"></i></span>
-      <input type="search" id="search" placeholder="Search..." />
-          <button onclick="myFunction()">Filter</button></div>
+     
             <div id="body">
-        <div id="left">
+                <table>
+                    
+                    <tr>
+                        <td> <div id="left">
             <div id="pic">
                 <img class="Picture" src="Images/sampleFood.jpg"></div>
             <div id="Star">★★★★★</div>
-           </div>
-            <div id="right">
+           </div></td>
+                        <td>          <div id="right">
         <div id="title">
         <strong>Title:</strong></div>
         <div id="author">
         <strong>Author:</strong></div>
         <div id="random">
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div>
+                 
+                </div></td>
 
-                </div></div></div>
-
+                            </tr>
+                </table>
+       
+  </div></div>
+        
 <!--END----------------------------------------------------------------->
 <!--END----------------------------------------------------------------->
 <!--END----------------------------------------------------------------->
