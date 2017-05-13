@@ -1,7 +1,7 @@
 /*Title of page*/
 .sub {
 	border-bottom: 1px, solid, white;
-	color: white;
+	color: orange;
 	text-align: center;
 	font-weight: bold;
 	font-size: 60px;
@@ -43,6 +43,6 @@ img {
 	color: white;
 	padding: 0;
 	margin: 20px;;
-	max-width: 130%;
-	font-size: 45px;
+
+	font-size: 30px;
 }

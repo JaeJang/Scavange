@@ -1,4 +1,4 @@
-/*Main Subheading*/
+background-color: rgba(0, 0, 0, 0.5);/*Main Subheading*/
 h2 {
 	color: white;
 	text-align: center;
@@ -58,4 +58,14 @@ label {
 
 .error {
 	color: red;
+}
+.jae_1{
+	color:white;
+}
+/*not a memnber?*/
+.jae_1 a{
+	color: orange;
+}
+.jae_title{
+	color:orange;
 }
