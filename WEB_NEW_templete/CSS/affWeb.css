@@ -42,7 +42,6 @@ h3 {
 	font-size: 30px;
 	letter-spacing: 2px;
 }
-
 /*Subheading */
 h2 {
 	font-family: "Courier New";
@@ -53,3 +52,5 @@ h2 {
 	padding-top: 50px;
 	letter-spacing: 2px;
 }
+
+html{min-width:1200px;}
