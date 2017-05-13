@@ -11,7 +11,7 @@
 /* Size for icons */
 .img1 {
 	width: 200px;
-	height: 300px;
+	height: 200px;
 }
 
 /* The description boxes */
@@ -54,3 +54,5 @@ html {
 body {
 	box-sizing: border-box
 }
+
+#star{color:orange;}
