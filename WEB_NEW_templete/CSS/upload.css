@@ -4,7 +4,7 @@
 }
 
 html {box-sizing: border-box;
-	  min-width: 1105px;
+	  min-width: 1200px;
 }
 
 body {font-family: "Courier New", Arial, sans-serif;
@@ -23,10 +23,10 @@ body {font-family: "Courier New", Arial, sans-serif;
  	font-weight: bold;
  }
 
-#container {color: black;
+/*#container {color: black;
 		   min-width: 960px;
 		   height: 100%;
-		}
+		}*/
 
 #nav ul {margin: 0px;
 	   padding:0px;
@@ -34,6 +34,7 @@ body {font-family: "Courier New", Arial, sans-serif;
 	   overflow: hidden;
 	   background-color: black;
 	   opacity: 0.5;
+	   font-size: 24px;
 	}
 
 #nav li {float: left;
@@ -61,7 +62,7 @@ body {font-family: "Courier New", Arial, sans-serif;
 		font-size: 1.5em;
 		text-shadow: 2px 3px 3px black;
 		padding: 60px 0;
-		background-image: url("../Images/basket.png");
+		background-image: url("../Images/Logo(white).png");
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: 220px;
@@ -171,6 +172,7 @@ body {font-family: "Courier New", Arial, sans-serif;
 #footer {text-align: center;
 		padding: 1px;
 		font-size: 24px;
+		margin-top: 30px;
 }
 .unbold {
 	font-weight: 500;

@@ -29,7 +29,7 @@
 
 					/*Initialize x image*/
 					var myImg = document.createElement("IMG");				
-					myImg.src="x.png";
+					myImg.src="Images/x.png";
 					
 					/*Give id to x image*/
 					myImg.id = "myImage" + counter; 
@@ -65,7 +65,7 @@
 
 					newText.style.resize = "none";
 					newText.style.width = "95%";
-					newText.rows = "1";
+					newText.rows = "2";
 					newText.style.border = "1px solid black";
 					newText.style.borderRadius = "25px";
 					newText.style.padding = "8px 0 8px 5px";
@@ -109,11 +109,12 @@
 	<div id="navContain">
 		<div id="nav">
 			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="recipe.html">Recipes</a></li>
-				<li><a href="share.html">Share</a></li>
-				<li><a href="about.html">About Us</a></li>
-				<li><a href="login.html">Login</a></li>
+				<li><a href="mainPage.html">Home</a></li>
+				<li><a href="recipepage.html">Recipes</a></li>
+				<li><a href="upload.html">Share</a></li>
+				<li><a href="aboutus.html">About Us</a></li>
+				<li><a href="#" id="myBtn">Login</a></li>
+				<li><a href="affilitatedPageWeb.html">Affiliates</a></li>
 			</ul>
 		</div>
 
@@ -121,7 +122,7 @@
 	
 		<div id="create">
 			<label id="recCreate">
-                <span style="color: white"><br>Recipe Creation</span>
+                <span style="color: orange"><br>&nbsp;Recipe Creation</span>
             </label>
 		</div>
 		
@@ -185,7 +186,15 @@
 		<div id="submit">
             <input type="submit" value="Finish">
         </div>
+
 	</div>
+
+		<div id="footerContain">
+			<div id="footer">
+			<p> Copyright &copy; 2017 </p>
+			</div>
+		</div>
+
 	</div>
 
 </div>
@@ -195,9 +204,9 @@
 </body>
 
 
-<div id="footerContain">
+<!--<div id="footerContain">
 	<div id="footer">
 		<p> Copyright &copy; 2017 </p>
 	</div>
-</div>
+</div>-->
 </html>
