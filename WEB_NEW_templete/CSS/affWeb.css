@@ -13,8 +13,6 @@
 
 /*Description of applications*/
 .content {
-	width: 610px;
-	height: 300px;
 	overflow: auto;
 	margin-left: 60px;
 	margin-top: 30px;
@@ -28,6 +26,7 @@
 table {
 	margin-left: 50px;
 	margin-top: 30px;
+
 }
 
 #footerContain {
@@ -43,7 +42,6 @@ h3 {
 	font-size: 30px;
 	letter-spacing: 2px;
 }
-
 /*Subheading */
 h2 {
 	font-family: "Courier New";
@@ -54,3 +52,5 @@ h2 {
 	padding-top: 50px;
 	letter-spacing: 2px;
 }
+
+html{min-width:1200px;}
