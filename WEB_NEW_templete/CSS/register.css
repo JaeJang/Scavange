@@ -20,7 +20,9 @@ legend {
 	font-weight: bold;
   text-align: center;
 }
-
+html {box-sizing: border-box;
+	  min-width: 1200px;
+}
 .labeL {
 	float: left;
 	width: 220px;
