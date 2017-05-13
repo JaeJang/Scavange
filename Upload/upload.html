@@ -27,11 +27,11 @@
 			
 				if(x != ""){
 
-					/*Initialize x*/
+					/*Initialize x image*/
 					var myImg = document.createElement("IMG");				
 					myImg.src="x.png";
 					
-					/*Give id*/
+					/*Give id to x image*/
 					myImg.id = "myImage" + counter; 
 					
 					/*Append image with input element*/
@@ -57,7 +57,6 @@
 					
 
 					/*make value of textbox innerHTML*/				
-					//newDiv.innerHTML = x;
 					newText = document.createElement('textarea');
 					newText.id = "newTextArea" + counter;
 					newText.value = x;
@@ -172,9 +171,6 @@
 		
 	<form class = "formContain">
 
-		<!--<div id="steps">
-			<input type="text" name="step" id="step" placeholder="Press '+' after each step"><br><br>
-		</div>-->
 		<div id="steps">
 			<textarea name="step" id="step" class="direction" rows="1" placeholder="Press '+' after each step""></textarea>
 		</div>

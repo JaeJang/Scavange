@@ -8,7 +8,7 @@ html {box-sizing: border-box;
 }
 
 body {font-family: "Courier New", Arial, sans-serif;
-	 font-size: 24px;
+	 font-size: 30px;
 	 letter-spacing: 10px;
 	 margin: 0px;
      background-image: url("food.jpg");
@@ -26,7 +26,6 @@ body {font-family: "Courier New", Arial, sans-serif;
 #container {color: black;
 		   min-width: 960px;
 		   height: 100%;
-		   /*min-height: 940px;*/
 		}
 
 #nav ul {margin: 0px;
@@ -69,6 +68,7 @@ body {font-family: "Courier New", Arial, sans-serif;
 		margin: 30px 0;
 	}
 
+/*Container with all content including nav bar*/
 #mainContain {background-color: transparent;
 			border-radius: 25px;
 			border: 2px solid orange;
@@ -76,6 +76,7 @@ body {font-family: "Courier New", Arial, sans-serif;
 			margin: 1px 100px 1px 100px;
 		}
 
+/*Recipe creation content*/
 #main {background-color: rgba(0, 0, 0, 0.5);
 	  height: 100%;
 	  margin-top: 30px;
@@ -83,7 +84,7 @@ body {font-family: "Courier New", Arial, sans-serif;
 	  }
 	  
 #create {text-align: center;
-		 font-size: 30px; 
+		 font-size: 36px; 
 }  
 		
 #nameLabel {letter-spacing: 1px;}	
@@ -95,13 +96,13 @@ body {font-family: "Courier New", Arial, sans-serif;
 }
 
 #uploadLabel {letter-spacing: 1px;}
-	
+
+/*Upload image placeholder*/	
 #placeholder {display: inline-block;
 			 width: 100%;
 			 display: center;}
 
-#placeholder input[type=file]{/*float: right;*/
-								display: inline-block;
+#placeholder input[type=file]{	display: inline-block;
 								color: transparent;
 								padding: 0;}
 #myPicture {
@@ -117,8 +118,6 @@ body {font-family: "Courier New", Arial, sans-serif;
 		  padding:10px;
 		  font-size: 18px;
 		  font-weight: 100;
-		  /*float: right;*/
-
 }
 	
 #ingredient {letter-spacing: 1px;
@@ -129,11 +128,13 @@ body {font-family: "Courier New", Arial, sans-serif;
 	margin: 0;
 }
 
+/*ingredients textbox*/
 #info input[type=text] {width: 100%; height:170px;
 						border: 1px solid black;
 						border-radius: 25px;
 					}
 
+/*ingredients text area*/
 .ingText {resize: none;
 		  width: 100%; height:170px;
 		  border: 1px solid black;
@@ -145,12 +146,6 @@ body {font-family: "Courier New", Arial, sans-serif;
 
 #stepLabel {letter-spacing: 1px;}
 
-/*#steps input[type=text]{width: 98%;
-					  border: 1px solid black;
-					  border-radius: 25px;
-					  padding: 5px;
-					  font-size: 18px;
-}*/
 .direction{resize: none;
 	  width: 100%;	
 	  border: 1px solid black;
@@ -160,6 +155,7 @@ body {font-family: "Courier New", Arial, sans-serif;
 	  font-weight: 100;
 }
 
+/* Add '+' button*/
 #add {text-align: center;}
 
 #submit input[type=submit] {width:80px;
@@ -167,10 +163,14 @@ body {font-family: "Courier New", Arial, sans-serif;
 						    margin-left: 90%;
 						    font-size: 16px;
 						    margin-bottom: 20px;
+						    color: white;
+						    background-color: orange;
+						    border: none;
 							 }
 
 #footer {text-align: center;
 		padding: 1px;
+		font-size: 24px;
 }
 .unbold {
 	font-weight: 500;
