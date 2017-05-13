@@ -8,10 +8,19 @@
 	font-weight: bold;
 	padding: 0;
 	margin: 0;
+	font-size: 30px;
 }
 
 .title {
-	padding: 0;
+	padding: 0 10px 0 0;
+}
+
+.author {
+	padding: 0 10px 0 0;
+}
+
+.rating {
+	padding: 0 10px 0 0;
 }
 
 .firstPicture {
@@ -26,6 +35,7 @@
 .recipeSubHeading {
 	color: orange;
 	font-weight: bold;
+	font-size: 30px;
 }
 
 .recipeIngredientList {
