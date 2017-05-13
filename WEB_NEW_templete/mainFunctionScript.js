@@ -21,6 +21,7 @@ function addIngredient() {
 		var node = document.createTextNode(item)
 		foodList.appendChild(node)
 		foodList.style.fontSize = "18px"
+		foodList.style.fontWeight = "bold"
 		
 		/*Initialize x image*/
 		var img = document.createElement('img')
@@ -30,6 +31,8 @@ function addIngredient() {
 		img.style.cssFloat = "right"
 		img.style.clear = "both"
 		img.style.marginTop = "8px"
+		img.style.height = "19px"
+		img.style.width = "20px"
 		img.onclick = function(){removeIngredient(img.id)}
 		
 		/*Appent list to masterList*/

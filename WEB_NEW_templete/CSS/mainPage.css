@@ -1,12 +1,14 @@
-<<<<<<< HEAD
+
 #contentBox {
 	margin: 20px;
 }
-#ingtext{color:white;}
+#ingtext{color:white;
+	font-size:36px;
+	letter-spacing: 2px;
+	}
 
 .formBox {
-	border-radius: 25px;
-	border: 3px solid orange;
+	
 	padding: 40px 20px;
 	font-size: 18px;
 	background-color: rgba(0, 0, 0, 0.6);
@@ -21,7 +23,8 @@
 #addButton {
 	position: relative;
 	bottom: 3px;
-	font-size: 40px;
+	font-size: 20px;
+	margin-top:2px;
 	width: 15%;
 	padding: 3px 5px;
 	/*background-color: rgba(0, 0, 0, 0.8);
@@ -36,10 +39,13 @@
 }
 .subheadingText {
 	color: white;
-	font-size: 30px;
+	font-size: 36px;
+	font-weight:bold;
+	letter-spacing: 2px;
 }
 .ingredientListAlt {
 	width: 100%;
+	display:none;
 }
 .ingredientList {
 	background-image: url("../Images/yellowPaper.jpg");
@@ -53,11 +59,13 @@
 #submitButton {
 	font-size: 20px;
 	margin-top: 30px;
-	padding: 10px;
+	padding: 10px 20px;
 	border: none;
 	background-color: orange;
 	color: white;
-=======
+	font-weight:bold;
+	
+}
 #input {
 	background-color: orange;
 	border: 2px solid black;
@@ -97,5 +105,4 @@
 	font-size: 20px;
 	text-align: center;
 	margin: auto;
->>>>>>> cbcec31789cb14a4aa9aeb20c5e3bbe95efc183d
 }
