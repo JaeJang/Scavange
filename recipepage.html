@@ -7,8 +7,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="recipepage.css">
-	<link rel="stylesheet" href="testProj.css">
-	<link rel="stylesheet" href="login.css">
+	<link rel="stylesheet" href="CSS/testProj.css">
+	<link rel="stylesheet" href="CSS/login.css">
 	<title>SCAVANGE</title>
 </head>
 <body>
@@ -63,16 +63,17 @@
 <!--START YOUR CODES FROM THIS LINE----------------------------------------------------------------->
             <div class="recipeContent col-md-12">
         <div class="recipes"> <strong>Recipes</strong></div>
-      <div class="box"><span class="icon"><i class="fa fa-search"></i></span>
-      <input type="search" id="search" placeholder="Search..." />
-          <button onclick="myFunction()">Filter</button></div>
+     
             <div id="body">
-        <div id="left">
+                <table>
+                    
+                    <tr>
+                        <td> <div id="left">
             <div id="pic">
                 <img class="Picture" src="Images/sampleFood.jpg"></div>
             <div id="Star">★★★★★</div>
-           </div>
-            <div id="right">
+           </div></td>
+                        <td>          <div id="right">
         <div id="title">
         <strong>Title:</strong></div>
         <div id="author">
@@ -80,7 +81,12 @@
         <div id="random">
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div>
                  
-                </div></div></div>
+                </div></td>
+
+                            </tr>
+                </table>
+       
+  </div></div>
         
 <!--END----------------------------------------------------------------->
 <!--END----------------------------------------------------------------->
