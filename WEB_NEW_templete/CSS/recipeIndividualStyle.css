@@ -3,9 +3,41 @@
 	margin-top: 30px;
 }
 
+.headingBar {
+	color: orange;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+	font-size: 30px;
+}
+
+.title {
+	padding: 12px 0;
+	vertical-align: center;
+}
+
+.author {
+	padding: 12px 0;
+	vertical-align: center;
+}
+
+.rating {
+	padding: 10px 0;
+	text-align: right;
+	/*position: relative;
+	bottom: 5px;*/
+}
+
 .firstPicture {
 	text-align: center;
 	padding: 30px;
+}
+
+.description p {
+	font-size: 18px;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.4);
+	padding: 20px;
 }
 
 .topPicture {
@@ -15,6 +47,7 @@
 .recipeSubHeading {
 	color: orange;
 	font-weight: bold;
+	font-size: 30px;
 }
 
 .recipeIngredientList {
@@ -22,6 +55,8 @@
 	background-color: rgba(0, 0, 0, 0.4);
 	font-size: 18px;
 	margin-bottom: 20px;
+	padding-top: 10px;
+	padding-left: 0;
 }
 
 .recipeSteps {
@@ -31,6 +66,7 @@
 	padding: 20px;
 }
 
+/*CSS styling for each step images*/
 .stepImage {
 	float: right;
 	padding-bottom: 10px;
@@ -46,10 +82,12 @@
 	padding-top: 10px;
 }
 
+/*underline with orange only on the middle elements*/
 .recipeTable tr:not (:last-child ) {
 	border-bottom: 1px solid orange;
 }
 
+/*align all table element to top left corner*/
 .alignTop {
 	vertical-align: top;
 }

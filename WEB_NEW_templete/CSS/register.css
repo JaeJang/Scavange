@@ -1,5 +1,5 @@
 <<<<<<<
-HEAD /* registration field*/ 
+HEAD /* registration field*/
  =======
 	/*Register text input styling*/ >>>>>>>
 	e2729bf88c1e15e76f94acc4c74e066a802b50ea
@@ -15,9 +15,10 @@ fieldset {
 }
 
 legend {
-	font-size: 50px;
+	font-size: 36px;
 	color: orange;
 	font-weight: bold;
+  text-align: center;
 }
 
 .labeL {
@@ -26,13 +27,14 @@ legend {
 	clear: left;
 	text-align: right;
 	padding-right: 50px;
-	margin-top: 10px;
+	margin-top: 5px;
 	display: block;
+  font-size: 18px;
 }
 
 .jae_opc {
-	background-color: black;
-	opacity: 0.8;
+	background-color: rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
 	color: white;
 	padding: 5px;
 	padding-bottom: 20px;
@@ -40,7 +42,9 @@ legend {
 }
 
 input, textarea {
-	margin-top: 10px;
+	margin-top: 5px;
+  width: 60%;
+  font-size: 18px;
 }
 
 /*Input spaces*/
@@ -68,8 +72,7 @@ input, textarea {
 	color: black;
 	font-family: Georgia, "Times New Roman", serif;
 	width: 100px;
-	position: relative;
-	left: 200px;
+	text-align: center;
 	opacity: 1.0;
 }
 
@@ -83,4 +86,5 @@ input, textarea {
 	margin-bottom: -20px;
 	color: red;
 	font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
 }

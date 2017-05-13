@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="mainFunctionScript.js"></script>
 	<link rel="stylesheet" href="css/mainPage.css">
 	<link rel="stylesheet" href="css/testProj.css">
 	<link rel="stylesheet" href="css/login.css">
@@ -25,7 +26,7 @@
 					<li><a href="upload.html">Share</a></li>
 					<li><a href="aboutus.html">About Us</a></li>
 					<li><a href="#" id="myBtn">Login</a></li>
-					<li><a href="affilitatedPageWeb.html">Affiliateds</a></li>
+					<li><a href="affilitatedPageWeb.html">Affiliates</a></li>
 				</ul>
 				<div class="modal fade" id="myModal" role="dialog">
 					<div class="modal-dialog">
@@ -62,59 +63,33 @@
 		<div id="main">
 <!--START YOUR CODES FROM THIS LINE----------------------------------------------------------------->
 <!--START YOUR CODES FROM THIS LINE----------------------------------------------------------------->
- <div id=info>
-                <br><br>
-
-				 <div id="left"><input type="text" name="search" id="searchBar" style="width:600px; height:30px;" placeholder=" Enter your ingredients here..." onkeypress="return key(event)"></div>
-				 <div id= "right"><input type="submit" value="Enter" id="input" onclick="return addItem()" style="height: 35px; width:100px;"> </div>
-				  <div id="contain"><ul id="inglist"></div>
-
-				</ul>
-
-                <br><br>
-				<div id="middle"><input type="submit" value="Submit" id="recipe" style="width: 300px; height:100px;"></div>
-                <br><br>
-
-            </div>
-
+ 	<div id="contentBox">
+			<br><br>
+			<div class="formBox">
+				<form class="ingredientSearch">
+					<label id="ingtext" for="ingredientText">Enter your ingredients below:<br><br></label>
+					<input type="text" id="ingredientText" name="ingredientText">
+					<input type="button" id="addButton" name="addButton" value="Add" onclick="addIngredient()">
+				</form>
+				<br>
+				<label class="subheadingText">Your Current Ingredients:</label>
+				<br>
+				<form class="ingredientForm">
+					<textarea id="realList" class="ingredientListAlt" ></textarea>
+					<div id="masterList" class="ingredientList">
+						<!--<p id="myList"></p>-->
+					</div>
+					<div id="submitSection">
+						<input type="submit" id="submitButton" name="submitButton">
+					</div>
+				</form>
+			</div>
+		</div>
 <!--END----------------------------------------------------------------->
 <!--END----------------------------------------------------------------->
 <!--END----------------------------------------------------------------->
 <!--END----------------------------------------------------------------->
 		</div>
-	<script>
-	$(document).ready(function(){
-	    $("#myBtn").click(function(){
-	        $("#myModal").modal();
-	    });
-	});
-	
-	
-	/*List adding item*/
-	 function addItem(){
-        var li = document.createElement("LI");
-        var input = document.getElementById("searchBar");
-        li.innerHTML = input.value;
-        input.value = "";
-		
-	/*appends the list value to the list*/
-		if(!li.innerHTML == "")
-		document.getElementById("inglist").appendChild(li);
-
-	/* Deletes the list item*/
-	li.onclick = function() {
-	this.parentNode.removeChild(this);
-	}
-
-	}
-	
-	/* Key function submit on enter*/
-	function key(e){
-	if(e.keyCode == 13)
-		addItem();
-
-	}
-	</script>
 	<div id="footerContain">
 		<div id="footer">
 			<p> Copyright &copy; 2017 </p>
@@ -122,5 +97,13 @@
 	</div>
 </div>
 </div>
+
+<script>
+$(document).ready(function(){
+		$("#myBtn").click(function(){
+				$("#myModal").modal();
+		});
+});
+</script>
 </body>
 </html>

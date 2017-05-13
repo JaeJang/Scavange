@@ -1,3 +1,71 @@
+
+#contentBox {
+	margin: 20px;
+}
+#ingtext{color:white;
+	font-size:36px;
+	letter-spacing: 2px;
+	}
+
+.formBox {
+	
+	padding: 40px 20px;
+	font-size: 18px;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+.ingredientSearch {
+	font-weight: bold;
+}
+#ingredientText {
+	font-size: 18px;
+	width: 80%;
+}
+#addButton {
+	position: relative;
+	bottom: 3px;
+	font-size: 20px;
+	margin-top:2px;
+	width: 15%;
+	padding: 3px 5px;
+	/*background-color: rgba(0, 0, 0, 0.8);
+	color: orange;*/
+	background-color: orange;
+	color: white;
+	border: none;
+	font-family: "Courier New";
+	font-weight: bold;
+	float: right;
+	clear: both;
+}
+.subheadingText {
+	color: white;
+	font-size: 36px;
+	font-weight:bold;
+	letter-spacing: 2px;
+}
+.ingredientListAlt {
+	width: 100%;
+	display:none;
+}
+.ingredientList {
+	background-image: url("../Images/yellowPaper.jpg");
+	padding: 20px;
+	font-size: 10px;
+	color: black;
+}
+#submitSection {
+	text-align: center;
+}
+#submitButton {
+	font-size: 20px;
+	margin-top: 30px;
+	padding: 10px 20px;
+	border: none;
+	background-color: orange;
+	color: white;
+	font-weight:bold;
+	
+}
 #input {
 	background-color: orange;
 	border: 2px solid black;

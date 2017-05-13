@@ -14,13 +14,10 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<link href="CSS/upload.css" rel="stylesheet">
-		<link rel="stylesheet" href="CSS/login.css">
-
 	
 	<script type="text/javascript">
 		var counter = 1;
 
-			/*clears the value displayed for the particular element*/
 			function clearBar(id) {
 				document.getElementById(id).value = ""
 			}
@@ -30,21 +27,21 @@
 			
 				if(x != ""){
 
-					/*Initialize x*/
+					/*Initialize x image*/
 					var myImg = document.createElement("IMG");				
 					myImg.src="x.png";
 					
-					/*Give id*/
+					/*Give id to x image*/
 					myImg.id = "myImage" + counter; 
 					
-					/*Append cancel image/icon with input element and style it*/
+					/*Append image with input element*/
 					document.getElementById('steps').appendChild(myImg);
 					myImg.style.cssFloat = "right";
 					myImg.style.marginRight = "10px";
 
 					myImg.style.marginTop = "10px";
 				
-					/*Set function to remove item when image is clicked*/
+					/*Calls function to remove item when image is clicked*/
 					myImg.onclick = function(){removeInput(myImg.id)};
 
 
@@ -66,7 +63,6 @@
 
 					document.getElementById('steps').appendChild(newText);
 
-					/*Style the new text box*/
 					newText.style.resize = "none";
 					newText.style.width = "95%";
 					newText.rows = "1";
@@ -78,7 +74,9 @@
 
 					document.getElementById('steps').style.letterSpacing = "1px";
 					
-					/*Calls clearBar function to clear textbox*/
+					
+				
+					/*calls clearBar function to clear textbox*/
 					clearBar('step');
 					counter++
 				}
@@ -90,7 +88,7 @@
 				var parent = list.parentNode;
 				//removes step
 				parent.removeChild(list);
-				//removes the cancel image/icon
+				//removes 'x' image
 				parent.removeChild(document.getElementById(id))
 			}
 
@@ -111,43 +109,12 @@
 	<div id="navContain">
 		<div id="nav">
 			<ul>
-				<li><a href="mainPage.html">Home</a></li>
-				<li><a href="recipepage.html">Recipes</a></li>
-				<li><a href="#">Share</a></li>
-				<li><a href="aboutus.html">About Us</a></li>
-					<li><a href="#" id="myBtn">Login</a></li>
-				<li><a href="affiliatedPageWeb.html">Affiliates</a></li>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="recipe.html">Recipes</a></li>
+				<li><a href="share.html">Share</a></li>
+				<li><a href="about.html">About Us</a></li>
+				<li><a href="login.html">Login</a></li>
 			</ul>
-			<div class="modal fade" id="myModal" role="dialog">
-					<div class="modal-dialog">
-
-						<!-- Modal content-->
-						<div class="modal-content" id="login_jae">
-							<div class="modal-header" style="padding:35px 50px;">
-								<button type="button" class="close" data-dismiss="modal">&times;</button>
-								<h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
-							</div>
-							<div class="modal-body" style="padding:40px 50px;">
-								<form role="form">
-									<div class="form-group">
-										<label for="usrname" style="letter-spacing: 1px;"><span class="glyphicon glyphicon-user"></span> Username</label>
-										<input type="text" class="form-control" id="usrname" placeholder="Enter email">
-									</div>
-									<div class="form-group">
-										<label for="psw" style="letter-spacing: 1px;"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
-										<input type="text" class="form-control" id="psw" placeholder="Enter password">
-									</div>
-
-										<button type="submit" class="btn btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
-								</form>
-							</div>
-							<div class="modal-footer">
-								<button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
-								<p style="letter-spacing: 1px;">Not a member?<a href="register_form.html" class="jae_a" style="color:blue; text-align:right;">Sign Up</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
 		</div>
 
 	<div id="main">
@@ -204,11 +171,8 @@
 		
 	<form class = "formContain">
 
-		<!--<div id="steps">
-			<input type="text" name="step" id="step" placeholder="Press '+' after each step"><br><br>
-		</div>-->
 		<div id="steps">
-			<textarea name="step" id="step" class="direction" rows="1" placeholder="Press '+' after each step"></textarea>
+			<textarea name="step" id="step" class="direction" rows="1" placeholder="Press '+' after each step""></textarea>
 		</div>
 
 	</form>
@@ -228,14 +192,6 @@
 
 
 </div>
-
-<script>
-	$(document).ready(function(){
-	    $("#myBtn").click(function(){
-	        $("#myModal").modal();
-	    });
-	});
-	</script>
 </body>
 
 
