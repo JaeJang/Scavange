@@ -2,12 +2,14 @@
 	margin: 0;
 	padding: 0;
 }
+
 html {
 	/*height: 100%;*/
 	min-height: 100%;
 	box-sizing: border-box;
 	font-size: 16px;
 }
+
 body {
 	width: 100%;
 	/*height: 100%;*/
@@ -19,29 +21,35 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+
 h1 {
 	font-size: 56px;
 	opacity: 1;
 }
+
 .navIcon {
 	position: absolute;
 	left: 60px;
 	top: 35px;
 }
+
 .topBar {
 	background-color: rgba(0, 0, 0, 0.6);
 	padding-top: 60px;
 	padding-bottom: 60px;
 }
+
 .topBarTitle {
 	color: orange;
 	text-align: center;
 	letter-spacing: 0.5em;
 }
+
 .navBar {
 	position: absolute;
 	/*top: 0;*/
 }
+
 .navBarList {
 	display: inline-block;
 	color: orange;
@@ -49,6 +57,7 @@ h1 {
 	text-align: center;
 	font-weight: bold;
 }
+
 .navBarPlaceholder {
 	height: 101.6px;
 	line-height: 101.6px;
@@ -56,6 +65,7 @@ h1 {
 	padding-right: 10px;
 	padding-left: 10px;
 }
+
 .navBarItem {
 	background-color: rgba(86, 79, 71, 1);
 	height: 200px;
@@ -67,29 +77,35 @@ h1 {
 	padding-right: 10px;
 	padding-left: 10px;
 }
+
 .navLink {
 	text-decoration: none;
 	color: white;
 }
-.navBarItem:active{
+
+.navBarItem:active {
 	background-color: rgba(255, 0, 0, 1);
 }
+
 .navBarListAlt {
 	text-align: center;
 	padding: 10px;
 	background-color: black;
 	opacity: 0.5;
 }
+
 .navBarItemAlt {
 	display: inline;
 	color: white;
 	font-size: 28px;
 	padding: 10px 20px;
 }
+
 .visible {
 	visibility: visible;
 	display: block;
 }
+
 .hidden {
 	visibility: hidden;
 	display: none;
