@@ -5,7 +5,7 @@
 .formBox {
 	border-radius: 25px;
 	border: 3px solid orange;
-	padding: 40px 20px;
+	padding: 40px 40px;
 	font-size: 36px;
 	background-color: rgba(0, 0, 0, 0.6);
 }
@@ -18,20 +18,23 @@
 #ingredientText {
 	font-size: 36px;
 	width: 80%;
+	border-radius: 15px;
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 #addButton {
 	position: relative;
-	bottom: 3px;
+	bottom: -1px;
 	font-size: 36px;
 	width: 15%;
-	padding: 3px 5px;
+	padding: 12px 5px 5px 5px;
 	background-color: orange;
 	color: white;
 	border: none;
-	font-family: "Courier New" Arial sans-serif;
 	float: right;
 	clear: both;
+	border-radius: 20px;
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 .subheadingText {
@@ -44,10 +47,12 @@
 }
 
 .ingredientList {
-	background-image: url("../Images/yellowPaper.jpg");
+	/*background-image: url("../Images/yellowPaper.jpg");*/
+	background-color: #fff2d7;
 	padding: 20px;
 	font-size: 36px;
 	color: black;
+	border-radius: 15px;
 }
 
 #submitSection {
@@ -57,8 +62,10 @@
 #submitButton {
 	font-size: 36px;
 	margin-top: 30px;
-	padding: 10px;
+	padding: 12px 15px 7px 15px;
 	border: none;
 	background-color: orange;
 	color: white;
+	border-radius: 20px;
+	font-family: 'Josefin Sans', sans-serif;
 }

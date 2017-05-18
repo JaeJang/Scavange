@@ -23,6 +23,68 @@
 				document.getElementById(id).value = ""
 			}
 
+			//Add ingredients to list
+			function addIngred(){
+			var y = document.getElementById("ingList").value;
+
+				if(y != ""){
+
+					/*Initialize x image*/
+					var myImages = document.createElement("IMG");
+					myImages.src="Images/x.png";
+
+					/*Give id to x image*/
+					myImages.id = "myImage2" + counter;
+
+					/*Append image with input element*/
+					document.getElementById('ingredientList').appendChild(myImages);
+					myImages.style.cssFloat = "right";
+					myImages.style.marginRight = "10px";
+
+					myImages.style.marginTop = "10px";
+
+					/*Calls function to remove item when image is clicked*/
+					myImages.onclick = function(){removeInput(myImages.id)};
+
+
+
+					var newDiv2 = document.createElement('div');
+					var id2 = "newLine2" + counter;
+
+					/*assign newDiv2 an id*/
+					newDiv2.id = id2;
+
+					/*Appends input element with new div*/
+					document.getElementById('ingredientList').appendChild(newDiv2);
+
+
+					/*make value of textbox innerHTML*/
+					newText2 = document.createElement('textarea');
+					newText2.id = "newTextArea2" + counter;
+					newText2.value = y;
+
+					document.getElementById('ingredientList').appendChild(newText2);
+
+					newText2.style.resize = "none";
+					newText2.style.width = "95%";
+					newText2.rows = "1";
+					newText2.style.border = "1px solid black";
+					newText2.style.borderRadius = "25px";
+					newText2.style.padding = "8px 0 8px 5px";
+					newText2.style.fontSize = "18px";
+					newText2.style.fontWeight = 100;
+
+					document.getElementById('ingredientList').style.letterSpacing = "1px";
+
+
+
+					/*calls clearBar function to clear textbox*/
+					clearBar('ingList');
+					counter++
+				}
+			}
+
+			//Add directions to list
 			function addInput(){
 			var x = document.getElementById("step").value;
 
@@ -185,15 +247,31 @@
 		<div id="description" class="col-md-6">
 			<textarea name="" class="describe" cols="15" rows="10" placeholder="Short description of recipe"></textarea>
 		</div>
-
 		</div>
 
 	    <div id=info class="col-md-12">
             <label id="ingredient" class="unbold">
                 <span style="color: white"><br>Ingredients:</span>
             </label><br><br>
+        </div>
+
+        <!--
 				<textarea name="" class="ingText" cols="30" rows="10" placeholder="List your ingredients here"></textarea>
                 <br>
+		</div>-->
+
+		<form class="ingredContain">
+
+		<div id="ingredientList">
+			<textarea name="ingList" id="ingList" class="ingredientArea" rows="1"
+			placeholder="Press '+' after each step"></textarea>
+			</div>
+
+		</form>
+
+		<div id="addIng">
+			<br>
+			<input type="image" src="Images/add.png" alt="Add Ingredients" height="50" width="50" onclick="addIngred()">
 		</div>
 
 		<div id="stepLabel">
@@ -202,17 +280,17 @@
             </label><br><br>
 		</div>
 
-	<form class = "formContain">
+		<form class = "formContain">
 
 		<div id="steps">
 			<textarea name="step" id="step" class="direction" rows="1" placeholder="Press '+' after each step"></textarea>
 		</div>
 
-	</form>
+		</form>
 
 		<div id="add">
 			<br>
-			<input type="image" src="Images/add.png" alt="Add Step" height="50" width="50" onClick="addInput()">
+			<input type="image" src="Images/add.png" alt="Add Step" height="50" width="50" onclick="addInput()">
 		</div>
 
 		<div id="submit">

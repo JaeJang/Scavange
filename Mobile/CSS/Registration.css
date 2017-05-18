@@ -2,7 +2,6 @@ background-color: rgba(0, 0, 0, 0.5);/*Main Subheading*/
 h2 {
 	color: white;
 	text-align: center;
-	font-weight: bold;
 }
 
 /*Size of text inputs*/
@@ -10,10 +9,12 @@ h2 {
 	width: 400px;
 	height: 80px;
 	font-size: 1.5em;
+	border-radius: 25px;
 }
 
 label {
 	color: white;
+	font-size: 46px;
 }
 
 .field {
@@ -35,9 +36,12 @@ label {
 #submit0 {
 	width: 300px;
 	height: 100px;
+	color: white;
 	background-color: orange;
 	border: 1px solid black;
-	font-size: 30px;
+	border-radius: 25px;
+	font-size: 45px;
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 /*Form input allignment*/
@@ -54,6 +58,10 @@ label {
 
 .formBox {
 	text-align: center;
+}
+
+.formBox input[type=text]{
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 .error {

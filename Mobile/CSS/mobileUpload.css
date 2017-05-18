@@ -2,40 +2,52 @@
 	margin: 0;
 	padding: 0;
 }
+
 html {
+	min-height: 100%;
+	box-sizing: border-box;
 	font-size: 16px;
 }
+
 body {
 	width: 100%;
+	min-height: 100%;
+	box-sizing: border-box;
 	margin: auto;
-	font-family: "Courier New";
+	font-family: 'Josefin Sans', sans-serif;
 	background-image: url("../Images/food.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+
 h1 {
 	font-size: 56px;
 	opacity: 1;
 }
+
 .navIcon {
 	position: absolute;
 	left: 60px;
 	top: 35px;
 }
+
 .topBar {
 	background-color: rgba(0, 0, 0, 0.6);
 	padding-top: 60px;
 	padding-bottom: 60px;
 }
+
 .topBarTitle {
 	color: orange;
 	text-align: center;
 	letter-spacing: 0.5em;
 }
+
 .navBar {
 	position: absolute;
 	/*top: 0;*/
 }
+
 .navBarList {
 	display: inline-block;
 	color: orange;
@@ -43,6 +55,7 @@ h1 {
 	text-align: center;
 	font-weight: bold;
 }
+
 .navBarPlaceholder {
 	height: 101.6px;
 	line-height: 101.6px;
@@ -50,6 +63,7 @@ h1 {
 	padding-right: 10px;
 	padding-left: 10px;
 }
+
 .navBarItem {
 	background-color: rgba(86, 79, 71, 1);
 	height: 200px;
@@ -60,29 +74,35 @@ h1 {
 	padding-right: 10px;
 	padding-left: 10px;
 }
+
 .navLink {
 	text-decoration: none;
 	color: white;
 }
+
 .navBarItem:active{
 	background-color: rgba(255, 0, 0, 1);
 }
+
 .navBarListAlt {
 	text-align: center;
 	padding: 10px;
 	background-color: black;
 	opacity: 0.5;
 }
+
 .navBarItemAlt {
 	display: inline;
 	color: white;
 	font-size: 28px;
 	padding: 10px 20px;
 }
+
 .visible {
 	visibility: visible;
 	display: block;
 }
+
 .hidden {
 	visibility: hidden;
 	display: none;
@@ -93,14 +113,14 @@ h1 {
 	margin: 20px;
 	border-radius: 25px;
 	border: 3px solid orange;
-	padding: 40px 20px;
-	font-size: 40px;
+	padding: 40px 40px;
 	background-color: rgba(0, 0, 0, 0.6);
 }
 
 #create {
 	text-align: center;
 	font-weight: bold;
+	font-size: 52px;
 } 
 
 #nameLabel{
@@ -109,7 +129,9 @@ h1 {
 		
 #name input[type=text]{
 	border: 1px solid black;
-	font-size: 18px;
+	border-radius: 25px;
+	font-size: 20px;
+	font-family: 'Josefin Sans', sans-serif;
 	width: 50%;
 	height: 30px;
 }
@@ -121,29 +143,42 @@ h1 {
 #placeholder input[type=file]{
 	margin-left: 20%;
 	color: white;
-	padding: 0;
-	font-size: 18px;
+	padding: 20px;
+	font-size: 20px;
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 .describe {
 	resize: none;
 	width: 100%; height:100px;
 	border: 1px solid black;
-	padding:8px 0 8px 5px;
-	font-size: 18px;
+	padding:10px 0 8px 0px;
+	font-size: 20px;
 	font-weight: 100;
+	border-radius: 25px;
 
 }
+
+#description textarea{
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.describe::placeholder{
+	font-size: 20px;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
 /*ingredients text box*/
 #info{
 	font-size:36px;
 }
 
-#info input[type=text] {
+/*#info input[type=text] {
 	width: 100%; height:170px;
 	border: 1px solid black;
 }
-/*ingredients text area*/
+
+ingredients text area
 .ingText {
 	resize: none;
 	width: 100%; height:170px;
@@ -151,18 +186,62 @@ h1 {
 	padding:8px 0 8px 5px;
 	font-size: 18px;
 	font-weight: 100;
+}*/
+
+.ingredientArea{resize: none;
+	  width: 100%;	
+	  border: 1px solid black;
+	  border-radius: 25px;
+	  padding:10px 0 8px 0;
+	  font-size: 20px;
+	  font-weight: 100;
 }
+
+#ingredientList textarea{
+	font-family: 'Josefin Sans', sans-serif;
+	background-color: #fff2d7;
+}
+
+.ingredientArea::placeholder{
+	height: 18px;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+#addIng{text-align: center;}
 
 #stepLabel{
 	font-size: 36px;
 }
 
+.direction{resize: none;
+	  width: 100%;	
+	  border: 1px solid black;
+	  border-radius: 25px;
+	  padding:10px 0 8px 0;
+	  font-size: 20px;
+	  font-weight: 100;
+}
+
+#steps textarea{
+	font-family: 'Josefin Sans', sans-serif;
+	background-color: #fff2d7;
+}
+
+.direction::placeholder{
+	height: 18px;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Add '+' button*/
+#add {text-align: center;}
+
 #submit input[type=submit] {
 	margin-top: 30px;
-	padding: 10px;
+	padding: 15px;
 	font-size: 36px;
 	border: none;
+	border-radius: 25px;
 	background-color: orange;
 	color: white;
-	font-family: "Courier New";
+	font-family: 'Josefin Sans', sans-serif;
 }

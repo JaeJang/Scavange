@@ -3,8 +3,11 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>SCAVANGE</title>
+		<link rel="stylesheet" href="CSS/backbone.css">
 		<link rel="stylesheet" href="CSS/mobileUpload.css">
+		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 		<script src="Javascript/navscripts.js"></script>
+		<script src="Javascript/mobileUpload.js"></script>
 		<!--<script src="Javascript/multiOnLoadEvent.js"></script>-->
 	</head>
 	<body>
@@ -19,7 +22,7 @@
 		<div id="navigationBar" class="navBar hidden">
 			<ul class="navBarList">
 				<a class="navLink" href="mainFunctionPage.html"><li class="navBarItem">Home</li></a>
-				<a class="navLink" href="mobile_recipe.html"><li class="navBarItem">Recipes</li></a>
+				<a class="navLink" href="mobile_recipe2.html"><li class="navBarItem">Recipes</li></a>
 				<a class="navLink" href="mobileUpload.html"><li class="navBarItem">Share</li></a>
 				<a class="navLink" href="mobile_login.html"><li class="navBarItem">Login</li></a>
 				<a class="navLink" href="mobile_aboutus.html"><li class="navBarItem">About Us</li></a>
@@ -37,19 +40,18 @@
 			</ul>
 		</div>
 
-
+	<br><br>
 	<div id="main">
 
 		<div id="create">
 			<label id="recCreate">
-                <span style="color: orange"><br>Recipe Creation</span>
-            </label>
+              <span style="color: orange">Recipe Creation</span>
 		</div>
 
 		<div id="nameLabel">
 			<label id="recLabel" class="unbold">
                 <span style="color: white"><br>Recipe Name</span>
-            </label><br>
+            </label><br><br>
 		</div>
 
 		<div id="name">
@@ -74,12 +76,26 @@
 
 		</div>
 
-	    <div id=info>
+	    <div id="info">
             <label id="ingredient">
                 <span style="color: white"><br>Ingredients:</span>
             </label><br><br>
-				<textarea name="" class="ingText" cols="30" rows="10" placeholder="List your ingredients here"></textarea>
-                <br>
+				<!--<textarea name="" class="ingText" cols="30" rows="10" placeholder="List your ingredients here"></textarea>
+                <br>-->
+		</div>
+
+		<form class="ingredContain">
+
+		<div id="ingredientList">
+			<textarea name="ingList" id="ingList" class="ingredientArea" rows="1"
+			placeholder="Press '+' after each step"></textarea>
+			</div>
+
+		</form>
+
+		<div id="addIng">
+			<br>
+			<input type="image" src="Images/add.png" alt="Add Ingredients" height="50" width="50" onclick="addIngred()">
 		</div>
 
 		<div id="stepLabel">
@@ -88,9 +104,22 @@
             </label><br><br>
 		</div>
 
+		<form class = "formContain">
+
 		<div id="steps">
-			<textarea name="step" class="ingText" placeholder="List the steps"></textarea>
+			<textarea name="step" id="step" class="direction" rows="1" placeholder="Press '+' after each step"></textarea>
 		</div>
+
+		</form>
+
+		<div id="add">
+			<br>
+			<input type="image" src="Images/add.png" alt="Add Step" height="50" width="50" onclick="addInput()">
+		</div>
+
+		<!--<div id="steps">
+			<textarea name="step" class="ingText" placeholder="List the steps"></textarea>
+		</div>-->
 
 		<div id="submit">
             <input type="submit" value="Finish">
