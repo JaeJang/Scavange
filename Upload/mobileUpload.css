@@ -3,12 +3,22 @@
 	padding: 0;
 }
 html {
+<<<<<<< HEAD
+=======
+	/*height: 100%;*/
+>>>>>>> caroleBranch
 	font-size: 16px;
 }
 body {
 	width: 100%;
+<<<<<<< HEAD
 	margin: auto;
 	font-family: "Courier New", Arial, Sans-Serif;
+=======
+	/*height: 100%;*/
+	margin: auto;
+	font-family: "Courier New";
+>>>>>>> caroleBranch
 	background-image: url("food.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -56,6 +66,10 @@ h1 {
 	width: 200px;
 	line-height: 200px;
 	vertical-align: middle;
+<<<<<<< HEAD
+=======
+	/*margin-top: 1px;*/
+>>>>>>> caroleBranch
 	border-top: 1px solid white;
 	padding-right: 10px;
 	padding-left: 10px;
@@ -133,7 +147,11 @@ h1 {
 	font-weight: 100;
 
 }
+<<<<<<< HEAD
 /*ingredients text box*/
+=======
+
+>>>>>>> caroleBranch
 #info{
 	font-size:36px;
 }
@@ -142,7 +160,11 @@ h1 {
 	width: 100%; height:170px;
 	border: 1px solid black;
 }
+<<<<<<< HEAD
 /*ingredients text area*/
+=======
+
+>>>>>>> caroleBranch
 .ingText {
 	resize: none;
 	width: 100%; height:170px;
@@ -163,5 +185,8 @@ h1 {
 	border: none;
 	background-color: orange;
 	color: white;
+<<<<<<< HEAD
 	font-family: "Courier New", Arial, Sans-Serif;
+=======
+>>>>>>> caroleBranch
 }
