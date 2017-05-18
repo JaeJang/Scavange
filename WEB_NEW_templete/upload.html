@@ -61,6 +61,7 @@
 					newText = document.createElement('textarea');
 					newText.id = "newTextArea" + counter;
 					newText.value = x;
+					newText.name="direction" + counter;
 
 					document.getElementById('steps').appendChild(newText);
 
@@ -157,7 +158,7 @@
                 <span style="color: orange"><br>&nbsp;Recipe Creation</span>
             </label>
 		</div>
-
+		<form class = "formContain">
 		<div id="nameLabel" class="unbold">
 			<label id="recLabel" class="unbold">
                 <span style="color: white"><br>Recipe Name</span>
@@ -202,21 +203,21 @@
             </label><br><br>
 		</div>
 
-	<form class = "formContain">
+
 
 		<div id="steps">
 			<textarea name="step" id="step" class="direction" rows="1" placeholder="Press '+' after each step"></textarea>
 		</div>
 
-	</form>
 
 		<div id="add">
 			<br>
-			<input type="image" src="Images/add.png" alt="Add Step" height="50" width="50" onClick="addInput()">
+			<img src="Images/add.png" alt="Add Step" height="50" width="50" onClick="addInput()">
 		</div>
 
 		<div id="submit">
             <input type="submit" value="Finish">
+		</form>
         </div>
 
 	</div>
