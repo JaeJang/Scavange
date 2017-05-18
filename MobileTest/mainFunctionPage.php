@@ -10,6 +10,10 @@ session_start();
 		<title>SCAVANGE TEMPLATE</title>
 		<link rel="stylesheet" href="CSS/backbone.css">
 		<link rel="stylesheet" href="CSS/mainFunctionStyle.css">
+		<link rel="stylesheet" href="CSS/loadingStyle.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+		<script src="Javascript/loadingScript.js"></script>
 		<script src="Javascript/navscripts.js"></script>
 		<script src="Javascript/mainFunctionScript.js"></script>
 		<script src="Javascript/multiOnLoadEvent.js"></script>
@@ -80,4 +84,6 @@ session_start();
 			</div>
 		</div>
 	</body>
+	<div class="se-pre-con">
+	</div>
 </html>
