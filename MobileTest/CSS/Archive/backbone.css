@@ -16,12 +16,10 @@ body {
 	min-height: 100%;
 	box-sizing: border-box;
 	margin: auto;
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: "Courier New";
 	background-image: url("../Images/food.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	letter-spacing: 0.2em;
-	border-radius: 25px;
 }
 
 h1 {
@@ -49,7 +47,6 @@ h1 {
 
 .navBar {
 	position: absolute;
-	z-index: 1;
 	/*top: 0;*/
 }
 
@@ -84,7 +81,6 @@ h1 {
 .navLink {
 	text-decoration: none;
 	color: white;
-	z-index: 1;
 }
 
 .navBarItem:active {

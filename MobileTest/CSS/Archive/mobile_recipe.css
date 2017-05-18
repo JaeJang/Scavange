@@ -1,23 +1,26 @@
 #rightcol0 {
+	display: inline-block;
 	float: left;
-	margin-left: 80px;
+	width: 40%;
 }
 
 #leftcol0 {
-	float: left;
-	margin-left: 90px;
+	display: inline-block;
+	float: right;
+	width: 50%;
+	margin-right: 5%;
 }
 
 /* Size for icons */
 .img1 {
-	width: 200px;
+	width: 100%;
 	height: 200px;
 }
 
 /* The description boxes */
 .content {
-	width: 470px;
-	height: 250px;
+	width: 100%;
+	height: 300px;
 	overflow: auto;
 	font-size: 30px;
 	color: white;
@@ -32,11 +35,11 @@
 	font-size: 36px;
 	margin-top: 50px;
 	background-color: rgba(0, 0, 0, 0.6);
-	height: 1400px;
+	box-sizing: border-box;
 }
 
 /* The Main headings */
-h1 {
+h2 {
 	color: orange;
 	text-align: center;
 }
@@ -53,4 +56,31 @@ html {
 
 body {
 	box-sizing: border-box
+}
+
+#star{color:orange;}
+
+#recipeList {
+	width: 100%;
+	color: white;
+}
+
+#recipeList tr {
+	height: 20px;
+	overflow: scroll;
+}
+
+#recipeList td {
+	width: 50%;
+	vertical-align: top;
+	text-align: left;
+}
+
+.recipeDescription {
+	overflow: scroll;
+	height: 250px;
+}
+
+#recipeList td:nth-of-type(even) {
+	padding-left: 20px;
 }
