@@ -109,7 +109,7 @@ $num=1;
 					<td class="recipeTitle">Title: <?php echo $row['title']; ?></td>
 					<?php
 					$uid = $row['user_id'];
-					$sql_userT = "SELECT username FROM usersT WHERE user_id = '$uid'";
+					$sql_userT = "SELECT username FROM userT WHERE user_id = '$uid'";
 					$result_userT = mysqli_query($conn, $sql_userT);
 					$row_user = mysqli_fetch_assoc($result_userT);
 					?>
