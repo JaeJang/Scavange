@@ -74,7 +74,7 @@ session_start();
 				<br>
 				<h4 class="subheadingText">Your Current Ingredients:</h4>
 				<br>
-				<form class="ingredientForm" action="" method="post">
+				<form class="ingredientForm" action="mobile_recipe_search.php" method="post">
 					<textarea id="realList" class="ingredientListAlt" name="leftover"></textarea>
 					<div id="masterList" class="ingredientList">
 						<!--<p id="myList"></p>-->
