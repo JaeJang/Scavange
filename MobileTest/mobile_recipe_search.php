@@ -31,7 +31,7 @@ for($x=1; $x < $num+1; $x++){
   while($row = mysqli_fetch_assoc($result2)){
 
     for($y=0; $y< $num_ingre; $y++){
-      if($left2[$y] == $row['ingredient']){
+      if(strcasecmp($left2[$y],$row['ingredient'])){
         $count++;
       }
     }
