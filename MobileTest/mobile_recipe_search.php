@@ -60,6 +60,7 @@ $num=1;
 		<link rel="stylesheet" href="CSS/backbone.css">
 		<link rel="stylesheet" href="CSS/mainFunctionStyle.css">
 		<link rel="stylesheet" href="CSS/mobile_recipe2.css">
+    <link rel="stylesheet" href="CSS/mobileRecipeIndividualStyle.css">
 		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 		<!--Javascript-->
 		<!--<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
@@ -114,35 +115,11 @@ $num=1;
 			</ul>
 		</div>
 		<div id="contentBox">
+    <?php if(empty($_GET['id'])){ ?>
 		<div class="box">
 		<h2>Recipes</h2><br>
 			<table id="recipeList">
-				<!--<tr>
-					<td class="recipeImage"><img src="Images/sampleFood.jpg" class="img1"></td>
-					<td rowspan="2" class="recipeInfo">
-						<div class="recipeDescription">
-							Title: <br>
-							Author: <br><br>
-							Refrigedate is a handy web app that is targeted mainly at families, those with roommates, or anyone that shares a fridge. Refrigedate keeps track of everyones leftovers that are in the fridge and shows what everything is, when it's from, and who it belongs to.
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td class="recipeRating">★★★★★</td>
-				</tr>
-				<tr>
-					<td class="recipeImage"><img src="Images/sampleFood.jpg" class="img1"></td>
-					<td rowspan="2" class="recipeInfo">
-						<div class="recipeDescription">
-							Title: <br>
-							Author: <br><br>
-							Refrigedate is a handy web app that is targeted mainly at families, those with roommates, or anyone that shares a fridge. Refrigedate keeps track of everyones leftovers that are in the fridge and shows what everything is, when it's from, and who it belongs to.
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td class="recipeRating">★★★★★</td>
-				</tr>-->
+
 				<?php
 				 	//number of called recipes
 					$num_called_recipe=count($tmp_recipe_id)+count($tmp_recipe_id2)+count($tmp_recipe_id0);
@@ -162,7 +139,7 @@ $num=1;
 
 				 ?>
 				<tr class="recipeHeading">
-					<td class="recipeTitle">Title:<?php echo $row_search['title']; ?> </td>
+					<td class="recipeTitle">Title:<a href=<?php echo '"mobile_recipe_search.php?id='.$r_id.'">'; echo $row_search['title']; ?></a></td>
 					<td class="recipeAuthor">Author: <?php echo $row_userid['username']; ?></td>
 					<td class="recipeRating">★★★★★</td>
 				</tr>
@@ -192,7 +169,7 @@ $num=1;
 
 		 ?>
 		<tr class="recipeHeading">
-			<td class="recipeTitle">Title:<?php echo $row_search['title']; ?> </td>
+			<td class="recipeTitle">Title:<a href=<?php echo '"mobile_recipe_search.php?id='.$r_id.'">'; echo $row_search['title']; ?></a></td>
 			<td class="recipeAuthor">Author: <?php echo $row_userid['username']; ?></td>
 			<td class="recipeRating">★★★★★</td>
 		</tr>
@@ -222,7 +199,7 @@ $num=1;
 
 		?>
 		<tr class="recipeHeading">
-		<td class="recipeTitle">Title:<?php echo $row_search['title']; ?> </td>
+		<td class="recipeTitle">Title:<a href=<?php echo '"mobile_recipe_search.php?id='.$r_id.'">'; echo $row_search['title']; ?></a></td>
 		<td class="recipeAuthor">Author: <?php echo $row_userid['username']; ?></td>
 		<td class="recipeRating">★★★★★</td>
 		</tr>
@@ -240,22 +217,81 @@ $num=1;
 		$num1++;}
 		}
 				//} ?>
-				<!-- <tr class="recipeHeading">
-					<td class="recipeTitle">Title: </td>
-					<td class="recipeAuthor">Author: </td>
-					<td class="recipeRating">★★★★★</td>
-				</tr>
-				<tr>
-					<td id="recipeList2" class="recipePicture" colspan="3" onclick="flipper('2')">
-						<div class="front">
-						</div>
-						<div id="description1" class="back">
-							Refrigedate is a handy web app that is targeted mainly at families, those with roommates, or anyone that shares a fridge. Refrigedate keeps track of everyones leftovers that are in the fridge and shows what everything is, when it's from, and who it belongs to.
-						</div>
-					</td>
-				</tr> -->
+
 			</table>
 		</div>
+    <?php } else{ ?>
+      <?php
+        //individual recipe id
+        $recipe_id_indi = $_GET['id'];
+        $sql_indi = "SELECT * FROM recipesT WHERE recipe_id = '$recipe_id_indi'";
+        $result_indi = mysqli_query($conn, $sql_indi);
+        if(mysqli_num_rows($result_indi)==1){
+          $row_indi = mysqli_fetch_assoc($result_indi);
+        }
+
+       ?>
+      <br><br>
+        <div class="recipeBox">
+          <table id="recipeHeading" name="recipeHeading">
+            <tr>
+              <?php
+                $uid_indi = $row_indi['user_id'];
+                $sql_indi_un = "SELECT username FROM userT WHERE user_id = '$uid_indi'";
+                $result_indi_un = mysqli_query($conn, $sql_indi_un);
+                $row_un = mysqli_fetch_assoc($result_indi_un);
+               ?>
+              <td class="recipeTitle" name="recipeTitle">Title:<?php echo $row_indi['title']; ?></td>
+              <td class="recipeAuthor" name="recipeAuthor">Author:<?php echo $row_un['username']; ?></td>
+              <td class="recipeRating" name="recipeRating"><img src="Images/star.png"><img src="Images/star.png"><img src="Images/star.png"><img src="Images/star.png"><img src="Images/star.png"></td>
+            </tr>
+          </table>
+          <div class="recipePicture">
+            <img id="recipeMainPicture" src=<?php echo '"'.$row_indi['image_address'].'"'; ?>>
+          </div>
+          <h4 class="ingredientHeading">Ingredients:</h4>
+          <div class="ingredientBox">
+            <table id="ingredientTable" name="ingredientTable">
+              <?php
+                $sql_indi_ingre = "SELECT * FROM recipe_ingredientT WHERE recipe_id='$recipe_id_indi'";
+                $result_indi_ingre = mysqli_query($conn, $sql_indi_ingre);
+                $count=0;
+                //while($row_indi_ingre = mysqli_fetch_assoc($result_indi_ingre)){
+               ?>
+              <tr>
+                <td class="ingredientItem">- Item1</td>
+                <td class="ingredientItem">- Item2</td>
+              </tr>
+              <?php //} ?>
+              <tr>
+                <td class="ingredientItem">- Item3</td>
+                <td class="ingredientItem">- Item4</td>
+              </tr>
+              <tr>
+                <td class="ingredientItem">- Item5</td>
+                <td class="ingredientItem">- Item6</td>
+              </tr>
+            </table>
+          </div>
+          <h4 class="stepHeading">Directions:</h4>
+          <div class="stepBox">
+            <table id="stepTable" name="stepTable">
+              <?php
+                $sql_steps = "SELECT * FROM recipe_detailT WHERE recipe_id = '$recipe_id_indi'";
+                $result_steps = mysqli_query($conn, $sql_steps);
+
+                while($row_steps = mysqli_fetch_assoc($result_steps)){?>
+              <tr>
+                <td class="stepItem" style="color:white;"><?php echo $row_steps['detail']; ?></td>
+                <td class="stepPicture"><img src="Images/step1.jpg"></td>
+              </tr>
+              <?php } ?>
+
+            </table>
+          </div>
+        </div>
+
+      <?php } ?>
 		</div>
 
 
