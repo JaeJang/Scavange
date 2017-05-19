@@ -31,19 +31,19 @@ for($x=1; $x < $num+1; $x++){
   while($row = mysqli_fetch_assoc($result2)){
 
     for($y=0; $y< $num_ingre; $y++){
-      if(strcasecmp($left2[$y],$row['ingredient'])){
+      if(strcasecmp($left2[$y],$row['ingredient'])==0){
         $count++;
+        if($num_ingre >2){
+          if($count == $num_ingre){
+            $tmp_recipe_id[] = $x;
+          } else if($count >= 2 && $count < $num_ingre){
+            $tmp_recipe_id2[] = $x;
+          }
+        } else if($num_ingre > 0){
+          $tmp_recipe_id0[] = $x;
+        }
       }
     }
-  }
-  if($num_ingre >2){
-    if($count == $num_ingre){
-      $tmp_recipe_id[] = $x;
-    } else if($count >= 2 && $count < $num_ingre){
-      $tmp_recipe_id2[] = $x;
-    }
-  } else if($num_ingre > 0){
-    $tmp_recipe_id0[] = $x;
   }
 }
 
