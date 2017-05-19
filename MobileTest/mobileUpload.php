@@ -63,7 +63,7 @@ session_start();
 			<div id="create">
 				<span style="color: orange">Recipe Creation</span>
 			</div>
-		<form action="" method="post">
+		<form action="newRecipe.php" method="post" enctype="multipart/form-data">
 			<div id="nameLabel">
 				<label id="recLabel" class="unbold" for="name"><span style="color: white"><br>Recipe Name</span></label>
 				<br><br>
