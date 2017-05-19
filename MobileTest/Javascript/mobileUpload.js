@@ -43,6 +43,7 @@ var counter = 1;
 				newText2 = document.createElement('textarea');
 				newText2.id = "newTextArea2" + counter;
 				newText2.value = y;
+				newText2.name="newIngredient" + counter;
 
 				document.getElementById('ingredientList').appendChild(newText2);
 
@@ -104,6 +105,7 @@ var counter = 1;
 				newText = document.createElement('textarea');
 				newText.id = "newTextArea" + counter;
 				newText.value = x;
+				newText.name="newSteps" + counter;
 
 				document.getElementById('steps').appendChild(newText);
 
