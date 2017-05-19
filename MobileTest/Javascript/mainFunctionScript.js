@@ -17,20 +17,23 @@ function addIngredient() {
 		foodList.id = "myList" + counter
 		foodList.style.borderBottom = "1px solid black"
 		foodList.style.overflow = "scroll"
+		foodList.style.paddingTop = "20px";
 
 		/* Create text and add text to paragraph */
 		var node = document.createTextNode(item)
 		foodList.appendChild(node)
-		foodList.style.fontSize = "40px"
+		foodList.style.fontSize = "52px"
 
 		/* Initialize x image */
 		var img = document.createElement('img')
 		img.src = "./Images/cancel.png"
 		/* foodList.appendChild(img) */
 		img.id = "myImage" + counter
+		img.style.height = "50px";
+		img.style.width = "50px";
 		img.style.cssFloat = "right"
 		img.style.clear = "both"
-		img.style.marginTop = "8px"
+		img.style.marginTop = "20px"
 		img.onclick = function() {
 			removeIngredient(img.id)
 		}
@@ -65,24 +68,4 @@ function removeIngredient(id) {
 	var parent = removeList.parentNode
 	parent.removeChild(removeList)
 	parent.removeChild(removeImage)
-
-	/*
-	 * document.getElementById(id).style.display = "none"
-	 * document.getElementById(paragraphId).style.display = "none"
-	 */
-
-	// regex's not necessary!
-	/* var regex = new RegExp(removeItem) */
-
-	// old parse string function. No longer needed
-	/*
-	 * var tempList = realList.value.split(",") var i = 0 while (i <
-	 * tempList.length) { if (tempList[i] == removeItem) { tempList[i] = "" i =
-	 * tempList.length } else { i++ } }
-	 * 
-	 * var myList = "" for (var j = 0; j < tempList.length; j++) { if
-	 * (tempList[i] != "") { myList += tempList[j] + "," } }
-	 * 
-	 * realList.value = myList;
-	 */
 }

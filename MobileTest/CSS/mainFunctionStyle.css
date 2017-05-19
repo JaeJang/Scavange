@@ -16,12 +16,12 @@
 }
 
 #ingredientText {
-	font-size: 36px;
-	width: 80%;
+	font-size: 52px;
+	width: 89%;
 	height: 50px;
 	border-radius: 15px;
 	font-family: 'Josefin Sans', sans-serif;
-	padding: 10px 0;
+	padding: 20px 0;
 }
 
 #addButton {
@@ -68,8 +68,8 @@
 
 #submitButton {
 	font-size: 36px;
-	margin-top: 30px;
-	padding: 12px 15px 7px 15px;
+	margin-top: 50px;
+	padding: 24px 30px 14px 30px;
 	border: none;
 	background-color: orange;
 	color: white;
