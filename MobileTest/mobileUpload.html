@@ -59,18 +59,19 @@
 		</div>
 
 		<div id="uploadLabel">
+			<br>
 			<label id="upLabel" class="unbold">
-                <span style="color: white"><br>Upload a picture:</span>
-            </label>
+                <span style="color: white">Upload a picture:</span><br>
+            </label><br>
+            <input id="myPicture" type="file" name="pic">
 		</div>
-
 		<div id="placeholder">
 		<br>
-			<div id="myPicture">
+			<!--<div id="myPicture">
 			<input type="file" name="pic"><br><br>
-			</div>
+			</div>-->
 
-		<div id="description">
+		<div id="description"><br>
 			<textarea name="describe" class="describe" cols="30" rows="10" placeholder="Short description of recipe"></textarea>
 		</div>
 
@@ -89,14 +90,15 @@
 		<div id="ingredientList">
 			<textarea name="ingList" id="ingList" class="ingredientArea" rows="1"
 			placeholder="Press '+' after each step"></textarea>
-			</div>
+			<img src="Images/add.png" alt="Add Ingredients" height="70" width="70" class="addOn" onclick="addIngred()">
+		</div>
 
 		</form>
 
-		<div id="addIng">
+		<!--<div id="addIng">
 			<br>
-			<input type="image" src="Images/add.png" alt="Add Ingredients" height="50" width="50" onclick="addIngred()">
-		</div>
+			<input type="image" src="Images/add.png" alt="Add Ingredients" height="70" width="70" onclick="addIngred()">
+		</div>-->
 
 		<div id="stepLabel">
 			<label id="recStep" class="unbold">
@@ -108,14 +110,15 @@
 
 		<div id="steps">
 			<textarea name="step" id="step" class="direction" rows="1" placeholder="Press '+' after each step"></textarea>
+			<img src="Images/add.png" alt="Add Ingredients" height="70" width="70" class="addOn" onclick="addInput()">
 		</div>
-
 		</form>
+		
 
-		<div id="add">
+		<!--<div id="add">
 			<br>
-			<input type="image" src="Images/add.png" alt="Add Step" height="50" width="50" onclick="addInput()">
-		</div>
+			<input type="image" src="Images/add.png" alt="Add Step" height="70" width="70" onclick="addInput()">
+		</div>-->
 
 		<!--<div id="steps">
 			<textarea name="step" class="ingText" placeholder="List the steps"></textarea>

@@ -109,7 +109,7 @@ h1 {
 }
 
 #main{
-	text-align: center;
+	/*text-align: center;*/
 	margin: 20px;
 	border-radius: 25px;
 	border: 3px solid orange;
@@ -138,20 +138,26 @@ h1 {
 }
 
 #uploadLabel{
-	font-size: 36px;
+	font-size: 52px;
+	display: inline-block;
 }
 
-#placeholder input[type=file]{
-	margin-left: 20%;
+#myPicture{
+	font-size: 36px;
+	display: inline-block;
+}
+
+#myPicture input[type=file]{
 	color: white;
 	padding: 20px;
 	font-size: 20px;
 	font-family: 'Josefin Sans', sans-serif;
+	/*display: inline-block;*/
 }
 
 .describe {
 	resize: none;
-	width: 100%; height:100px;
+	width: 100%; height:150px;
 	border: 1px solid black;
 	padding:10px 0 8px 0px;
 	font-size: 20px;
@@ -165,7 +171,7 @@ h1 {
 }
 
 .describe::placeholder{
-	font-size: 20px;
+	font-size: 46px;
 	font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -188,14 +194,24 @@ ingredients text area
 	font-size: 18px;
 	font-weight: 100;
 }*/
+.ingredContain{
+	display: inline;
+}
+
 
 .ingredientArea{resize: none;
-	  width: 100%;	
+	  width: 89%;	
+	  height: 50px;
 	  border: 1px solid black;
 	  border-radius: 25px;
 	  padding:10px 0 8px 0;
-	  font-size: 20px;
+	  font-size: 52px;
 	  font-weight: 100;
+	  display: inline;
+}
+
+#ingredientList{
+	display: inline;
 }
 
 #ingredientList textarea{
@@ -208,19 +224,29 @@ ingredients text area
 	font-family: 'Josefin Sans', sans-serif;
 }
 
-#addIng{text-align: center;}
+#addIng{
+	display: inline-block;
+}
 
 #stepLabel{
 	font-size: 36px;
 }
 
+.formContain{
+	display: inline;
+}
+
 .direction{resize: none;
-	  width: 100%;	
+	  width: 89%;	
 	  border: 1px solid black;
 	  border-radius: 25px;
 	  padding:10px 0 8px 0;
 	  font-size: 52px;
 	  font-weight: 100;
+}
+
+#steps{
+	display: inline;
 }
 
 #steps textarea{
@@ -234,15 +260,23 @@ ingredients text area
 }
 
 /* Add '+' button*/
-#add {text-align: center;}
+#add {display: inline-block;}
+
+#submit{text-align: center; 
+}
 
 #submit input[type=submit] {
 	margin-top: 30px;
-	padding: 15px;
-	font-size: 36px;
+	padding: 25px;
+	font-size: 52px;
 	border: none;
 	border-radius: 25px;
 	background-color: orange;
 	color: white;
 	font-family: 'Josefin Sans', sans-serif;
+}
+
+.addOn {
+	float: right;
+	clear:; both;
 }
