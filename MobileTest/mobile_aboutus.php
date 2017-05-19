@@ -10,14 +10,10 @@ session_start();
 		<title>SCAVANGE TEMPLATE</title>
 		<link rel="stylesheet" href="CSS/backbone.css">
 		<link rel="stylesheet" href="CSS/mainFunctionStyle.css">
-		<link rel="stylesheet" href="CSS/loadingStyle.css">
+		<link rel="stylesheet" href="CSS/aboutus.css">
 		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
-		<script src="Javascript/loadingScript.js"></script>
 		<script src="Javascript/navscripts.js"></script>
 		<script src="Javascript/mainFunctionScript.js"></script>
-		<script src="Javascript/multiOnLoadEvent.js"></script>
 	</head>
 	<body>
 		<div class="topBar">
@@ -32,7 +28,7 @@ session_start();
 			<ul class="navBarList">
 				<!--<li class="navBarPlaceholder"></li>-->
 				<a class="navLink" href="mainFunctionPage.php"><li class="navBarItem">Home</li></a>
-				<a class="navLink" href="mobile_recipe2.php"><li class="navBarItem">Recipes</li></a>
+				<a class="navLink" href="mobile_recipe.php"><li class="navBarItem">Recipes</li></a>
 				<?php
 					if(isLoggedIn()){
 						echo '<a class="navLink" href="mobileUpload.php"><li class="navBarItem">Share</li></a>';
@@ -49,7 +45,7 @@ session_start();
 		<div id="navigationBarAlt">
 			<ul class="navBarListAlt">
 				<a class="navLink" href="mainFunctionPage.php"><li class="navBarItemAlt">Home</li></a>
-				<a class="navLink" href="mobile_recipe2.php"><li class="navBarItemAlt">Recipes</li></a>
+				<a class="navLink" href="mobile_recipe.php"><li class="navBarItemAlt">Recipes</li></a>
 				<?php
 					if(isLoggedIn()){
 						echo '<a class="navLink" href="mobileUpload.php"><li class="navBarItem">Share</li></a>';
@@ -63,29 +59,28 @@ session_start();
 			</ul>
 		</div>
 		<div id="contentBox">
-			<br><br>
+		<br>
 			<div class="formBox">
-				<form class="ingredientSearch">
-					<label for="ingredientText">Enter your ingredients below:<br><br></label>
-					<input type="text" id="ingredientText" name="ingredientText">
-					<!--<input type="button" id="addButton" name="addButton" value="Add" onclick="addIngredient()">-->
-					<img src="Images/add.png" width="70" height="70" id="add" onclick="addIngredient()">
-				</form>
-				<br>
-				<h4 class="subheadingText">Your Current Ingredients:</h4>
-				<br>
-				<form class="ingredientForm" action="" method="post">
-					<textarea id="realList" class="ingredientListAlt" name="leftover"></textarea>
-					<div id="masterList" class="ingredientList">
-						<!--<p id="myList"></p>-->
+				<h1 class="sub">Who we are</h1>
+				<div class="row">
+
+					<div class="span2"></div>
+					<div class="span8">
+						<img src="Images/twotwo.jpg" alt="">
 					</div>
-					<div id="submitSection">
-						<input type="submit" id="submitButton" name="submitButton">
-					</div>
-				</form>
+					<div class="span2"></div>
+				</div>
+
+
+					<div class="whoweare">
+		Why won't a state lark train a repetitive analysis? A fighter forks the technique beside each fooling thumb.
+		The queen fellows an internal concrete. When will an intent project compliment the wary handler? Will the ground subroutine fudge?
+		Under the collected antidote bobs whatever held sore.
+
+
+
+
 			</div>
 		</div>
 	</body>
-	<div class="se-pre-con">
-	</div>
 </html>

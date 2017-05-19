@@ -7,17 +7,13 @@ session_start();
 <html lang="en">
 	<head>
 		<meta charset="utf-8"/>
-		<title>SCAVANGE TEMPLATE</title>
+		<title>SCAVANGE</title>
 		<link rel="stylesheet" href="CSS/backbone.css">
-		<link rel="stylesheet" href="CSS/mainFunctionStyle.css">
-		<link rel="stylesheet" href="CSS/loadingStyle.css">
+		<link rel="stylesheet" href="CSS/mobileUpload.css">
 		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
-		<script src="Javascript/loadingScript.js"></script>
 		<script src="Javascript/navscripts.js"></script>
-		<script src="Javascript/mainFunctionScript.js"></script>
-		<script src="Javascript/multiOnLoadEvent.js"></script>
+		<script src="Javascript/mobileUpload.js"></script>
+		<!--<script src="Javascript/multiOnLoadEvent.js"></script>-->
 	</head>
 	<body>
 		<div class="topBar">
@@ -62,30 +58,56 @@ session_start();
 				<a class="navLink" href="mobile_affilated.php"><li class="navBarItem">Affilates</li></a>
 			</ul>
 		</div>
-		<div id="contentBox">
-			<br><br>
-			<div class="formBox">
-				<form class="ingredientSearch">
-					<label for="ingredientText">Enter your ingredients below:<br><br></label>
-					<input type="text" id="ingredientText" name="ingredientText">
-					<!--<input type="button" id="addButton" name="addButton" value="Add" onclick="addIngredient()">-->
-					<img src="Images/add.png" width="70" height="70" id="add" onclick="addIngredient()">
-				</form>
-				<br>
-				<h4 class="subheadingText">Your Current Ingredients:</h4>
-				<br>
-				<form class="ingredientForm" action="" method="post">
-					<textarea id="realList" class="ingredientListAlt" name="leftover"></textarea>
-					<div id="masterList" class="ingredientList">
-						<!--<p id="myList"></p>-->
-					</div>
-					<div id="submitSection">
-						<input type="submit" id="submitButton" name="submitButton">
-					</div>
-				</form>
+		<br><br>
+		<div id="main">
+			<div id="create">
+				<span style="color: orange">Recipe Creation</span>
 			</div>
-		</div>
-	</body>
-	<div class="se-pre-con">
+		<form action="" method="post">
+			<div id="nameLabel">
+				<label id="recLabel" class="unbold" for="name"><span style="color: white"><br>Recipe Name</span></label>
+				<br><br>
+				<div id="name">
+					<input type="text" name="recName">
+				</div>
+			</div>
+			<br><br>
+			<div id="uploadLabel">
+				<label id="upLabel" class="unbold" for="myPicture"><span style="color: white">Upload a picture:</span></label>
+				<br><br>
+				<input id="myPicture" type="file" name="pic">
+			</div>
+			<br><br><br>
+			<div id="placeholder">
+				<label id="desLabel" class="unbold" for="describe"><span style="color: white">Description:</span></label>
+				<br>
+				<div id="description"><br>
+					<textarea name="describe" class="describe" cols="30" rows="10" placeholder="Short description of recipe"></textarea>
+				</div>
+			</div>
+			<div id="info">
+				<label id="ingredient"><span style="color: white"><br>Ingredients:</span></label>
+				<br><br>
+			</div>
+			<div class="ingredContain">
+				<div id="ingredientList">
+					<textarea name="ingList" id="ingList" class="ingredientArea" rows="1" placeholder="Press '+' after each step"></textarea>
+					<img src="Images/add.png" alt="Add Ingredients" height="70" width="70" class="addOn" onclick="addIngred()">
+				</div>
+			</div>
+			<div id="stepLabel">
+				<label id="recStep" class="unbold"><span style="color: white"><br>Directions:</span></label><br><br>
+			</div>
+			<div class = "formContain">
+				<div id="steps">
+					<textarea name="singleStep" id="singleStep" class="direction" rows="1" placeholder="Press '+' after each step"></textarea>
+					<img src="Images/add.png" alt="Add Ingredients" height="70" width="70" class="addOn" onclick="addInput()">
+				</div>
+			</div>
+			<div id="submit">
+				<input type="submit" value="Finish">
+			</div>
+		</form>
 	</div>
+	</body>
 </html>

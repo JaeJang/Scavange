@@ -18,7 +18,7 @@ if (mysqli_num_rows($result) == 1) {
 	session_write_close();
 	header("location: mainFunctionPage.php");
 } else {
-	header("location: mobile_login.html");
+	header("location: mobile_login.php");
 	exit();
 }
 

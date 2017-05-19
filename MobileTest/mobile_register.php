@@ -10,14 +10,11 @@ session_start();
 		<title>SCAVANGE TEMPLATE</title>
 		<link rel="stylesheet" href="CSS/backbone.css">
 		<link rel="stylesheet" href="CSS/mainFunctionStyle.css">
-		<link rel="stylesheet" href="CSS/loadingStyle.css">
+		<link rel="stylesheet" href="CSS/Registration.css">
 		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
-		<script src="Javascript/loadingScript.js"></script>
 		<script src="Javascript/navscripts.js"></script>
 		<script src="Javascript/mainFunctionScript.js"></script>
-		<script src="Javascript/multiOnLoadEvent.js"></script>
+		<script src="Javascript/form.js"></script>
 	</head>
 	<body>
 		<div class="topBar">
@@ -65,27 +62,37 @@ session_start();
 		<div id="contentBox">
 			<br><br>
 			<div class="formBox">
-				<form class="ingredientSearch">
-					<label for="ingredientText">Enter your ingredients below:<br><br></label>
-					<input type="text" id="ingredientText" name="ingredientText">
-					<!--<input type="button" id="addButton" name="addButton" value="Add" onclick="addIngredient()">-->
-					<img src="Images/add.png" width="70" height="70" id="add" onclick="addIngredient()">
-				</form>
-				<br>
-				<h4 class="subheadingText">Your Current Ingredients:</h4>
-				<br>
-				<form class="ingredientForm" action="" method="post">
-					<textarea id="realList" class="ingredientListAlt" name="leftover"></textarea>
-					<div id="masterList" class="ingredientList">
-						<!--<p id="myList"></p>-->
+				<h2 class="jae_title">Registration</h2><br><br><br>
+				<form action="register.php" onsubmit="return formValidate()" method="post">
+					<label class="labeL" for="name">*Username: </label>
+					<input type="text" name="name" id="name" placeholder="">
+					<br>
+					<div id="errorn" class="error">
 					</div>
-					<div id="submitSection">
-						<input type="submit" id="submitButton" name="submitButton">
+					<br><br>
+					<label class="labeL" for="email">*Email: </label>
+					<input type="text" name="email" id="email" placeholder="you@domail.com">
+					<br>
+					<div id="errore" class="error">
+					</div>
+					<br><br>
+					<label class="labeL" for="password">*Password: </label>
+					<input type="password" name="password" id="password" minlength="8">
+					<br>
+					<div id="errorp" class="error">
+					</div>
+					<br><br>
+					<label class="labeL" for="cpasword">*Password:<br>Confirm </label>
+					<input type="password" name="myPwordConfirm" id="cPassword" minlength="8">
+					<br><br>
+					<div id="errorp2" class="error">
+					</div>
+					<br><br><br><br>
+					<div class="field">
+						<input type="submit" name="" value="Submit" id="submit0">
 					</div>
 				</form>
 			</div>
 		</div>
 	</body>
-	<div class="se-pre-con">
-	</div>
 </html>

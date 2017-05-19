@@ -9,15 +9,10 @@ session_start();
 		<meta charset="utf-8"/>
 		<title>SCAVANGE TEMPLATE</title>
 		<link rel="stylesheet" href="CSS/backbone.css">
-		<link rel="stylesheet" href="CSS/mainFunctionStyle.css">
-		<link rel="stylesheet" href="CSS/loadingStyle.css">
+		<link rel="stylesheet" href="CSS/mobileRecipeIndividualStyle.css">
 		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
-		<script src="Javascript/loadingScript.js"></script>
 		<script src="Javascript/navscripts.js"></script>
-		<script src="Javascript/mainFunctionScript.js"></script>
-		<script src="Javascript/multiOnLoadEvent.js"></script>
+		<!--<script src="Javascript/multiOnLoadEvent.js"></script>-->
 	</head>
 	<body>
 		<div class="topBar">
@@ -63,29 +58,57 @@ session_start();
 			</ul>
 		</div>
 		<div id="contentBox">
-			<br><br>
-			<div class="formBox">
-				<form class="ingredientSearch">
-					<label for="ingredientText">Enter your ingredients below:<br><br></label>
-					<input type="text" id="ingredientText" name="ingredientText">
-					<!--<input type="button" id="addButton" name="addButton" value="Add" onclick="addIngredient()">-->
-					<img src="Images/add.png" width="70" height="70" id="add" onclick="addIngredient()">
-				</form>
-				<br>
-				<h4 class="subheadingText">Your Current Ingredients:</h4>
-				<br>
-				<form class="ingredientForm" action="" method="post">
-					<textarea id="realList" class="ingredientListAlt" name="leftover"></textarea>
-					<div id="masterList" class="ingredientList">
-						<!--<p id="myList"></p>-->
-					</div>
-					<div id="submitSection">
-						<input type="submit" id="submitButton" name="submitButton">
-					</div>
-				</form>
+		<br><br>
+			<div class="recipeBox">
+				<table id="recipeHeading" name="recipeHeading">
+					<tr>
+						<td class="recipeTitle" name="recipeTitle">Title:</td>
+						<td class="recipeAuthor" name="recipeAuthor">Author:</td>
+						<td class="recipeRating" name="recipeRating"><img src="Images/star.png"><img src="Images/star.png"><img src="Images/star.png"><img src="Images/star.png"><img src="Images/star.png"></td>
+					</tr>
+				</table>
+				<div class="recipePicture">
+					<img id="recipeMainPicture" src="Images/sampleFood.jpg">
+				</div>
+				<h4 class="ingredientHeading">Ingredients:</h4>
+				<div class="ingredientBox">
+					<table id="ingredientTable" name="ingredientTable">
+						<tr>
+							<td class="ingredientItem">- Item1</td>
+							<td class="ingredientItem">- Item2</td>
+						</tr>
+						<tr>
+							<td class="ingredientItem">- Item3</td>
+							<td class="ingredientItem">- Item4</td>
+						</tr>
+						<tr>
+							<td class="ingredientItem">- Item5</td>
+							<td class="ingredientItem">- Item6</td>
+						</tr>
+					</table>
+				</div>
+				<h4 class="stepHeading">Directions:</h4>
+				<div class="stepBox">
+					<table id="stepTable" name="stepTable">
+						<tr>
+							<td class="stepItem">Step1</td>
+							<td class="stepPicture"><img src="Images/step1.jpg"></td>
+						</tr>
+						<tr>
+							<td class="stepItem">Step2</td>
+							<td class="stepPicture"><img src="Images/step1.jpg"></td>
+						</tr>
+						<tr>
+							<td class="stepItem">Step3</td>
+							<td class="stepPicture"><img src="Images/step1.jpg"></td>
+						</tr>
+						<tr>
+							<td class="stepItem">Step4</td>
+							<td class="stepPicture"><img src="Images/step1.jpg"></td>
+						</tr>
+					</table>
+				</div>
 			</div>
 		</div>
 	</body>
-	<div class="se-pre-con">
-	</div>
 </html>

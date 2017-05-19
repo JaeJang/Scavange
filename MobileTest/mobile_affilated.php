@@ -10,14 +10,10 @@ session_start();
 		<title>SCAVANGE TEMPLATE</title>
 		<link rel="stylesheet" href="CSS/backbone.css">
 		<link rel="stylesheet" href="CSS/mainFunctionStyle.css">
-		<link rel="stylesheet" href="CSS/loadingStyle.css">
+		<link rel="stylesheet" href="CSS/affpage.css">
 		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
-		<script src="Javascript/loadingScript.js"></script>
 		<script src="Javascript/navscripts.js"></script>
 		<script src="Javascript/mainFunctionScript.js"></script>
-		<script src="Javascript/multiOnLoadEvent.js"></script>
 	</head>
 	<body>
 		<div class="topBar">
@@ -63,29 +59,32 @@ session_start();
 			</ul>
 		</div>
 		<div id="contentBox">
+		<div class="box">
+		<div class="affiliate">
+			<h1>Affiliated Webpages</h1><br><br>
+		</div>
+			<div id="rightcol0">
 			<br><br>
-			<div class="formBox">
-				<form class="ingredientSearch">
-					<label for="ingredientText">Enter your ingredients below:<br><br></label>
-					<input type="text" id="ingredientText" name="ingredientText">
-					<!--<input type="button" id="addButton" name="addButton" value="Add" onclick="addIngredient()">-->
-					<img src="Images/add.png" width="70" height="70" id="add" onclick="addIngredient()">
-				</form>
-				<br>
-				<h4 class="subheadingText">Your Current Ingredients:</h4>
-				<br>
-				<form class="ingredientForm" action="" method="post">
-					<textarea id="realList" class="ingredientListAlt" name="leftover"></textarea>
-					<div id="masterList" class="ingredientList">
-						<!--<p id="myList"></p>-->
+			<a href="http://refrigedate.me/#/"><img src="Images/Refrigedate.png" class="img1"></a><br><br><br><br><br>
+			<a href="https://freshness.000webhostapp.com/"><img src="Images/Freshness.png" class="img1"></a><br><br><br><br><br><br>
+			<a href=""><img src="Images/group5.png" class="img1"></a><br><br><br><br>
+			</div>
+			<div id="leftcol0">
+			<h3>Refrigedate</h3><br>
+			<div class="content">
+			Refrigedate is a handy web app that is targeted mainly at families, those with roommates, or anyone that shares a fridge. Refrigedate keeps track of everyones leftovers that are in the fridge and shows what everything is, when it's from, and who it belongs to. By allowing multiple users to easily add, remove, and keep track of whats in their fridge they can make sure that no food goes bad and ultimately goes to waste. </div><br><br>
+
+			<h3>Freshness</h3><br>
+			<div class="content">Provides food preservation methods for you to keep your food fresh as long as you can!! A great way to preserve your soon
+			expiring leftovers. </div><br><br>
+
+			<h3>Vegi-smart</h3>
+			<div class="content">Food waste manager for fruits and vegetables. Users can track your waste usage. Compete with other users in a quest to become the number one non food waster!! Gives statistics and feedback based on your inputs.</div><br><br>
+			</div>
 					</div>
-					<div id="submitSection">
-						<input type="submit" id="submitButton" name="submitButton">
 					</div>
 				</form>
 			</div>
 		</div>
 	</body>
-	<div class="se-pre-con">
-	</div>
 </html>
