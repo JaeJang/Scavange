@@ -11,7 +11,7 @@ CREATE TABLE usersT(
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 DROP TABLE recipe_ingredientT;
-DROP TABLE ingredientT;
+DROP TABLE recipe_detailT;
 DROP TABLE recipesT;
 CREATE TABLE recipesT(
   recipe_id INT(100) NOT NULL auto_increment,

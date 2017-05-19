@@ -2,6 +2,15 @@
 include('functions.php');
 require_once('config.php');
 session_start();
+
+$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWD, DB_DATABASE) or die("can't connect");
+
+$sql_recipesT = "SELECT * FROM recipesT ORDER BY recipe_id DESC";
+$result_recipesT = mysqli_query($conn, $sql_recipesT);
+
+
+$num=1;
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -95,21 +104,32 @@ session_start();
 				<tr>
 					<td class="recipeRating">★★★★★</td>
 				</tr>-->
+				<?php while($row = mysqli_fetch_assoc($result_recipesT)){ ?>
 				<tr class="recipeHeading">
-					<td class="recipeTitle">Title: </td>
-					<td class="recipeAuthor">Author: </td>
+					<td class="recipeTitle">Title: <?php echo $row['title']; ?></td>
+					<?php
+					$uid = $row['user_id'];
+					$sql_userT = "SELECT username FROM usersT WHERE user_id = '$uid'";
+					$result_userT = mysqli_query($conn, $sql_userT);
+					$row_user = mysqli_fetch_assoc($result_userT);
+					?>
+					<td class="recipeAuthor">Author:<?php echo $row_user['username']; ?> </td>
 					<td class="recipeRating">★★★★★</td>
 				</tr>
 				<tr>
-					<td id="recipeList1" class="recipePicture" colspan="3" onclick="flipper('1')">
-						<div class="front">
+					<td id=<?php echo '"recipeList'.$num.'"'; ?>"recipeList1" class="recipePicture" colspan="3" onclick=<?php echo '"flipper('."'".$num."'".')"'; ?>>
+						<div class="front" style=<?php echo '"background-image:url('.$row['image_address'].')"'; ?>>
 						</div>
 						<div id="description1" class="back">
-							Refrigedate is a handy web app that is targeted mainly at families, those with roommates, or anyone that shares a fridge. Refrigedate keeps track of everyones leftovers that are in the fridge and shows what everything is, when it's from, and who it belongs to.
+							<?php echo $row['description']; ?>
 						</div>
 					</td>
 				</tr>
-				<tr class="recipeHeading">
+				<?php $num++;
+				} ?>
+
+
+				<!-- <tr class="recipeHeading">
 					<td class="recipeTitle">Title: </td>
 					<td class="recipeAuthor">Author: </td>
 					<td class="recipeRating">★★★★★</td>
@@ -122,7 +142,7 @@ session_start();
 							Refrigedate is a handy web app that is targeted mainly at families, those with roommates, or anyone that shares a fridge. Refrigedate keeps track of everyones leftovers that are in the fridge and shows what everything is, when it's from, and who it belongs to.
 						</div>
 					</td>
-				</tr>
+				</tr> -->
 			</table>
 		</div>
 		</div>
