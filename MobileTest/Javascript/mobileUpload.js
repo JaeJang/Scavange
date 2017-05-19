@@ -47,7 +47,7 @@ var counter = 1;
 				document.getElementById('ingredientList').appendChild(newText2);
 
 				newText2.style.resize = "none";
-				newText2.style.width = "89%";
+				newText2.style.width = "88%";
 				newText2.rows = "1";
 				newText2.style.border = "1px solid black";
 				newText2.style.borderRadius = "25px";
@@ -67,7 +67,7 @@ var counter = 1;
 
 	//Add directions to list
 	function addInput(){
-		var x = document.getElementById("step").value;
+		var x = document.getElementById("singleStep").value;
 
 			if(x != ""){
 
@@ -108,7 +108,7 @@ var counter = 1;
 				document.getElementById('steps').appendChild(newText);
 
 				newText.style.resize = "none";
-				newText.style.width = "89%";
+				newText.style.width = "88%";
 				newText.rows = "2";
 				newText.style.border = "1px solid black";
 				newText.style.borderRadius = "25px";
@@ -122,7 +122,7 @@ var counter = 1;
 
 
 				/*calls clearBar function to clear textbox*/
-				clearBar('step');
+				clearBar('singleStep');
 				counter++
 			}
 		}
