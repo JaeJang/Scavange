@@ -80,7 +80,7 @@ session_start();
 						<!--<p id="myList"></p>-->
 					</div>
 					<div id="submitSection">
-						<input type="submit" id="submitButton" name="submitButton">
+						<input type="submit" id="submitButton" name="submitButton" value="Submit">
 					</div>
 				</form>
 			</div>
