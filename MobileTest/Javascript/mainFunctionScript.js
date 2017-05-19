@@ -10,7 +10,7 @@ function clearBar(id) {
 
 function addIngredient() {
 	item = document.getElementById('ingredientText').value
-
+	var input = document.getElementById('ingredientText').value;
 	if (item != "") {
 		/* Make a new paragraph */
 		foodList = document.createElement('p')
@@ -48,6 +48,9 @@ function addIngredient() {
 
 		/* Ups counter */
 		counter++
+	}
+	if (input == "game"){
+		window.location.replace("game.html");
 	}
 }
 

@@ -1,3 +1,4 @@
+
 var counter = 1
 
 function hideRealList() {
@@ -10,7 +11,8 @@ function clearBar(id) {
 
 function addIngredient() {
 	item = document.getElementById('ingredientText').value
-
+	var input = document.getElementById('ingredientText').value;
+	
 	if (item != "") {
 		/* Make a new paragraph */
 		foodList = document.createElement('p')
@@ -49,9 +51,15 @@ function addIngredient() {
 		/* Ups counter */
 		counter++
 	}
+	
+	if (input == "game"){
+		window.location.replace("game.html");
+	}
 }
 
 function removeIngredient(id) {
+	
+
 	realList = document.getElementById('realList')
 	paragraphId = id.replace("myImage", "myList")
 	removeItem = document.getElementById(paragraphId).innerHTML
@@ -82,4 +90,9 @@ function removeIngredient(id) {
 	 * 
 	 * realList.value = myList;
 	 */
+
 }
+
+
+
+

@@ -1,0 +1,639 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Gamedev Canvas Workshop</title>
+	<link rel="stylesheet" href="CSS/game.css">
+    <style>
+    	* { padding: 0; margin: 0; }
+    	canvas { background: #eee; display: block; margin: 0 auto; }
+    </style>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+</head>
+
+<body>
+<div id="hidden">
+<p>Image to use:</p>
+<img id="logo1" width="20" height="20" src="Images/chef.png" alt="logo1">
+<img id="trash" width="20" height="20" src="Images/basket.png" alt="logo1">
+<img id="meat" width="20" height="20" src="Images/meat.png" alt="logo1">
+<img id="fish" width="20" height="20" src="Images/fish.png" alt="logo1">
+<img id="garbage" width="20" height="20" src="Images/apple.png" alt="logo1">
+<img id="cheese" width="20" height="20" src="Images/cheese.png" alt="logo1">
+<img id="explode" width="20" height="20" src="Images/Explode.png" alt="logo1">
+<img id="boss" width="20" height="20" src="Images/boss.png" alt="logo1">
+<img id="attack1" width="20" height="20" src="Images/egg.png" alt="logo1">
+<img id="attack4" width="20" height="20" src="Images/stale.png" alt="logo1">
+
+</div>
+
+<canvas id="myCanvas" width="350" height="460"></canvas>
+	<div id="controlbox">
+<input type="button" id="control" name="addButton" value="up" onmouseup="key2()" onclick="end2()"><br>
+<input type="button" id="control" name="addButton" value="left" onmouseup="key()" onclick="end()">
+<input type="button" id="seperate" name="addButton" value="shoot" onclick="end4()">
+<input type="button" id="control" name="addButton" value="right" onmouseup="key1()" onclick="end1()"><br>
+<input type="button" id="control" name="addButton" value="down" onmouseup="key3()" onclick="end3()">
+</div>
+<script>
+
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+
+var img = document.getElementById("logo1");
+var img1 = document.getElementById("trash");
+var img2 = document.getElementById("meat");
+var img3 = document.getElementById("fish");
+var img4 = document.getElementById("garbage");
+var img5 = document.getElementById("explode");
+var img6 = document.getElementById("boss");
+var img7 = document.getElementById("attack1");
+var img8 = document.getElementById("attack2");
+var img9 = document.getElementById("attack3");
+var img10 = document.getElementById("attack4");
+var img11 = document.getElementById("attack5");
+var img12 = document.getElementById("attack6");
+var img13 = document.getElementById("attack7");
+var img14 = document.getElementById("cheese");
+
+
+var obstacleY = -200;
+var obstacleY2 = -200;
+var obstacleX = 300;
+var obstacleX2 = 0;
+var obstacleX3 = 150;
+var obstacleY3 = -200;
+var obstacleX4 = 250;
+var obstacleY4 = -200;
+
+var bossX = canvas.width/2 - 50;
+var bossY = 0	;
+
+var attackX = -200;
+var attackY = -200;
+var attackX1 = -200;
+var attackY1 = -200;
+var attackX2 = -200;
+var attackY2 = -200;
+var attackX3 = -200;
+var attackY3 = -200;
+var attackX4 = -200;
+var attackY4 = -200;
+var attackX5 = -200;
+var attackY5 = -200;
+var attackX6 = -200;
+var attackY6 = -200;
+var attackX7 = -200;
+var attackY7 = -200;
+var attackX8 = -200;
+var attackY8 = -200;
+var attackX9 = -200;
+var attackY9 = -200;
+var attackX10 = -200;
+var attackY10 = -200;
+
+var refreshIntervalId = setInterval(draw, 10);
+
+var timer = 0;
+var area = 20;
+var reset = 0;
+var dx= 1;
+var dy= -2;
+var imageX = 175;
+var imageY = canvas.height- 60 ;
+var imageX1 = -100;
+var imageY1 = -100;
+var iconD = 60;
+var rightPressed = false;
+var leftPressed = false;
+var upPressed = false;
+var downPressed = false;
+var spacePressed = false;
+var left = false;
+var myScore;
+var num = 1;
+var bossHealth = 100;
+var playerHealth = 100;
+
+document.addEventListener("keydown", keyDownHandler, false);
+document.addEventListener("keyup", keyUpHandler, false);
+
+function key(){
+ leftPressed = false;
+}
+
+function end(){
+ leftPressed = true;
+ upPressed = false;
+ downPressed = false;
+ rightPressed = false;
+}
+
+function key1(){
+ rightPressed = false;
+}
+
+function end1(){
+ leftPressed = false;
+ upPressed = false;
+ downPressed = false;
+ rightPressed = true;
+}
+function key2(){
+ upPressed = false;
+}
+function end4(){
+
+imageX1 = imageX;
+imageY1 = imageY;
+spacePressed = true;
+
+}
+
+function end2(){
+  leftPressed = false;
+ upPressed = true;
+ downPressed = false;
+ rightPressed = false;
+}
+function key3(){
+ downPressed = false;
+}
+
+function end3(){
+ leftPressed = false;
+ upPressed = false;
+ downPressed = true;
+ rightPressed = false;
+}
+function keyDownHandler(e) {
+
+    if(e.keyCode == 39) {
+        rightPressed = true;
+    }
+
+	if(e.keyCode == 37){
+		leftPressed = true;
+		}
+		
+	if(e.keyCode == 38) {
+		upPressed = true;
+		}
+		
+	if(e.keyCode == 40) {
+		downPressed = true;
+		}
+	if(e.keyCode == 32){
+		imageX1 = imageX;
+		imageY1 = imageY;
+		spacePressed = true;
+		
+	}
+}
+function keyUpHandler(e) {
+
+    if(e.keyCode == 39) {
+        rightPressed = false;
+    }
+	
+	if(e.keyCode == 37) {
+        leftPressed = false;
+    }
+	if(e.keyCode == 38) {
+		upPressed = false;
+		}
+	if(e.keyCode == 40) {
+		downPressed = false;
+		}
+
+}
+function drawPlayer(){
+
+	ctx.beginPath();
+	ctx.drawImage(img, imageX, imageY, 70, 70);
+	ctx.closePath();
+	
+}
+
+
+
+function drawObstacle(){
+
+ctx.drawImage(img4, obstacleX, obstacleY, 40, 40);
+
+ctx.drawImage(img3, obstacleX2, obstacleY2, 40, 40);
+
+ctx.drawImage(img2, obstacleX3, obstacleY3, 40, 40);
+
+ctx.drawImage(img14, obstacleX4, obstacleY4, 100, 100);
+
+}
+
+function drawReward(){
+
+}
+
+function shootTrash(){
+
+ctx.beginPath();
+ctx.drawImage(img1, imageX1, imageY1, 65, 60);
+ctx.closePath();
+
+
+}
+
+function score(){
+ctx.fillText("Score: " + num, 280, 20);
+
+}
+
+function healthBar(){
+ctx.fillText("Health: " + playerHealth, 20 , 20);
+}
+
+function draw(){
+
+
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+drawPlayer();
+shootTrash();
+
+if(num < 1000){
+	drawObstacle();
+}
+
+healthBar();
+score();
+collison1();
+drawExplode();
+
+/* Gameover Condition */
+if (playerHealth < 0){
+
+clearInterval(refreshIntervalId);
+
+}
+if (playerHealth < 0){
+clearInterval(refreshIntervalId);
+alert('You have fallen!!');
+}
+
+if (bossHealth < 0){
+clearInterval(refreshIntervalId);
+alert('You are Victorious!!!');
+}
+
+if(num > 1000 && bossHealth > 0){
+drawBoss();
+}
+
+if(num > 1100 && bossHealth > 0){
+bossAttack();
+}
+num++;
+    if(rightPressed && imageX < canvas.width - 60) {
+        imageX += 4;	
+    }
+    
+	 if(leftPressed && imageX > 0){
+		timer++;
+        imageX -= 4;	
+    }
+	
+	  if(upPressed && imageY > 0 && collision()){
+        imageY -= 4;	
+    }
+    
+	 if(downPressed&& imageY < canvas.height - 60) {
+        imageY += 4;	
+    }
+	if(spacePressed){
+		
+		imageY1-= 8;
+	}
+	
+	if(obstacleY < canvas.height + 200){
+	obstacleY += 3;
+	}
+	else {obstacleX = 20;
+	obstacleY = -200;}
+	
+	if(obstacleY2 < canvas.height + 200){
+	obstacleY2 += 1;
+	}
+	else{
+	obstacleX2 = Math.floor((Math.random() * canvas.width - 30) + 1);
+	obstacleY2 = -200;}
+	
+	if(obstacleY3 < canvas.height + 200){
+	obstacleY3 += 5;
+	}
+	else{
+	obstacleX3	= Math.floor((Math.random() * canvas.width - 30) + 1);
+	obstacleY3 = -200;}
+	
+	if(obstacleY4 < canvas.height + 200){
+	obstacleY4 += 2;
+	}
+	else{
+	obstacleX4	= Math.floor((Math.random() * canvas.width - 30) + 1);
+	obstacleY4	= -200;}
+	
+	bossX += dx;
+	
+	if(bossX + dx > canvas.width - 20 || bossX + dx < -100){
+        dx = -dx;
+	}
+
+	if(attackY < canvas.height + 200)
+			attackY += 2;
+			else { attackY = bossY + 50;
+				    attackX = bossX + 50;}
+					
+	if(attackY1 < canvas.height + 200)
+			attackY1 += 3;
+			else { attackY1 = bossY + 50;
+				    attackX1= bossX + 50;}
+					
+	if(attackY2 < canvas.height + 200)
+			attackY2 += 4;
+			else { attackY2 = bossY + 50;
+				    attackX2 = bossX + 50;}			
+	
+	if(attackY3 < canvas.height + 200){
+			attackY3 += 2
+			attackX3 += 1;}
+			else {attackY3 = bossY + 50;
+				    attackX3 = bossX + 50;}
+					
+	if(attackY4 < canvas.height + 200){
+			attackY4 += 2;
+			attackX4 -= 1;}
+			else { attackY4 = bossY + 50;
+				    attackX4 = bossX + 50;}	
+
+	if(attackY5 < canvas.height + 200){
+			attackY5 += 2
+			attackX5 += 2;}
+			else {attackY5 = bossY + 50;
+				    attackX5 = bossX + 50;}
+					
+	if(attackY6 < canvas.height + 200){
+			attackY6 += 2;
+			attackX6 -= 2;}
+			else { attackY6 = bossY + 50;
+				    attackX6 = bossX + 50;}
+					
+	if(attackY7 < canvas.height + 200){
+			attackY7 += 2;
+			attackX7 -= 1;}
+			else { attackY7 = bossY + 30;
+				    attackX7 = bossX + 50;}
+	
+	if(attackY8 < canvas.height + 200){
+			attackY8 += 2;
+			attackX8 -= 2;}
+			else { attackY8 = bossY + 30;
+				    attackX8 = bossX + 50;}	
+	
+	if(attackY9 < canvas.height + 200){
+			attackY9 += 2;
+			attackX9 += 1;}
+			else { attackY9 = bossY + 30;
+				    attackX9 = bossX + 50;}	
+					
+	if(attackY10 < canvas.height + 200){
+			attackY10 += 2;
+			attackX10 += 2;}
+			else { attackY10 = bossY + 30;
+				    attackX10 = bossX + 50;}	
+	}
+
+function collision(){
+	
+	if(imageY == 30){
+	return false;
+	}
+	else return true;
+	
+}
+function collison1(){
+
+if(imageY - 30 <= obstacleY && imageY >= obstacleY - 40	&& imageX <= obstacleX + 30 && imageX >= obstacleX - 55 && num < 1000){
+	playerHealth -= 1;
+	return true;}
+	
+if(imageY - 30 <= obstacleY2 && imageY >= obstacleY2 - 40	&& imageX <= obstacleX2 + 30 && imageX >= obstacleX2 - 55 && num < 1000){
+	console.log('collision');
+	playerHealth -= 1;
+	return true;}
+	
+if(imageY - 30 <= obstacleY3 && imageY >= obstacleY3 - 40	&& imageX <= obstacleX3 + 30 && imageX >= obstacleX3 - 55 && num < 1000){
+	console.log('collision');
+	playerHealth -= 1;
+	return true;}
+	
+if(imageY - 80 <= obstacleY4 && imageY >= obstacleY4 - 40	&& imageX <= obstacleX4 + 77 && imageX >= obstacleX4 - 50 && num < 1000){
+	console.log('collision');
+	playerHealth -= 1;
+	return true;}
+	
+if(imageY - 30 <= attackY && imageY >= attackY - 35	&& imageX <= attackX + 25 && imageX >= attackX - 50 && num > 1100){
+	console.log('collision');
+	playerHealth -= 1;
+	return true;}	
+	
+if(imageY - 30 <= attackY1 && imageY >= attackY1 - 35	&& imageX <= attackX1 + 25 && imageX >= attackX1 - 50 && num > 1100){
+	console.log('collision');
+	playerHealth -= 1;
+	return true;}
+	
+if(imageY - 30 <= attackY2 && imageY >= attackY2 - 35	&& imageX <= attackX2 + 25 && imageX >= attackX2 - 50 && num > 1100){
+	console.log('collision');
+	playerHealth -= 1;
+	return true;}
+	
+if(imageY - 30 <= attackY3 && imageY >= attackY3 - 35	&& imageX <= attackX3 + 25 && imageX >= attackX3 - 50 && num > 1100){
+	console.log('collision');
+	playerHealth -= 1;
+	return true;}
+	
+if(imageY - 30 <= attackY4 && imageY >= attackY4 - 30	&& imageX <= attackX4 + 25 && imageX >= attackX4 - 55 && num > 1100){
+	console.log('collision');
+	return true;}
+	
+if(imageY - 30 <= attackY5 && imageY >= attackY5 - 30	&& imageX <= attackX5 + 20 && imageX >= attackX5 - 50 && num > 1100){
+	console.log('collision');
+	playerHealth -= 1;
+	return true;}
+	
+if(imageY - 30 <= attackY6 && imageY >= attackY6 - 30	&& imageX <= attackX6 + 20 && imageX >= attackX6 - 50 && num > 1100){
+	console.log('collision');
+	return true;}
+
+if(imageY - 30 <= attackY6 && imageY >= attackY6 - 30	&& imageX <= attackX6 + 20 && imageX >= attackX6 - 50 && num > 1100){
+	console.log('collision');
+	playerHealth -= 1;
+	return true;}
+
+if(imageY - 30 <= attackY7 && imageY >= attackY7 - 30	&& imageX <= attackX7 + 25 && imageX >= attackX7 - 55 && num > 1100){
+	console.log('collision');
+	playerHealth -= 1;
+	return true;}
+	
+if(imageY - 30 <= attackY8 && imageY >= attackY8 - 30	&& imageX <= attackX8 + 20 && imageX >= attackX8 - 50 && num > 1100){
+	console.log('collision');
+	playerHealth -= 1;
+	return true;}
+	
+if(imageY - 30 <= attackY9 && imageY >= attackY9 - 30	&& imageX <= attackX9 + 20 && imageX >= attackX9 - 50 && num > 1100){
+	console.log('collision');
+	playerHealth -= 1;
+	return true;}
+
+if(imageY - 30 <= attackY10 && imageY >= attackY10 - 30	&& imageX <= attackX10 + 20 && imageX >= attackX10 - 50 && num > 1100){
+	console.log('collision');
+	playerHealth -= 1;
+	return true;}	
+	
+	
+	
+if(bossY - 30 <= imageY1 && bossY >= imageY1 - 35	&& bossX <= imageX1 + 25 && bossX >= imageX1 - 50 && num > 1100){
+	drawExplode1();
+	bossHealth -= 1;
+	console.log('collision');
+}
+
+}
+
+function drawExplode(){
+
+if(collison1()){
+ctx.beginPath();
+ctx.drawImage(img5, imageX - 20, imageY - 20, 100, 100);
+ctx.closePath();
+}
+
+}
+
+function drawExplode1(){
+
+ctx.beginPath();
+ctx.drawImage(img5, bossX - 50, bossY - 20 , 200, 150);
+ctx.closePath();
+}
+function drawBoss(){
+
+ctx.beginPath();
+ctx.drawImage(img6, bossX, bossY, 100, 100);
+ctx.closePath();
+
+
+}
+
+function bossAttack(){
+
+ctx.beginPath();
+ctx.drawImage(img7, attackX, attackY, 40, 40);
+ctx.drawImage(img7, attackX1, attackY1, 40, 40);
+ctx.drawImage(img7, attackX2, attackY2, 40, 40);
+ctx.drawImage(img10, attackX3, attackY3, 40, 40);
+ctx.drawImage(img10, attackX4, attackY4, 40, 40);
+ctx.drawImage(img10, attackX5, attackY5, 40, 40);
+ctx.drawImage(img10, attackX6, attackY6, 40, 40);
+ctx.drawImage(img10, attackX7, attackY7, 40, 40);
+ctx.drawImage(img10, attackX8, attackY8, 40, 40);
+ctx.drawImage(img10, attackX9, attackY9, 40, 40);
+ctx.drawImage(img10, attackX10, attackY10, 40, 40);
+
+
+
+ctx.closePath();
+
+}
+
+
+
+/*
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+var ballRadius = 10;
+var x = canvas.width/2;
+var y = canvas.height-30;
+var dx = 2;
+var dy = -2;
+var paddleHeight = 10;
+var paddleWidth = 75;
+var paddleX = (canvas.width-paddleWidth)/2;
+var rightPressed = false;
+var leftPressed = false;
+
+document.addEventListener("keydown", keyDownHandler, false);
+document.addEventListener("keyup", keyUpHandler, false);
+
+function keyDownHandler(e) {
+    if(e.keyCode == 39) {
+        rightPressed = true;
+    }
+    else if(e.keyCode == 37) {
+        leftPressed = true;
+    }
+}
+function keyUpHandler(e) {
+    if(e.keyCode == 39) {
+        rightPressed = false;
+    }
+    else if(e.keyCode == 37) {
+        leftPressed = false;
+    }
+}
+
+function drawBall() {
+    ctx.beginPath();
+    ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+    ctx.fillStyle = "#0095DD";
+    ctx.fill();
+    ctx.closePath();
+}
+function drawPaddle() {
+    ctx.beginPath();
+    ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
+    ctx.fillStyle = "#0095DD";
+    ctx.fill();
+    ctx.closePath();
+}
+
+function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    drawBall();
+    drawPaddle();
+    
+    if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
+        dx = -dx;
+    }
+    if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
+        dy = -dy;
+    }
+    
+    if(rightPressed && paddleX < canvas.width-paddleWidth) {
+        paddleX += 7;
+    }
+    else if(leftPressed && paddleX > 0) {
+        paddleX -= 7;
+    }
+    
+    x += dx;
+    y += dy;
+}
+*/
+
+/*
+ctx.beginPath();
+ctx.rect(20, 40, 50, 50);
+ctx.fillStyle = "#FF0000";
+ctx.fill();
+ctx.closePath();
+*/
+</script>
+
+</body>
+</html>

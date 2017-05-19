@@ -68,7 +68,8 @@ session_start();
 				<form class="ingredientSearch">
 					<label for="ingredientText">Enter your ingredients below:<br><br></label>
 					<input type="text" id="ingredientText" name="ingredientText">
-					<input type="button" id="addButton" name="addButton" value="Add" onclick="addIngredient()">
+					<!--<input type="button" id="addButton" name="addButton" value="Add" onclick="addIngredient()">-->
+					<img src="Images/add.png" width="70" height="70" id="add" onclick="addIngredient()">
 				</form>
 				<br>
 				<h4 class="subheadingText">Your Current Ingredients:</h4>
