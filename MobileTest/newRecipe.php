@@ -10,7 +10,7 @@ $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWD, DB_DATABASE) or die("can't c
 $title = mysqli_real_escape_string($conn, $_POST['recName']);
 //get image and redirect and save a path
 $image = $_FILES['pic']['name'];
-$target = 'images/'.$image;
+$target = 'Images/'.$image;
 $tmp_name = $_FILES['pic']['tmp_name'];
 move_uploaded_file($tmp_name, $target);
 //get description
