@@ -18,8 +18,10 @@
 #ingredientText {
 	font-size: 36px;
 	width: 80%;
+	height: 50px;
 	border-radius: 15px;
 	font-family: 'Josefin Sans', sans-serif;
+	padding: 10px 0;
 }
 
 #addButton {
@@ -35,6 +37,11 @@
 	clear: both;
 	border-radius: 20px;
 	font-family: 'Josefin Sans', sans-serif;
+}
+
+#add {
+	position: relative;
+	top: 25px;
 }
 
 .subheadingText {
