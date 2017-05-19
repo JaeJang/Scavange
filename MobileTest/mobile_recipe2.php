@@ -80,32 +80,6 @@ $uN = array();
 				<div class="box">
 				<h2>Recipes</h2><br>
 					<table id="recipeList">
-						<!--<tr>
-							<td class="recipeImage"><img src="Images/sampleFood.jpg" class="img1"></td>
-							<td rowspan="2" class="recipeInfo">
-								<div class="recipeDescription">
-									Title: <br>
-									Author: <br><br>
-									Refrigedate is a handy web app that is targeted mainly at families, those with roommates, or anyone that shares a fridge. Refrigedate keeps track of everyones leftovers that are in the fridge and shows what everything is, when it's from, and who it belongs to.
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td class="recipeRating">★★★★★</td>
-						</tr>
-						<tr>
-							<td class="recipeImage"><img src="Images/sampleFood.jpg" class="img1"></td>
-							<td rowspan="2" class="recipeInfo">
-								<div class="recipeDescription">
-									Title: <br>
-									Author: <br><br>
-									Refrigedate is a handy web app that is targeted mainly at families, those with roommates, or anyone that shares a fridge. Refrigedate keeps track of everyones leftovers that are in the fridge and shows what everything is, when it's from, and who it belongs to.
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td class="recipeRating">★★★★★</td>
-						</tr>-->
 						<?php while($row = mysqli_fetch_assoc($result_recipesT)){ ?>
 						<tr class="recipeHeading">
 							<td class="recipeTitle"><a href=<?php echo '"mobile_recipe2.php?id='.$row['recipe_id'].'"'?>>Title: <?php echo $row['title']; ?></a></td>
