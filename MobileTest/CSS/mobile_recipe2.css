@@ -71,6 +71,7 @@ body {
 
 .recipePicture {
 	height: 350px;
+	overflow: scroll;
 }
 
 .front {
