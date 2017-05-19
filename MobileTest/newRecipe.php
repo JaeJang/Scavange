@@ -15,6 +15,7 @@ $tmp_name = $_FILES['pic']['tmp_name'];
 move_uploaded_file($tmp_name, $target);
 //get description
 $description = mysqli_real_escape_string($conn, $_POST['describe']);
+$userid = $_SESSION['USERID'];
 
 // //get ingredients and split and store in array
 // $ingredient = mysqli_real_escape_string($conn, $_POST['ingredient']);
@@ -53,7 +54,7 @@ $num_ingre= count($ingredients);
 //now there is no login system in this folder
 //so ALL user_id below  has to be changed to $_SESSION['USERID']
 $sql1 = "INSERT INTO recipesT(user_id, title, description, image_address)
-        VALUES('1', '$title', '$description', '$target')";
+        VALUES('$userid', '$title', '$description', '$target')";
 $result1 = mysqli_query($conn, $sql1);
 //get recipe_id from last query
 $recipe_id = mysqli_insert_id($conn);
@@ -62,7 +63,7 @@ $recipe_id = mysqli_insert_id($conn);
 for($x=0; $x<$num_steps; $x++){
   $detail = $steps[$x];
   $sql2 = "INSERT INTO recipe_detailT(user_id, recipe_id,detail)
-          VALUES('1', '$recipe_id', '$detail')";
+          VALUES('$userid', '$recipe_id', '$detail')";
   $result2 = mysqli_query($conn, $sql2);
 }
 
