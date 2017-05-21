@@ -142,14 +142,14 @@ $uN = array();
 								<?php
 									$sql_indi_ingre = "SELECT * FROM recipe_ingredientT WHERE recipe_id='$recipe_id_indi'";
 									$result_indi_ingre = mysqli_query($conn, $sql_indi_ingre);
-									$count=0;
+									$count = 1;
 									while($row_ingre = mysqli_fetch_assoc($result_indi_ingre)) {
-										if(!($count % 2 == 0)) {
+										if($count % 2 == 0) {
 								?>
-									<td class="ingredientItem"><?php echo $row_ingre['ingredient'];
+									<td class="ingredientItem"><?php echo $count . ". " . $row_ingre['ingredient'];
 									$count++;?></td>
 										<?php } else { ?>
-									<td class="ingredientItem"><?php echo $row_ingre['ingredient'];
+									<td class="ingredientItem"><?php echo $count . ". " . $row_ingre['ingredient'];
 									$count++;?></td>
 								<?php }
 									} ?>
@@ -165,7 +165,7 @@ $uN = array();
 									$stepCount = 1;
 								 	while($row_steps = mysqli_fetch_assoc($result_steps)){?>
 								<tr>
-									<td class="stepNumber"><?php echo $stepCount;?>
+									<td class="stepNumber"><?php echo $stepCount . ". ";?>
 									<td class="stepItem"><?php echo $row_steps['detail']; ?></td>
 									<!--<td class="stepPicture"><img src="Images/step1.jpg"></td>-->
 								</tr>
