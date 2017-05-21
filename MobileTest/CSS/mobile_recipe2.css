@@ -46,6 +46,11 @@ body {
 	color: white;
 }
 
+#recipeList a {
+	text-decoration: none;
+	color: orange;
+}
+
 #recipeList td {
 	color: orange;
 	font-weight: bold;

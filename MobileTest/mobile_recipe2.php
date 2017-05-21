@@ -82,7 +82,7 @@ $uN = array();
 					<table id="recipeList">
 						<?php while($row = mysqli_fetch_assoc($result_recipesT)){ ?>
 						<tr class="recipeHeading">
-							<td class="recipeTitle"><a href=<?php echo '"mobile_recipe2.php?id='.$row['recipe_id'].'"'?>>Title: <?php echo $row['title']; ?></a></td>
+							<td class="recipeTitle"><a href=<?php echo '"mobile_recipe2.php?id='.$row['recipe_id'].'"'?>><!--Title: --><?php echo $row['title']; ?></a></td>
 							<?php
 							$recipe_id = $row['recipe_id'];
 							$uid = $row['user_id'];
@@ -91,7 +91,7 @@ $uN = array();
 							$row_user = mysqli_fetch_assoc($result_userT);
 
 							?>
-							<td class="recipeAuthor">Author:<?php echo $row_user['username'];; ?> </td>
+							<td class="recipeAuthor"><!--Author:--><?php echo $row_user['username'];; ?> </td>
 							<td class="recipeRating">★★★★★</td>
 						</tr>
 						<tr>
@@ -127,8 +127,8 @@ $uN = array();
 									$result_indi_un = mysqli_query($conn, $sql_indi_un);
 									$row_un = mysqli_fetch_assoc($result_indi_un);
 								 ?>
-								<td class="recipeTitle" name="recipeTitle">Title:<?php echo $row_indi['title']; ?></td>
-								<td class="recipeAuthor" name="recipeAuthor">Author:<?php echo $row_un['username']; ?></td>
+								<td class="recipeTitle" name="recipeTitle"><!--Title:--><?php echo $row_indi['title']; ?></td>
+								<td class="recipeAuthor" name="recipeAuthor"><!--Author:--><?php echo $row_un['username']; ?></td>
 								<td class="recipeRating" name="recipeRating"><img src="Images/star.png"><img src="Images/star.png"><img src="Images/star.png"><img src="Images/star.png"><img src="Images/star.png"></td>
 							</tr>
 						</table>
