@@ -1,27 +1,46 @@
 html {box-sizing: border-box;
-	  min-width: 1200px;
+	  /*min-width: 1200px;*/
 }
 
-#contentBox {
-	margin: 20px;
-}
 #ingtext{color:white;
 	font-size:36px;
 	letter-spacing: 2px;
-	}
-
-.formBox {
-	
+}
+#contentBox {
+	text-align: center;
+}
+.aboutBox {
+	display: inline-block;
+	text-align: left;
+	width: 45%;
 	padding: 40px 20px;
+	margin: 0 10px 40px;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+	letter-spacing: normal;
+	overflow: hidden;
+	vertical-align: top;
+}
+.aboutHeading {
+	font-weight: bold;
+	font-size: 36px;
+}
+.formBox {
+	display: inline-block;
+	text-align: left;
+	width: 45%;
+	padding: 40px 20px;
+	margin: 0 10px 40px;
 	font-size: 18px;
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0.8);
+	overflow: hidden;
 }
 .ingredientSearch {
 	font-weight: bold;
 }
 #ingredientText {
-	font-size: 18px;
-	width: 80%;
+	font-size: 24px;
+	width: 90%;
 }
 #addButton {
 	position: relative;
@@ -40,10 +59,14 @@ html {box-sizing: border-box;
 	float: right;
 	clear: both;
 }
+.addButton {
+	position: relative;
+	bottom: 5px;
+}
 .subheadingText {
 	color: white;
 	font-size: 36px;
-	font-weight:bold;
+	font-weight: bold;
 	letter-spacing: 2px;
 }
 .ingredientListAlt {
@@ -51,10 +74,11 @@ html {box-sizing: border-box;
 	display:none;
 }
 .ingredientList {
-	background-image: url("../Images/yellowPaper.jpg");
+	background-color: #fff2d7;
 	padding: 20px;
 	font-size: 10px;
 	color: black;
+	letter-spacing: normal;
 }
 #submitSection {
 	text-align: center;

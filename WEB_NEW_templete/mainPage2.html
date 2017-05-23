@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="mainFunctionScript.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="CSS/mainPage.css">
+	<link rel="stylesheet" href="CSS/testProj.css">
+	<link rel="stylesheet" href="CSS/login.css">
+	<title>SCAVANGE</title>
+</head>
+<body>
+<div id="container-fluid">
+	<div id="outerHeader">
+		<div id="header">
+			<h1 class="myTitle">S C A V <span style="font-size: 84px; color: red;">A</span> N G E</h1>
+			<br><br><br><br>
+			<h2>Who says leftovers can't be tasty?</h2>
+		</div>
+	</div>
+	<div id="mainContain">
+		<div id="navContain" class="row">
+			<div id="nav" class="col-md-12">
+				<ul>
+					<li><a href="mainPage.html">Home</a></li>
+					<li><a href="recipepage.html">Recipes</a></li>
+					<li><a href="upload.html">Share</a></li>
+					<li><a href="aboutus.html">About Us</a></li>
+					<li><a href="#" id="myBtn">Login</a></li>
+					<li><a href="affilitatedPageWeb.html">Affiliates</a></li>
+				</ul>
+				<div class="modal fade" id="myModal" role="dialog">
+					<div class="modal-dialog">
+
+						<!-- Modal content-->
+						<div class="modal-content" id="login_jae">
+							<div class="modal-header" style="padding:35px 50px;">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+							</div>
+							<div class="modal-body" style="padding:40px 50px;">
+								<form role="form">
+									<div class="form-group">
+										<label for="usrname" style="letter-spacing: 1px;"><span class="glyphicon glyphicon-user"></span> Username</label>
+										<input type="text" class="form-control" id="usrname" placeholder="Enter email">
+									</div>
+									<div class="form-group">
+										<label for="psw" style="letter-spacing: 1px;"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+										<input type="text" class="form-control" id="psw" placeholder="Enter password">
+									</div>
+
+										<button type="submit" class="btn btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+								<p style="letter-spacing: 1px;">Not a member?<a href="register_form.html" class="jae_a" style="color:blue; text-align:right;">Sign Up</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="main">
+<!--START YOUR CODES FROM THIS LINE----------------------------------------------------------------->
+<!--START YOUR CODES FROM THIS LINE----------------------------------------------------------------->
+ 	<div id="contentBox">
+			<br><br>
+			<div class="aboutBox">
+				<h2 class="aboutHeading">Tired of leftovers?</h2>
+				<p><span style="color: orange; font-weight: bold;">Look no further.</span> Simply type in your leftovers in the search bar and we'll match you up with a recipe!
+				<br><br>
+				To add an ingredient to the list, type the name then press&nbsp;&nbsp;<img src="Images/add.png" width="40" height="40">
+				<br><br>
+				To remove an item from the list, click on the&nbsp;&nbsp;<img src="Images/cancel.png" width="30" height="30">
+				<br><br>
+				When you have finished constructing your list, press <span style="color: orange; font-weight: bold;">Submit</span> and let's us find you a recipe!</p>
+			</div>
+			<form class="formBox">
+				<div class="ingredientSearch">
+					<label id="ingtext" for="ingredientText">Enter your ingredients below:<br><br></label>
+					<input type="text" id="ingredientText" name="ingredientText">
+					<!--<input type="button" id="addButton" name="addButton" value="Add" onclick="addIngredient()">-->
+					<img class="addButton" src="Images/add.png" width="40" height="40" onclick="addIngredient()">
+				</div>
+				<br>
+				<label class="subheadingText">Your Current Ingredients:</label>
+				<br>
+				<div class="ingredientForm">
+					<textarea id="realList" class="ingredientListAlt" ></textarea>
+					<div id="masterList" class="ingredientList">
+						<!--<p id="myList"></p>-->
+					</div>
+					<div id="submitSection">
+						<input type="submit" id="submitButton" name="submitButton">
+					</div>
+				</div>
+			</form>
+		</div>
+<!--END----------------------------------------------------------------->
+<!--END----------------------------------------------------------------->
+<!--END----------------------------------------------------------------->
+<!--END----------------------------------------------------------------->
+		</div>
+	<div id="footerContain">
+		<div id="footer">
+			<p> Copyright &copy; 2017 </p>
+		</div>
+	</div>
+</div>
+</div>
+
+<script>
+$(document).ready(function(){
+		$("#myBtn").click(function(){
+				$("#myModal").modal();
+		});
+});
+</script>
+</body>
+</html>
