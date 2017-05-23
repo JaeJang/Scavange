@@ -20,9 +20,9 @@
 <img id="garbage" width="20" height="20" src="Images/apple.png" alt="logo1">
 <img id="cheese" width="20" height="20" src="Images/cheese.png" alt="logo1">
 <img id="explode" width="20" height="20" src="Images/Explode.png" alt="logo1">
-<img id="boss" width="20" height="20" src="Images/boss.png" alt="logo1">
-<img id="attack1" width="20" height="20" src="Images/egg.png" alt="logo1">
-<img id="attack4" width="20" height="20" src="Images/stale.png" alt="logo1">
+<img id="boss" width="20" height="20" src="Images/github.png" alt="logo1">
+<img id="attack1" width="20" height="20" src="Images/merge.png" alt="logo1">
+<img id="attack4" width="20" height="20" src="Images/attack.png" alt="logo1">
 
 </div>
 
@@ -32,7 +32,8 @@
 <input type="button" id="control" name="addButton" value="left" onmouseup="key()" onclick="end()">
 <input type="button" id="seperate" name="addButton" value="shoot" onclick="end4()">
 <input type="button" id="control" name="addButton" value="right" onmouseup="key1()" onclick="end1()"><br>
-<input type="button" id="control" name="addButton" value="down" onmouseup="key3()" onclick="end3()">
+<input type="button" id="control" name="addButton" value="down" onmouseup="key3()" onclick="end3()"> 
+
 </div>
 <script>
 
@@ -275,11 +276,13 @@ clearInterval(refreshIntervalId);
 if (playerHealth < 0){
 clearInterval(refreshIntervalId);
 alert('You have fallen!!');
+window.location.replace("mainFunctionPage.php");;
 }
 
 if (bossHealth < 0){
 clearInterval(refreshIntervalId);
 alert('You are Victorious!!!');
+window.location.replace("mainFunctionPage.php");;
 }
 
 if(num > 1000 && bossHealth > 0){
