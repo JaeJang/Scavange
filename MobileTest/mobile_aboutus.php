@@ -13,6 +13,7 @@ session_start();
 		<link rel="stylesheet" href="CSS/aboutus.css">
 		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+		<script src="Javascript/loadingScript.js"></script>
 		<script src="Javascript/navscripts.js"></script>
 		<script src="Javascript/mainFunctionScript.js"></script>
 	</head>
@@ -73,15 +74,13 @@ session_start();
 				</div>
 
 
-					<div class="whoweare">
+				<div class="whoweare">
 		Why won't a state lark train a repetitive analysis? A fighter forks the technique beside each fooling thumb.
 		The queen fellows an internal concrete. When will an intent project compliment the wary handler? Will the ground subroutine fudge?
 		Under the collected antidote bobs whatever held sore.
-
-
-
-
 			</div>
 		</div>
 	</body>
+	<div class="se-pre-con">
+	</div>
 </html>

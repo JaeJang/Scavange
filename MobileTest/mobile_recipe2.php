@@ -24,24 +24,23 @@ $uN = array();
 		<link rel="stylesheet" href="CSS/mobileRecipeIndividualStyle.css">
 		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 		<!--Javascript-->
-		<!--<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
-		<script src="Javascript/firebase.js"></script>-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+		<script src="Javascript/loadingScript.js"></script>
 		<script src="Javascript/navscripts.js"></script>
 		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 		<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
 		<script src="Javascript/mobileRecipeScript.js"></script>
-		<!--<script src="Javascript/multiOnLoadEventOther.js"></script>-->
 	</head>
 	<body>
 		<div class="topBar">
-			<div class="navIcon" onclick="showNavBar()">
+			<div class="navIcon">
 				<img src="Images/basket.png" width="100" height="100">
 			</div>
 			<div id="myTitle">
 				<h1 class="topBarTitle">&nbsp;&nbsp;SCAVANGE</h1>
 			</div>
 		</div>
-		<div id="navigationBar" class="navBar hidden">
+		<div id="navigationBar" class="navBar">
 			<ul class="navBarList">
 				<!--<li class="navBarPlaceholder"></li>-->
 				<a class="navLink" href="mainFunctionPage.php"><li class="navBarItem">Home</li></a>
@@ -237,4 +236,6 @@ $uN = array();
 				<?php } ?>
 		</div>
 	</body>
+	<div class="se-pre-con">
+	</div>
 </html>

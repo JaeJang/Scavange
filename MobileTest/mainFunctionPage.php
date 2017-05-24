@@ -21,14 +21,14 @@ session_start();
 	</head>
 	<body>
 		<div class="topBar">
-			<div class="navIcon" onclick="showNavBar()">
+			<div class="navIcon">
 				<img src="Images/basket.png" width="100" height="100">
 			</div>
 			<div id="myTitle">
 				<h1 class="topBarTitle">&nbsp;&nbsp;SCAVANGE</h1>
 			</div>
 		</div>
-		<div id="navigationBar" class="navBar hidden">
+		<div id="navigationBar" class="navBar">
 			<ul class="navBarList">
 				<!--<li class="navBarPlaceholder"></li>-->
 				<a class="navLink" href="mainFunctionPage.php"><li class="navBarItem">Home</li></a>

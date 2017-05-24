@@ -11,20 +11,21 @@ session_start();
 		<link rel="stylesheet" href="CSS/backbone.css">
 		<link rel="stylesheet" href="CSS/mobileUpload.css">
 		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+		<script src="Javascript/loadingScript.js"></script>
 		<script src="Javascript/navscripts.js"></script>
 		<script src="Javascript/mobileUpload.js"></script>
-		<!--<script src="Javascript/multiOnLoadEvent.js"></script>-->
 	</head>
 	<body>
 		<div class="topBar">
-			<div class="navIcon" onclick="showNavBar()">
+			<div class="navIcon">
 				<img src="Images/basket.png" width="100" height="100">
 			</div>
 			<div id="myTitle">
 				<h1 class="topBarTitle">&nbsp;&nbsp;SCAVANGE</h1>
 			</div>
 		</div>
-		<div id="navigationBar" class="navBar hidden">
+		<div id="navigationBar" class="navBar">
 			<ul class="navBarList">
 				<!--<li class="navBarPlaceholder"></li>-->
 				<a class="navLink" href="mainFunctionPage.php"><li class="navBarItem">Home</li></a>
@@ -110,4 +111,6 @@ session_start();
 		</form>
 	</div>
 	</body>
+	<div class="se-pre-con">
+	</div>
 </html>
