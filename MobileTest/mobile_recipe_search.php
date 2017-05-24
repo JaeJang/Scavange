@@ -25,26 +25,29 @@ $tmp_recipe_id0 = array();
 //matching process
 for($x=1; $x < $num+1; $x++){
 
-  $sql2 = "SELECT * FROM recipe_ingredientT WHERE recipe_id='$x'";
+  /*$sql2 = "SELECT * FROM recipe_ingredientT WHERE recipe_id='$x'";
   $result2 = mysqli_query($conn, $sql2);
   $count =0;
-  while($row = mysqli_fetch_assoc($result2)){
-
+  while($row = mysqli_fetch_assoc($result2)){*/
+    $count=0;
     for($y=0; $y< $num_ingre; $y++){
-      if(strcasecmp($left2[$y],$row['ingredient'])==0){
+      $sql2_1 = "SELECT * FROM recipe_ingredientT WHERE ingredient LIKE '%$left2[$y]%' and recipe_id='$x'";
+      $result2_1 = mysqli_query($conn, $sql2_1);
+      if(mysqli_num_rows($result2_1) > 0){
         $count++;
-        if($num_ingre >2){
-          if($count == $num_ingre){
-            $tmp_recipe_id[] = $x;
-          } else if($count >= 2 && $count < $num_ingre){
-            $tmp_recipe_id2[] = $x;
-          }
-        } else if($num_ingre > 0){
-          $tmp_recipe_id0[] = $x;
-        }
+
       }
     }
-  }
+    if($num_ingre >2){
+      if($count == $num_ingre){
+        $tmp_recipe_id[] = $x;
+      } else if($count >= 2 && $count < $num_ingre){
+        $tmp_recipe_id2[] = $x;
+      }
+    } else if($num_ingre > 0 && $count >0){
+      $tmp_recipe_id0[] = $x;
+    }
+//  }
 }
 
 
