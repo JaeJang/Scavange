@@ -52,7 +52,7 @@ h1 {
 	position: absolute;
 	z-index: 1;
 	display: none;
-	width: 100%;
+	width: calc(100% - 30px);
 }
 
 .navBarList {
