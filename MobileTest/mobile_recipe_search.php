@@ -63,27 +63,28 @@ $num=1;
 		<link rel="stylesheet" href="CSS/backbone.css">
 		<link rel="stylesheet" href="CSS/mainFunctionStyle.css">
 		<link rel="stylesheet" href="CSS/mobile_recipe2.css">
-    <link rel="stylesheet" href="CSS/mobileRecipeIndividualStyle.css">
+		<link rel="stylesheet" href="CSS/loadingStyle.css">
+		<link rel="stylesheet" href="CSS/mobileRecipeIndividualStyle.css">
 		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 		<!--Javascript-->
-		<!--<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
-		<script src="Javascript/firebase.js"></script>-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+		<script src="Javascript/loadingScript.js"></script>
 		<script src="Javascript/navscripts.js"></script>
 		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 		<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
 		<script src="Javascript/mobileRecipeScript.js"></script>
-		<!--<script src="Javascript/multiOnLoadEventOther.js"></script>-->
 	</head>
 	<body>
 		<div class="topBar">
-			<div class="navIcon" onclick="showNavBar()">
+			<div class="navIcon">
 				<img src="Images/basket.png" width="100" height="100">
 			</div>
 			<div id="myTitle">
 				<h1 class="topBarTitle">&nbsp;&nbsp;SCAVANGE</h1>
 			</div>
 		</div>
-		<div id="navigationBar" class="navBar hidden">
+		<div id="navigationBar" class="navBar">
 			<ul class="navBarList">
 				<!--<li class="navBarPlaceholder"></li>-->
 				<a class="navLink" href="mainFunctionPage.php"><li class="navBarItem">Home</li></a>
@@ -190,8 +191,8 @@ $num=1;
 
 		 ?>
 		<tr class="recipeHeading">
-			<td class="recipeTitle">Title:<a href=<?php echo '"mobile_recipe_search.php?id='.$r_id.'">'; echo $row_search['title']; ?></a></td>
-			<td class="recipeAuthor">Author: <?php echo $row_userid['username']; ?></td>
+			<td class="recipeTitle"><a href=<?php echo '"mobile_recipe_search.php?id='.$r_id.'">'; echo $row_search['title']; ?></a></td>
+			<td class="recipeAuthor"><?php echo $row_userid['username']; ?></td>
       <td class="recipeRating" name="recipeRating" style="font-size:25px;">
       <?php
         $sql_rate = "SELECT AVG(rate) FROM recipe_rateT WHERE recipe_id='$r_id'";
@@ -214,9 +215,9 @@ $num=1;
 		</tr>
 		<tr>
 			<td id=<?php echo '"recipeList'.$num1.'"'; ?> class="recipePicture" colspan="3" onclick=<?php echo '"flipper('."'".$num1."'".')"'; ?>>
-				<div class="front" style=<?php echo '"background-image:url('.$row_search['image_address'].')"'; ?>>
+				<div class="front" style=<?php echo '"background-image:url('.$row_search['image_address'].'); width: auto;"'?>>
 				</div>
-				<div id="description1" class="back" >
+				<div id="description1" class="back" style="width: auto;">
 					<?php echo $row_search['description']; ?>
 				</div>
 			</td>
@@ -238,8 +239,8 @@ $num=1;
 
 		?>
 		<tr class="recipeHeading">
-		<td class="recipeTitle">Title:<a href=<?php echo '"mobile_recipe_search.php?id='.$r_id.'">'; echo $row_search['title']; ?></a></td>
-		<td class="recipeAuthor">Author: <?php echo $row_userid['username']; ?></td>
+		<td class="recipeTitle"><a href=<?php echo '"mobile_recipe_search.php?id='.$r_id.'">'; echo $row_search['title']; ?></a></td>
+		<td class="recipeAuthor"><?php echo $row_userid['username']; ?></td>
     <td class="recipeRating" name="recipeRating" style="font-size:25px;">
     <?php
       $sql_rate = "SELECT AVG(rate) FROM recipe_rateT WHERE recipe_id='$r_id'";
@@ -298,8 +299,8 @@ $num=1;
                 $result_indi_un = mysqli_query($conn, $sql_indi_un);
                 $row_un = mysqli_fetch_assoc($result_indi_un);
                ?>
-              <td class="recipeTitle" name="recipeTitle">Title:<?php echo $row_indi['title']; ?></td>
-              <td class="recipeAuthor" name="recipeAuthor">Author:<?php echo $row_un['username']; ?></td>
+              <td class="recipeTitle" name="recipeTitle"><?php echo $row_indi['title']; ?></td>
+              <td class="recipeAuthor" name="recipeAuthor"><?php echo $row_un['username']; ?></td>
               <!-- rating calculate -->
               <td class="recipeRating" name="recipeRating">
               <?php
@@ -375,13 +376,14 @@ $num=1;
               <?php
                 $sql_steps = "SELECT * FROM recipe_detailT WHERE recipe_id = '$recipe_id_indi'";
                 $result_steps = mysqli_query($conn, $sql_steps);
-
+				$stepCount = 1;
                 while($row_steps = mysqli_fetch_assoc($result_steps)){?>
               <tr>
+			  	<td class="stepNumber"><?php echo $stepCount . ". ";?>
                 <td class="stepItem" style="color:white;"><?php echo $row_steps['detail']; ?></td>
-                <td class="stepPicture"><img src="Images/step1.jpg"></td>
               </tr>
-              <?php } ?>
+              <?php $stepCount++;
+				} ?>
 
             </table>
           </div>
@@ -389,7 +391,7 @@ $num=1;
 
       <?php } ?>
 		</div>
-
-
 	</body>
+	<div class="se-pre-con">
+	</div>
 </html>

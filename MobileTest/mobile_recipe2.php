@@ -22,9 +22,11 @@ $uN = array();
 		<link rel="stylesheet" href="CSS/mainFunctionStyle.css">
 		<link rel="stylesheet" href="CSS/mobile_recipe2.css">
 		<link rel="stylesheet" href="CSS/mobileRecipeIndividualStyle.css">
+		<link rel="stylesheet" href="CSS/loadingStyle.css">
 		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 		<!--Javascript-->
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 		<script src="Javascript/loadingScript.js"></script>
 		<script src="Javascript/navscripts.js"></script>
 		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -113,9 +115,9 @@ $uN = array();
 						</tr>
 						<tr>
 							<td id=<?php echo '"recipeList'.$num.'"'; ?> class="recipePicture" colspan="3" onclick=<?php echo '"flipper('."'".$num."'".')"'; ?>>
-								<div class="front" style=<?php echo '"background-image:url('.$row['image_address'].')"'; ?>>
+								<div class="front" style=<?php echo '"background-image:url('.$row['image_address'].'); width: auto;"'; ?>>
 								</div>
-								<div id="description1" class="back">
+								<div id="description1" class="back" style="width: auto;">
 									<?php echo $row['description']; ?>
 								</div>
 							</td>
@@ -164,7 +166,6 @@ $uN = array();
 									$num_voted = mysqli_num_rows($result_num_voted);
 									echo "($num_voted voted)";
 								 ?>
-								<!-- <img src="Images/star.png"><img src="Images/star.png"><img src="Images/star.png"><img src="Images/star.png"><img src="Images/star.png"> -->
 								</td>
 							</tr>
 						</table>
