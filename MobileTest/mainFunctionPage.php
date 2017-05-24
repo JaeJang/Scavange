@@ -63,19 +63,16 @@ session_start();
 			</ul>
 		</div>
 		<div id="contentBox">
-			<br><br>
 			<div class="formBox">
-				<form class="myForm">
 				<div class="ingredientSearch">
 					<label for="ingredientText">Enter your ingredients below:<br><br></label>
 					<input type="text" id="ingredientText" name="ingredientText">
-					<!--<input type="button" id="addButton" name="addButton" value="Add" onclick="addIngredient()">-->
 					<img src="Images/add.png" width="70" height="70" id="add" onclick="addIngredient()">
 				</div>
 				<br>
 				<h4 class="subheadingText">Your Current Ingredients:</h4>
 				<br>
-				<div class="ingredientForm" action="mobile_recipe_search.php" method="post">
+				<form class="ingredientForm" action="mobile_recipe_search.php" method="post">
 					<textarea id="realList" class="ingredientListAlt" name="leftover"></textarea>
 					<div id="masterList" class="ingredientList">
 						<!--<p id="myList"></p>-->
@@ -83,11 +80,32 @@ session_start();
 					<div id="submitSection">
 						<input type="submit" id="submitButton" name="submitButton" value="Submit">
 					</div>
-				</div>
 				</form>
+			</div>
+			<div class="aboutSection">
+				<h4 class="subheadingText">Tired of leftovers?</h4>
+				<br>
+				<p><!--Look no further. Simply type in your leftovers in the search bar and we'll match you up with a recipe!
+				<br><br>-->
+				Press&nbsp;&nbsp;<img src="Images/add.png" width="32" height="32">&nbsp;&nbsp;to add an ingredient.
+				<br><br>
+				Press&nbsp;&nbsp;<img src="Images/cancel.png" width="28" height="28">&nbsp;&nbsp;to delete an ingredient.
+				<br><br>
+				When you have finished your list, press <span style="color: orange; font-weight: bold;">Submit</span> and let's us find you a recipe!
+				</p>
 			</div>
 		</div>
 	</body>
+	<footer>
+		<table class="footerNav">
+			<tr>
+				<td><img src="Images/basket-orange.png" width="32" height="32"><br>Home</td>
+				<td><img src="Images/recipe.png" width="32" height="32"><br>Recipes</td>
+				<td><img src="Images/share.png" width="32" height="32"><br>Share</td>
+				<td><img src="Images/login.png" width="32" height="32"><br>Login</td>
+			</tr>
+		</table>
+	</footer>
 	<div class="se-pre-con">
 	</div>
 </html>
