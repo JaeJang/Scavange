@@ -92,7 +92,25 @@ $uN = array();
 
 							?>
 							<td class="recipeAuthor"><!--Author:--><?php echo $row_user['username'];; ?> </td>
-							<td class="recipeRating">★★★★★</td>
+							<td class="recipeRating" name="recipeRating" style="font-size:25px;">
+							<?php
+								$sql_rate = "SELECT AVG(rate) FROM recipe_rateT WHERE recipe_id='$recipe_id'";
+								$result_rate = mysqli_query($conn, $sql_rate);
+								$row_rate = mysqli_fetch_row($result_rate);
+								$average = round($row_rate[0]);
+								//print stars based on average
+								for($z=0; $z < $average; $z++){
+									echo '<img src="Images/star.png">';
+								}
+
+								//number of people who voted
+								$sql_num_voted = "SELECT * FROM recipe_rateT WHERE recipe_id='$recipe_id'";
+								$result_num_voted = mysqli_query($conn, $sql_num_voted);
+								$num_voted = mysqli_num_rows($result_num_voted);
+								echo "($num_voted voted)";
+							 ?>
+							<!-- <img src="Images/star.png"><img src="Images/star.png"><img src="Images/star.png"><img src="Images/star.png"><img src="Images/star.png"> -->
+							</td>
 						</tr>
 						<tr>
 							<td id=<?php echo '"recipeList'.$num.'"'; ?> class="recipePicture" colspan="3" onclick=<?php echo '"flipper('."'".$num."'".')"'; ?>>
@@ -129,31 +147,73 @@ $uN = array();
 								 ?>
 								<td class="recipeTitle" name="recipeTitle"><!--Title:--><?php echo $row_indi['title']; ?></td>
 								<td class="recipeAuthor" name="recipeAuthor"><!--Author:--><?php echo $row_un['username']; ?></td>
-								<td class="recipeRating" name="recipeRating"><img src="Images/star.png"><img src="Images/star.png"><img src="Images/star.png"><img src="Images/star.png"><img src="Images/star.png"></td>
+								<!-- rating calculate -->
+								<td class="recipeRating" name="recipeRating">
+								<?php
+									$sql_rate = "SELECT AVG(rate) FROM recipe_rateT WHERE recipe_id='$recipe_id_indi'";
+									$result_rate = mysqli_query($conn, $sql_rate);
+									$row_rate = mysqli_fetch_row($result_rate);
+									$average = round($row_rate[0]);
+									//print stars based on average
+									for($z=0; $z < $average; $z++){
+										echo '<img src="Images/star.png">';
+									}
+
+									//number of people who voted
+									$sql_num_voted = "SELECT * FROM recipe_rateT WHERE recipe_id='$recipe_id_indi'";
+									$result_num_voted = mysqli_query($conn, $sql_num_voted);
+									$num_voted = mysqli_num_rows($result_num_voted);
+									echo "($num_voted voted)";
+								 ?>
+								<!-- <img src="Images/star.png"><img src="Images/star.png"><img src="Images/star.png"><img src="Images/star.png"><img src="Images/star.png"> -->
+								</td>
 							</tr>
 						</table>
+						<?php if(isLoggedIn()){ ?>
+							<form action="rating.php" method="post" style="float:right;">
+								<input type="hidden" name="recipe_id" value=<?php echo '"'.$recipe_id_indi.'"'; ?>>
+								<select class="" name="rate" size="1" onchange="this.form.submit();"
+								style="width:150px; font-size:46px; background-color:orange;color:white;
+								font-family: 'Josefin Sans', sans-serif; border-radius: 25px;">
+									<option value="">rate</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+
+								</select>
+
+							</form>
+						<?php } ?>
 						<div class="recipePicture">
 							<img id="recipeMainPicture" src=<?php echo '"'.$row_indi['image_address'].'"'; ?>>
 						</div>
 						<h4 class="ingredientHeading">Ingredients:</h4>
 						<div class="ingredientBox">
 							<table id="ingredientTable" name="ingredientTable">
-								<tr>
+
 								<?php
-									$sql_indi_ingre = "SELECT * FROM recipe_ingredientT WHERE recipe_id='$recipe_id_indi'";
-									$result_indi_ingre = mysqli_query($conn, $sql_indi_ingre);
-									$count = 1;
-									while($row_ingre = mysqli_fetch_assoc($result_indi_ingre)) {
-										if($count % 2 == 0) {
-								?>
-									<td class="ingredientItem"><?php echo $count . ". " . $row_ingre['ingredient'];
-									$count++;?></td>
-										<?php } else { ?>
-									<td class="ingredientItem"><?php echo $count . ". " . $row_ingre['ingredient'];
-									$count++;?></td>
-								<?php }
-									} ?>
+								$sql_indi_ingre = "SELECT * FROM recipe_ingredientT WHERE recipe_id='$recipe_id_indi'";
+								$result_indi_ingre = mysqli_query($conn, $sql_indi_ingre);
+								$number_ingre = mysqli_num_rows($result_indi_ingre);
+								$count = 1;
+								while($row_ingre = mysqli_fetch_assoc($result_indi_ingre)){
+									if($count % 2 == 1){
+								 ?>
+								 <tr>
+									 <td class="ingredientItem"><?php echo $count . ". " . $row_ingre['ingredient'];
+ 									$count++;?></td>
+
+								 <?php } else{ ?>
+									 <td class="ingredientItem"><?php echo $count . ". " . $row_ingre['ingredient'];
+ 									$count++;?></td>
 								</tr>
+								<?php } ?>
+								<?php }
+								if($number_ingre % 2 == 1){
+									echo '</tr>';
+								}?>
 							</table>
 						</div>
 						<h4 class="stepHeading">Directions:</h4>
