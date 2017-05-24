@@ -17,11 +17,11 @@ body {
 	box-sizing: border-box;
 	margin: auto;
 	font-family: 'Josefin Sans', sans-serif;
-	background-image: url("../Images/food.jpg");
+	/*background-image: url("../Images/food4.jpg");
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: cover;*/
+	background-color: #F2F2F2;
 	letter-spacing: 0.2em;
-	border-radius: 25px;
 }
 
 h1 {
@@ -36,9 +36,10 @@ h1 {
 }
 
 .topBar {
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 1);
 	padding-top: 60px;
 	padding-bottom: 60px;
+	width: 100%;
 }
 
 .topBarTitle {
@@ -51,15 +52,16 @@ h1 {
 	position: absolute;
 	z-index: 1;
 	display: none;
-	/*top: 0;*/
+	width: 100%;
 }
 
 .navBarList {
 	display: inline-block;
 	color: orange;
 	font-size: 36px;
-	text-align: center;
+	text-align: left;
 	font-weight: bold;
+	width: 100%;
 }
 
 .navBarPlaceholder {
@@ -71,15 +73,16 @@ h1 {
 }
 
 .navBarItem {
-	background-color: rgba(86, 79, 71, 1);
+	/*background-color: rgba(86, 79, 71, 1);*/
+	background-color: #f0efed;
+	color: black;
 	height: 200px;
-	width: 200px;
+	width: 100%;
 	line-height: 200px;
 	vertical-align: middle;
 	/*margin-top: 1px;*/
-	border-top: 1px solid white;
-	padding-right: 10px;
-	padding-left: 10px;
+	border-top: 1px solid gray;
+	padding-left: 30px;
 }
 
 .navLink {
@@ -104,6 +107,24 @@ h1 {
 	color: white;
 	font-size: 28px;
 	padding: 10px 20px;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+	width: 100%;
+}
+
+.footerNav {
+	width: 100%;
+}
+
+.footerNav td {
+	background-color: white;
+	padding: 20px 0;
+	width: 25%;
+	font-size: 32px;
 }
 
 .visible {

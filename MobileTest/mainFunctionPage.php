@@ -65,16 +65,17 @@ session_start();
 		<div id="contentBox">
 			<br><br>
 			<div class="formBox">
-				<form class="ingredientSearch">
+				<form class="myForm">
+				<div class="ingredientSearch">
 					<label for="ingredientText">Enter your ingredients below:<br><br></label>
 					<input type="text" id="ingredientText" name="ingredientText">
 					<!--<input type="button" id="addButton" name="addButton" value="Add" onclick="addIngredient()">-->
 					<img src="Images/add.png" width="70" height="70" id="add" onclick="addIngredient()">
-				</form>
+				</div>
 				<br>
 				<h4 class="subheadingText">Your Current Ingredients:</h4>
 				<br>
-				<form class="ingredientForm" action="mobile_recipe_search.php" method="post">
+				<div class="ingredientForm" action="mobile_recipe_search.php" method="post">
 					<textarea id="realList" class="ingredientListAlt" name="leftover"></textarea>
 					<div id="masterList" class="ingredientList">
 						<!--<p id="myList"></p>-->
@@ -82,6 +83,7 @@ session_start();
 					<div id="submitSection">
 						<input type="submit" id="submitButton" name="submitButton" value="Submit">
 					</div>
+				</div>
 				</form>
 			</div>
 		</div>
