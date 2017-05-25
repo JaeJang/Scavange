@@ -42,7 +42,7 @@ session_start();
 				 ?>
 
 				<a class="navLink" href="mobile_aboutus.php"><li class="navBarItem">About Us</li></a>
-				<a class="navLink" href="mobile_affilated.php"><li class="navBarItem">Affilates</li></a>
+				<a class="navLink" href="mobile_affilated.php"><li class="navBarItem">Affiliates</li></a>
 			</ul>
 		</div>
 		<div id="navigationBarAlt">
@@ -58,39 +58,40 @@ session_start();
 					}
 				 ?>
 				<a class="navLink" href="mobile_aboutus.php"><li class="navBarItemAlt">About Us</li></a>
-				<a class="navLink" href="mobile_affilated.php"><li class="navBarItem">Affilates</li></a>
+				<a class="navLink" href="mobile_affilated.php"><li class="navBarItem">Affiliates</li></a>
 			</ul>
 		</div>
-		<br><br>
+		
 		<div id="main">
 			<div id="create">
-				<span style="color: orange">Recipe Creation</span>
+				<span style="color: black">Recipe Creation</span><br><br>
 			</div>
 		<form action="newRecipe.php" method="post" enctype="multipart/form-data">
 			<div id="nameLabel">
-				<label id="recLabel" class="unbold" for="name"><span style="color: white"><br>Recipe Name</span></label>
-				<br><br>
+				<label id="recLabel" class="unbold" for="name"><span style="color: black"><br>Recipe Name</span>
+				</label>
+				<hr>
 				<div id="name">
 					<input type="text" name="recName">
 				</div>
 			</div>
 			<br><br>
 			<div id="uploadLabel">
-				<label id="upLabel" class="unbold" for="myPicture"><span style="color: white">Upload a picture:</span></label>
-				<br><br>
+				<label id="upLabel" class="unbold" for="myPicture"><span style="color: black">Upload a picture:</span></label><hr>
+				<br>
 				<input id="myPicture" type="file" name="pic">
 			</div>
-			<br><br><br>
+			<br><br>
 			<div id="placeholder">
-				<label id="desLabel" class="unbold" for="describe"><span style="color: white">Description:</span></label>
+				<label id="desLabel" class="unbold" for="describe"><span style="color: black">Description:</span></label><hr>
 				<br>
-				<div id="description"><br>
+				<div id="description">
 					<textarea name="describe" class="describe" cols="30" rows="10" placeholder="Short description of recipe"></textarea>
 				</div>
 			</div>
 			<div id="info">
-				<label id="ingredient"><span style="color: white"><br>Ingredients:</span></label>
-				<br><br>
+				<label id="ingredient"><span style="color: black"><br>Ingredients:</span></label><hr>
+				<br>
 			</div>
 			<div class="ingredContain">
 				<div id="ingredientList">
@@ -99,7 +100,7 @@ session_start();
 				</div>
 			</div>
 			<div id="stepLabel">
-				<label id="recStep" class="unbold"><span style="color: white"><br>Directions:</span></label><br><br>
+				<label id="recStep" class="unbold"><span style="color: black"><br>Directions:</span></label><hr><br>
 			</div>
 			<div class = "formContain">
 				<div id="steps">
@@ -113,6 +114,16 @@ session_start();
 		</form>
 	</div>
 	</body>
+	<footer>
+		<table class="footerNav">
+			<tr>
+				<td><a href="mainFunctionPage.php"><img src="Images/basket-orange.png" width="32" height="32"><br>Home</a></td>
+				<td><a href="mobile_recipe2.php"><img src="Images/recipe.png" width="32" height="32"><br>Recipes</a></td>
+				<td><a href="mobileUpload.php"><img src="Images/share.png" width="32" height="32"><br>Share</a></td>
+				<td><a href="mobile_login.php"><img src="Images/login.png" width="32" height="32"><br>Login</a></td>
+			</tr>
+		</table>
+	</footer>
 	<div class="se-pre-con">
 	</div>
 </html>

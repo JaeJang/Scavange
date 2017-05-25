@@ -15,7 +15,7 @@ body {
 	box-sizing: border-box;
 	margin: auto;
 	font-family: 'Josefin Sans', sans-serif;
-	background-image: url("../Images/food.jpg");
+	/*background-image: url("../Images/food.jpg");*/
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -26,22 +26,27 @@ h1 {
 }
 
 #main{
-	/*text-align: center;*/
+	/*text-align: center;
 	margin: 20px;
 	border-radius: 25px;
 	border: 3px solid orange;
 	padding: 40px 40px;
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0.6)*/
+	margin: 30px 0px 150px 0px;
+	padding: 40px 40px;
+	font-size: 36px;
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #create {
 	text-align: center;
 	font-weight: bold;
-	font-size: 36px;
+	font-size: 46px;
 } 
 
-#nameLabel{
-	font-size: 36px;
+hr{
+	margin: 15px 0px;
 }
 		
 #name input{
@@ -51,16 +56,16 @@ h1 {
 	font-family: 'Josefin Sans', sans-serif;
 	width: 50%;
 	height: 90px;
-	padding: 0 20px;
+	padding: 0px 20px;
+	margin-top: 20px;
 }
 
-#uploadLabel{
-	font-size: 36px;
-	display: inline-block;
+#upLabel{
+	font-size: 46px;
 }
 
 #desLabel{
-	font-size: 36px;
+	font-size: 46px;
 }
 
 #myPicture{
@@ -68,13 +73,13 @@ h1 {
 	display: inline-block;
 }
 
-#myPicture input{
+/*#myPicture input{
 	color: white;
 	padding: 20px;
 	font-size: 20px;
 	font-family: 'Josefin Sans', sans-serif;
-	/*display: inline-block;*/
-}
+	/*display: inline-block;
+}*/
 
 .describe {
 	resize: none;
@@ -92,6 +97,7 @@ h1 {
 }
 
 .describe::placeholder{
+	padding-left: 10px;
 	font-size: 46px;
 	font-family: 'Josefin Sans', sans-serif;
 }
@@ -125,6 +131,7 @@ h1 {
 }
 
 .ingredientArea::placeholder{
+	padding-left: 10px;
 	height: 18px;
 	font-family: 'Josefin Sans', sans-serif;
 }
@@ -160,6 +167,7 @@ h1 {
 }
 
 .direction::placeholder{
+	padding-left: 10px;
 	height: 18px;
 	font-family: 'Josefin Sans', sans-serif;
 }

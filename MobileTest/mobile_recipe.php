@@ -115,4 +115,14 @@
 				
 		
 	</body>
+	<footer>
+		<table class="footerNav">
+			<tr>
+				<td><a href="mainFunctionPage.php"><img src="Images/basket-orange.png" width="32" height="32"><br>Home</a></td>
+				<td><a href="mobile_recipe2.php"><img src="Images/recipe.png" width="32" height="32"><br>Recipes</a></td>
+				<td><a href="mobileUpload.php"><img src="Images/share.png" width="32" height="32"><br>Share</a></td>
+				<td><a href="mobile_login.php"><img src="Images/login.png" width="32" height="32"><br>Login</a></td>
+			</tr>
+		</table>
+	</footer>
 </html>

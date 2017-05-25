@@ -42,7 +42,7 @@ session_start();
 				 ?>
 
 				<a class="navLink" href="mobile_aboutus.php"><li class="navBarItem">About Us</li></a>
-				<a class="navLink" href="mobile_affilated.php"><li class="navBarItem">Affilates</li></a>
+				<a class="navLink" href="mobile_affilated.php"><li class="navBarItem">Affiliates</li></a>
 			</ul>
 		</div>
 		<div id="navigationBarAlt">
@@ -58,7 +58,7 @@ session_start();
 					}
 				 ?>
 				<a class="navLink" href="mobile_aboutus.php"><li class="navBarItemAlt">About Us</li></a>
-				<a class="navLink" href="mobile_affilated.php"><li class="navBarItem">Affilates</li></a>
+				<a class="navLink" href="mobile_affilated.php"><li class="navBarItem">Affiliates</li></a>
 			</ul>
 		</div>
 		<div id="contentBox">
@@ -84,13 +84,13 @@ session_start();
 			</div>
 		</div>
 	</body>
-	<footer>
+	<<footer>
 		<table class="footerNav">
 			<tr>
-				<td><img src="Images/basket-orange.png" width="32" height="32"><br>Home</td>
-				<td><img src="Images/recipe.png" width="32" height="32"><br>Recipes</td>
-				<td><img src="Images/share.png" width="32" height="32"><br>Share</td>
-				<td><img src="Images/login.png" width="32" height="32"><br>Login</td>
+				<td><a href="mainFunctionPage.php"><img src="Images/basket-orange.png" width="32" height="32"><br>Home</a></td>
+				<td><a href="mobile_recipe2.php"><img src="Images/recipe.png" width="32" height="32"><br>Recipes</a></td>
+				<td><a href="mobileUpload.php"><img src="Images/share.png" width="32" height="32"><br>Share</a></td>
+				<td><a href="mobile_login.php"><img src="Images/login.png" width="32" height="32"><br>Login</a></td>
 			</tr>
 		</table>
 	</footer>

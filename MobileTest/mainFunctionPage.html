@@ -5,25 +5,20 @@
 		<title>SCAVANGE TEMPLATE</title>
 		<link rel="stylesheet" href="CSS/backbone.css">
 		<link rel="stylesheet" href="CSS/mainFunctionStyle.css">
-		<link rel="stylesheet" href="CSS/loadingStyle.css">
-		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
-		<script src="Javascript/loadingScript.js"></script>
 		<script src="Javascript/navscripts.js"></script>
 		<script src="Javascript/mainFunctionScript.js"></script>
 		<script src="Javascript/multiOnLoadEvent.js"></script>
 	</head>
 	<body>
 		<div class="topBar">
-			<div class="navIcon">
+			<div class="navIcon" onclick="showNavBar()">
 				<img src="Images/basket.png" width="100" height="100">
 			</div>
 			<div id="myTitle">
 				<h1 class="topBarTitle">&nbsp;&nbsp;SCAVANGE</h1>
 			</div>
 		</div>
-		<div id="navigationBar" class="navBar">
+		<div id="navigationBar" class="navBar hidden">
 			<ul class="navBarList">
 				<!--<li class="navBarPlaceholder"></li>-->
 				<a class="navLink" href="mainFunctionPage.html"><li class="navBarItem">Home</li></a>
@@ -45,17 +40,18 @@
 			</ul>
 		</div>
 		<div id="contentBox">
+			<br><br>
 			<div class="formBox">
-				<form class="myForm">
-				<div class="ingredientSearch">
+				<form class="ingredientSearch">
 					<label for="ingredientText">Enter your ingredients below:<br><br></label>
 					<input type="text" id="ingredientText" name="ingredientText">
+					<!--<input type="button" id="addButton" name="addButton" value="Add" onclick="addIngredient()">-->
 					<img src="Images/add.png" width="70" height="70" id="add" onclick="addIngredient()">
-				</div>
+				</form>
 				<br>
 				<h4 class="subheadingText">Your Current Ingredients:</h4>
 				<br>
-				<div class="ingredientForm">
+				<form class="ingredientForm">
 					<textarea id="realList" class="ingredientListAlt" ></textarea>
 					<div id="masterList" class="ingredientList">
 						<!--<p id="myList"></p>-->
@@ -63,33 +59,8 @@
 					<div id="submitSection">
 						<input type="submit" id="submitButton" name="submitButton">
 					</div>
-				</div>
 				</form>
-			</div>
-			<div class="aboutSection">
-				<h4 class="subheadingText">Tired of leftovers?</h4>
-				<br>
-				<p><!--Look no further. Simply type in your leftovers in the search bar and we'll match you up with a recipe!
-				<br><br>-->
-				Press&nbsp;&nbsp;<img src="Images/add.png" width="32" height="32">&nbsp;&nbsp;to add an ingredient.
-				<br><br>
-				Press&nbsp;&nbsp;<img src="Images/cancel.png" width="28" height="28">&nbsp;&nbsp;to delete an ingredient.
-				<br><br>
-				When you have finished your list, press <span style="color: orange; font-weight: bold;">Submit</span> and let's us find you a recipe!
-				</p>
 			</div>
 		</div>
 	</body>
-	<footer>
-		<table class="footerNav">
-			<tr>
-				<td><img src="Images/basket-orange.png" width="32" height="32"><br>Home</td>
-				<td><img src="Images/recipe.png" width="32" height="32"><br>Recipes</td>
-				<td><img src="Images/share.png" width="32" height="32"><br>Share</td>
-				<td><img src="Images/login.png" width="32" height="32"><br>Login</td>
-			</tr>
-		</table>
-	</footer>
-	<div class="se-pre-con">
-	</div>
 </html>
