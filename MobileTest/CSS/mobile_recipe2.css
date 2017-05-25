@@ -1,28 +1,23 @@
-/* The description boxes */
-.content {
-	width: 100%;
-	height: 300px;
-	overflow: auto;
-	font-size: 30px;
-	color: white;
-	letter-spacing: 2px;
+/* Overall frame */
+#contentBox {
+	margin: 30px 0 120px 0;
 }
 
 /* The outside frame for box */
 .box {
-	border-radius: 25px;
-	border: 3px solid orange;
-	padding: 50px 50px;
-	font-size: 36px;
-	margin-top: 50px;
-	background-color: rgba(0, 0, 0, 0.6);
-	box-sizing: border-box;
+	padding: 40px 40px;
+	font-size: 46px;
+	color: black;
+	background-color: white;
+	margin-bottom: 30px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* The Main headings */
-h2 {
-	color: orange;
+.myTitle {
+	color: black;
 	text-align: center;
+	font-size: 46px;
 }
 
 /* The subheadings */
@@ -41,31 +36,35 @@ body {
 
 #star{color:orange;}
 
-#recipeList {
-	width: 100%;
-	color: white;
+.myRecipe {
+	width: auto;
 }
 
-#recipeList a {
+.recipeTable {
+	width: 100%;
+	background-color: white;
+}
+
+.recipeTable a {
 	text-decoration: none;
 	color: orange;
 }
 
-#recipeList td {
-	color: orange;
+.recipeTable td {
+	color: black;
 	font-weight: bold;
 	box-sizing: border-box;
 }
 
-#recipeList tr:not(:nth-of-type(1)) .recipeTitle {
+.recipeTable tr:not(:nth-of-type(1)) .recipeTitle {
 	padding-top: 50px;
 }
 
-#recipeList tr:not(:nth-of-type(1)) .recipeAuthor {
+.recipeTable tr:not(:nth-of-type(1)) .recipeAuthor {
 	padding-top: 50px;
 }
 
-#recipeList tr:not(:nth-of-type(1)) .recipeRating {
+.recipeTable tr:not(:nth-of-type(1)) .recipeRating {
 	padding-top: 50px;
 	text-align: right;
 }
@@ -87,24 +86,27 @@ body {
 
 .recipePicture {
 	height: 350px;
-	overflow: scroll;
+	overflow: hidden;
 }
 
 .front {
-	background-image: url("../Images/sampleFood.jpg");
 	background-size: cover;
-	border: 5px solid white;
-	border-radius: 25px;
-	/*padding-top: 20px;*/
-	height: 100%;
+	height: 350px;
 	width: auto;
+	overflow: hidden;
 }
 
 .back {
-	overflow: scroll;
-	color: white;
+	display: none;
+	overflow: hidden;
+	color: black;
+	background-color: white;
 	font-weight: normal;
 	padding-top: 20px;
-	height: 100%;
+	height: 350px;
 	width: auto;
+}
+
+.back p {
+	padding: 20px;
 }

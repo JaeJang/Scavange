@@ -1,12 +1,18 @@
-$(function() {
-	$(".recipePicture").flip({
-		trigger: 'manual',
-		axis: 'x'
+/*function swipe() {
+	$(".back").hide();
+	$(".front").on("swipeleft", function(event) {
+		$(this).hide();
+		var parent = $(this).parent();
+		parent.find(".back").show();
 	});
-});
+	
+	$(".back").on("swiperight", function(event) {
+		$(this).hide();
+		var parent = $(this).parent();
+		parent.find(".front").show();
+	});
+	
+}*/
 
-function flipper(number) {
-	$("#recipeList" + number).flip('toggle');
+function flip(id) {
 }
-
-

@@ -18,17 +18,24 @@ $uN = array();
 		<meta charset="utf-8"/>
 		<title>SCAVANGE TEMPLATE</title>
 		<!--CSS-->
+		<!-- Include jQuery Mobile stylesheets -->
+		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 		<link rel="stylesheet" href="CSS/backbone.css">
 		<link rel="stylesheet" href="CSS/mobile_recipe2.css">
 		<link rel="stylesheet" href="CSS/mobileRecipeIndividualStyle.css">
 		<link rel="stylesheet" href="CSS/loadingStyle.css">
 		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-		
 		<!--Javascript-->
+		<!-- Include the jQuery library -->
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<!-- Include the jQuery Mobile library -->
+		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 		<script src="Javascript/loadingScript.js"></script>
 		<script src="Javascript/navscripts.js"></script>
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<!--<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>-->
 		<script src="Javascript/mobileRecipeScript.js"></script>
 	</head>
 	<body>
@@ -42,6 +49,7 @@ $uN = array();
 		</div>
 		<div id="navigationBar" class="navBar">
 			<ul class="navBarList">
+				<!--<li class="navBarPlaceholder"></li>-->
 				<a class="navLink" href="mainFunctionPage.php"><li class="navBarItem">Home</li></a>
 				<a class="navLink" href="mobile_recipe2.php"><li class="navBarItem">Recipes</li></a>
 				<?php
@@ -125,17 +133,18 @@ $uN = array();
 						</tr>
 						<tr>
 							<!--Setup recipe picture-->
-							<td id=<?php echo '"recipeList'.$num.'"';?> class="recipePicture" colspan="3">
-								<div class="front" style=<?php echo '"background-image:url('.$row['image_address'].');"';?> onclick=<?php
-									$frontID = 'recipeList' . $num;
-									echo '"' . 'flip('' . $frontID . '')"';
-								?>>
+							<!--<td id=<?php echo '"recipeList'.$num.'"';?> class="recipePicture" colspan="3" onclick=<?php echo '"flipper('."'".$num."'".')"';?>>
+								<div class="front" style=<?php echo '"background-image:url('.$row['image_address'].'); width: auto;"';?>>
 								</div>
-								<div id=<?php echo'"description'.$num.'"';?> class="back" onclick=<?php
-									$backID = 'recipeList' . $num;
-									echo '"' . 'flip('' . $backID . '')"';
-								?>>
-									<p><?php echo $row['description']; ?></p>
+								<div id=<?php echo'"description'.$num.'"';?> class="back">
+									<?php echo $row['description']; ?>
+								</div>
+							</td>-->
+							<td id=<?php echo '"recipeList'.$num.'"';?> class="recipePicture" colspan="3">
+								<div class="front" style=<?php echo '"background-image:url('.$row['image_address'].'); width: auto;"';?>>
+								</div>
+								<div id=<?php echo'"description'.$num.'"';?> class="back">
+									<?php echo $row['description']; ?>
 								</div>
 							</td>
 						</tr>
@@ -166,7 +175,7 @@ $uN = array();
 									$row_un = mysqli_fetch_assoc($result_indi_un);
 								 ?>
 								<td class="recipeTitle" name="recipeTitle"><!--Title:--><?php echo $row_indi['title']; ?></td>
-								<td class="recipeAuthor" name="recipeAuthor"><?php echo $row_un['username']; ?></td>
+								<td class="recipeAuthor" name="recipeAuthor"><!--Author:--><?php echo $row_un['username']; ?></td>
 								<!-- rating calculate -->
 								<td class="recipeRating" name="recipeRating">
 								<?php
@@ -200,7 +209,9 @@ $uN = array();
 									<option value="3">3</option>
 									<option value="4">4</option>
 									<option value="5">5</option>
+
 								</select>
+
 							</form>
 						<?php } ?>
 						<div class="recipePicture">
