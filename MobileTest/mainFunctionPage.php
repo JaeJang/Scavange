@@ -18,6 +18,7 @@ session_start();
 		<script src="Javascript/navscripts.js"></script>
 		<script src="Javascript/mainFunctionScript.js"></script>
 		<script src="Javascript/multiOnLoadEvent.js"></script>
+
 	</head>
 	<body>
 		<div class="topBar">
@@ -43,7 +44,7 @@ session_start();
 				 ?>
 
 				<a class="navLink" href="mobile_aboutus.php"><li class="navBarItem">About Us</li></a>
-				<a class="navLink" href="mobile_affilated.php"><li class="navBarItem">Affilates</li></a>
+				<a class="navLink" href="mobile_affilated.php"><li class="navBarItem">Affiliates</li></a>
 			</ul>
 		</div>
 		<div id="navigationBarAlt">
@@ -59,7 +60,7 @@ session_start();
 					}
 				 ?>
 				<a class="navLink" href="mobile_aboutus.php"><li class="navBarItemAlt">About Us</li></a>
-				<a class="navLink" href="mobile_affilated.php"><li class="navBarItem">Affilates</li></a>
+				<a class="navLink" href="mobile_affilated.php"><li class="navBarItem">Affiliates</li></a>
 			</ul>
 		</div>
 		<div id="contentBox">
@@ -99,13 +100,26 @@ session_start();
 	<footer>
 		<table class="footerNav">
 			<tr>
-				<td><img src="Images/basket-orange.png" width="32" height="32"><br>Home</td>
-				<td><img src="Images/recipe.png" width="32" height="32"><br>Recipes</td>
-				<td><img src="Images/share.png" width="32" height="32"><br>Share</td>
-				<td><img src="Images/login.png" width="32" height="32"><br>Login</td>
+				<td><a href="mainFunctionPage.php"><img src="Images/basket-orange.png" width="32" height="32"><br>Home</a></td>
+				<td><a href="mobile_recipe2.php"><img src="Images/recipe.png" width="32" height="32"><br>Recipes</a></td>
+				<?php
+					if(isLoggedIn()){
+				 ?>
+				<td><a href="mobileUpload.php"><img src="Images/share.png" width="32" height="32"><br>Share</a></td>
+				<td><a href="logout.php"><img src="Images/login.png" width="32" height="32"><br>Logout</a></td>
+				<?php } else{ ?>
+					<td><a href="#" onclick="notloggedin()"><img src="Images/share.png" width="32" height="32"onclick="notloggedin()" ><br>Share</a></td>
+					<td><a href="mobile_login.php"><img src="Images/share.png" width="32" height="32"><br>Login</a></td>
+					<?php }
+					echo '<script type="text/javascript">
+						function notloggedin(){
+							alert("Please log in for sharing");
+						}
+					</script>'; ?>
 			</tr>
 		</table>
 	</footer>
 	<div class="se-pre-con">
 	</div>
+
 </html>
