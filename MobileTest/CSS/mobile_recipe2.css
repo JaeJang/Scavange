@@ -113,17 +113,19 @@ body {
 }
 
 .back {
-	overflow: hidden;
+	overflow: scroll;
 	color: black;
 	background-color: white;
-	font-weight: normal;
 	padding-top: 20px;
 	height: 350px;
 	width: auto;
-	font-size: 36px;
 }
 
 .back p {
 	padding: 20px;
-	overflow: hidden;
+	overflow: scroll;
+	width: 100%;
+	font-size: 24px;
+	box-sizing: border-box;
+	word-break: break-all;
 }
