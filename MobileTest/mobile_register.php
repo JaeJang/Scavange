@@ -64,34 +64,36 @@ session_start();
 			</ul>
 		</div>
 		<div id="contentBox">
-			<br><br>
 			<div class="formBox">
-				<h2 class="jae_title">Registration</h2><br><br><br>
-				<form action="register.php" onsubmit="return formValidate()" method="post">
-					<label class="labeL" for="name">*Username: </label>
-					<input type="text" name="name" id="name" placeholder="">
-					<br>
-					<div id="errorn" class="error">
-					</div>
+				<h1 class="jae_title">Registration</h1><br><br>
+				<form class="myForm" action="register.php" onsubmit="return formValidate()" method="post">
+					<table class="loginInfo">
+						<tr>
+							<td class="loginLabel"><label class="labeL" for="name">*Username:</label></td>
+							<td class="loginInput"><input type="text" name="name" id="name" placeholder="">
+							<div id="errorn" class="error">
+							</div></td>
+						</tr>
+						<tr>
+							<td class="loginLabel"><label class="labeL" for="email">*Email:</label></td>
+							<td class="loginInput"><input type="text" name="email" id="email" placeholder="you@domail.com">
+							<div id="errore" class="error">
+							</div></td>
+						</tr>
+						<tr>
+							<td class="loginLabel"><label class="labeL" for="password">*Password:</label></td>
+							<td class="loginInput"><input type="password" name="password" id="password" minlength="8">
+							<div id="errorp" class="error">
+							</div></td>
+						</tr>
+						<tr>
+							<td class="loginLabel"><label class="labeL" for="cpasword">*Confirm Password:</label></td>
+							<td class="loginInput"><input type="password" name="myPwordConfirm" id="cPassword" minlength="8">
+							<div id="errorp2" class="error">
+							</div></td>
+						</tr>
+					</table>
 					<br><br>
-					<label class="labeL" for="email">*Email: </label>
-					<input type="text" name="email" id="email" placeholder="you@domail.com">
-					<br>
-					<div id="errore" class="error">
-					</div>
-					<br><br>
-					<label class="labeL" for="password">*Password: </label>
-					<input type="password" name="password" id="password" minlength="8">
-					<br>
-					<div id="errorp" class="error">
-					</div>
-					<br><br>
-					<label class="labeL" for="cpasword">*Password:<br>Confirm </label>
-					<input type="password" name="myPwordConfirm" id="cPassword" minlength="8">
-					<br><br>
-					<div id="errorp2" class="error">
-					</div>
-					<br><br><br><br>
 					<div class="field">
 						<input type="submit" name="" value="Submit" id="submit0">
 					</div>
@@ -99,6 +101,16 @@ session_start();
 			</div>
 		</div>
 	</body>
+	<footer>
+		<table class="footerNav">
+			<tr>
+				<td><img src="Images/basket-orange.png" width="32" height="32"><br>Home</td>
+				<td><img src="Images/recipe.png" width="32" height="32"><br>Recipes</td>
+				<td><img src="Images/share.png" width="32" height="32"><br>Share</td>
+				<td><img src="Images/login.png" width="32" height="32"><br>Login</td>
+			</tr>
+		</table>
+	</footer>
 	<div class="se-pre-con">
 	</div>
 </html>

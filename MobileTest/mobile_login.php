@@ -30,7 +30,6 @@ session_start();
 		</div>
 		<div id="navigationBar" class="navBar">
 			<ul class="navBarList">
-				<!--<li class="navBarPlaceholder"></li>-->
 				<a class="navLink" href="mainFunctionPage.php"><li class="navBarItem">Home</li></a>
 				<a class="navLink" href="mobile_recipe2.php"><li class="navBarItem">Recipes</li></a>
 				<?php
@@ -63,23 +62,38 @@ session_start();
 			</ul>
 		</div>
 		<div id="contentBox">
-			<br><br>
-			<div class="formBox" style="margin-top: 50px;">
-			<form action="login.php" method="post">
-				<h2 class="jae_title">Login</h2><br><br>
-				<label class="labeL" for="name" style="font-size:45px">*Username: </label>
-				<input type="text" name="myName" id="name" placeholder="" required="required">
-				<br><br><br>
-				<label class="labeL" for="password"style="font-size:45px">*Password:</label>
-				<input type="password" name="myPword" id="password" required="required" minlength="8">
-				<br><br><br>
-				<div class="field"><input type="submit" name="" value="Submit" id="submit0"></div>
+			<div class="formBox">
+			<h1 class="jae_title">Login</h1><br><br>
+			<form class="myForm" action="login.php" method="post">
+				<table class="loginInfo">
+					<tr>
+						<td class="loginLabel"><label class="labeL" for="name">*Username:</label></td>
+						<td class="loginInput"><input type="text" name="myName" id="name" placeholder="" class="inputField" required="required"></td>
+					</tr>
+					<tr>
+						<td class="loginLabel"><label class="labeL" for="password">*Password:</label></td>
+						<td class="loginInput"><input type="password" name="myPword" id="password" class="inputField" required="required" minlength="8"></td>
+					</tr>
+				</table>
 				<br><br>
+				<div class="field">
+					<input type="submit" name="" value="Submit" id="submit0">
+				</div>
 				<p class="jae_1"> Not a member? <a href="mobile_register.php">SIGN UP</a></p>
-			</div>
 			</form>
+			</div>
 		</div>
 	</body>
+	<footer>
+		<table class="footerNav">
+			<tr>
+				<td><img src="Images/basket-orange.png" width="32" height="32"><br>Home</td>
+				<td><img src="Images/recipe.png" width="32" height="32"><br>Recipes</td>
+				<td><img src="Images/share.png" width="32" height="32"><br>Share</td>
+				<td><img src="Images/login.png" width="32" height="32"><br>Login</td>
+			</tr>
+		</table>
+	</footer>
 	<div class="se-pre-con">
 	</div>
 </html>

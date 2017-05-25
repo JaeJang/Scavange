@@ -65,7 +65,7 @@ session_start();
 		<div id="contentBox">
 			<div class="formBox">
 				<div class="ingredientSearch">
-					<label for="ingredientText">Enter your ingredients below:<br><br></label>
+					<label class="subheadingText" for="ingredientText">Enter your ingredients below:<br><br></label>
 					<input type="text" id="ingredientText" name="ingredientText">
 					<img src="Images/add.png" width="70" height="70" id="add" onclick="addIngredient()">
 				</div>
@@ -83,7 +83,7 @@ session_start();
 				</form>
 			</div>
 			<div class="aboutSection">
-				<h4 class="subheadingText">Tired of leftovers?</h4>
+				<h4 class="subheadingText">Tired of leftovers?</h4><hr>
 				<br>
 				<p><!--Look no further. Simply type in your leftovers in the search bar and we'll match you up with a recipe!
 				<br><br>-->
