@@ -32,7 +32,7 @@ session_start();
 			<ul class="navBarList">
 				<!--<li class="navBarPlaceholder"></li>-->
 				<a class="navLink" href="mainFunctionPage.php"><li class="navBarItem">Home</li></a>
-				<a class="navLink" href="mobile_recipe.php"><li class="navBarItem">Recipes</li></a>
+				<a class="navLink" href="mobile_recipe2.php"><li class="navBarItem">Recipes</li></a>
 				<?php
 					if(isLoggedIn()){
 						echo '<a class="navLink" href="mobileUpload.php"><li class="navBarItem">Share</li></a>';
@@ -88,8 +88,20 @@ session_start();
 			<tr>
 				<td><a href="mainFunctionPage.php"><img src="Images/basket-orange.png" width="32" height="32"><br>Home</a></td>
 				<td><a href="mobile_recipe2.php"><img src="Images/recipe.png" width="32" height="32"><br>Recipes</a></td>
+				<?php
+					if(isLoggedIn()){
+				 ?>
 				<td><a href="mobileUpload.php"><img src="Images/share.png" width="32" height="32"><br>Share</a></td>
-				<td><a href="mobile_login.php"><img src="Images/login.png" width="32" height="32"><br>Login</a></td>
+				<td><a href="logout.php"><img src="Images/login.png" width="32" height="32"><br>Logout</a></td>
+				<?php } else{ ?>
+					<td><a href="#" onclick="notloggedin()"><img src="Images/share.png" width="32" height="32"onclick="notloggedin()" ><br>Share</a></td>
+					<td><a href="mobile_login.php"><img src="Images/share.png" width="32" height="32"><br>Login</a></td>
+					<?php }
+					echo '<script type="text/javascript">
+						function notloggedin(){
+							alert("Please log in for sharing");
+						}
+					</script>'; ?>
 			</tr>
 		</table>
 	</footer>
