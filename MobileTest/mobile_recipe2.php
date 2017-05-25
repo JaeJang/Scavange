@@ -87,7 +87,7 @@ $uN = array();
 						<table class="recipeTable">
 						<tr class="recipeHeading">							
 							<!--Display title/link for recipe-->
-							<td class="recipeTitle"><a href=<?php echo '"mobile_recipe2.php?id='.$row['recipe_id'].'"'?>><?php echo $row['title']; ?></a></td>
+							<td class="recipeTitleList"><a href=<?php echo '"mobile_recipe2.php?id='.$row['recipe_id'].'"'?>><?php echo $row['title']; ?></a></td>
 							
 							<!--Fetch author recipe-->
 							<?php
@@ -99,10 +99,10 @@ $uN = array();
 							?>
 							
 							<!--Display author of recipe-->
-							<td class="recipeAuthor"><?php echo $row_user['username'];; ?></td>
+							<td class="recipeAuthorList"><?php echo $row_user['username'];; ?></td>
 							
 							<!--Setup rating of recipe-->
-							<td class="recipeRating" name="recipeRating">
+							<td class="recipeRatingList" name="recipeRating">
 							
 							<!--Get recipe rating--> 
 							<?php
@@ -119,21 +119,21 @@ $uN = array();
 								$sql_num_voted = "SELECT * FROM recipe_rateT WHERE recipe_id='$recipe_id'";
 								$result_num_voted = mysqli_query($conn, $sql_num_voted);
 								$num_voted = mysqli_num_rows($result_num_voted);
-								echo "($num_voted voted)";
+								echo "<br>($num_voted voted)";
 							 ?>
 							</td>
 						</tr>
 						<tr>
 							<!--Setup recipe picture-->
 							<td id=<?php echo '"recipeList'.$num.'"';?> class="recipePicture" colspan="3">
-								<div class="front" style=<?php echo '"background-image:url('.$row['image_address'].');"';?> onclick=<?php
-									$frontID = 'recipeList' . $num;
-									echo '"' . 'flip('' . $frontID . '')"';
+								<div id=<?php echo'"recipeFront'.$num.'"';?> class="front" style=<?php echo '"background-image:url('.$row['image_address'].');"';?> onclick=<?php
+									$frontID = 'recipeFront' . $num;
+									echo '"' . 'flip(\'' . $frontID . '\')"';
 								?>>
 								</div>
 								<div id=<?php echo'"description'.$num.'"';?> class="back" onclick=<?php
-									$backID = 'recipeList' . $num;
-									echo '"' . 'flip('' . $backID . '')"';
+									$backID = 'description' . $num;
+									echo '"' . 'flip(\'' . $backID . '\')"';
 								?>>
 									<p><?php echo $row['description']; ?></p>
 								</div>
@@ -254,6 +254,16 @@ $uN = array();
 				<?php } ?>
 		</div>
 	</body>
+	<footer>
+		<table class="footerNav">
+			<tr>
+				<td><img src="Images/basket-orange.png" width="32" height="32"><br>Home</td>
+				<td><img src="Images/recipe.png" width="32" height="32"><br>Recipes</td>
+				<td><img src="Images/share.png" width="32" height="32"><br>Share</td>
+				<td><img src="Images/login.png" width="32" height="32"><br>Login</td>
+			</tr>
+		</table>
+	</footer>
 	<div class="se-pre-con">
 	</div>
 </html>

@@ -1,6 +1,6 @@
 /* Overall frame */
 #contentBox {
-	margin: 30px 0 120px 0;
+	margin: 30px 0 150px 0;
 }
 
 /* The outside frame for box */
@@ -43,6 +43,13 @@ body {
 .recipeTable {
 	width: 100%;
 	background-color: white;
+	margin-bottom: 30px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	padding-bottom: 20px;
+}
+
+.myRecipe table:last-of-type {
+	margin-bottom: 60px;
 }
 
 .recipeTable a {
@@ -54,6 +61,7 @@ body {
 	color: black;
 	font-weight: bold;
 	box-sizing: border-box;
+	padding: 50px 10px;
 }
 
 .recipeTable tr:not(:nth-of-type(1)) .recipeTitle {
@@ -69,19 +77,26 @@ body {
 	text-align: right;
 }
 
-.recipeAuthor {
-	text-align: center;
-	vertical-align: top;
-}
-
-.recipeTitle {
-	text-align: left;
-	vertical-align: top;
-}
-
-.recipeRating {
+.recipeAuthorList {
 	text-align: right;
 	vertical-align: middle;
+	font-size: 32px;
+	width: 30%;
+}
+
+.recipeTitleList {
+	text-align: left;
+	vertical-align: middle;
+	font-size: 32px;
+	width: 40%;
+	font-weight: bold;
+}
+
+.recipeRatingList {
+	text-align: right;
+	vertical-align: middle;
+	font-size: 24px;
+	width: 30%;
 }
 
 .recipePicture {
@@ -94,10 +109,10 @@ body {
 	height: 350px;
 	width: auto;
 	overflow: hidden;
+	padding-top: 20px;
 }
 
 .back {
-	display: none;
 	overflow: hidden;
 	color: black;
 	background-color: white;
@@ -105,8 +120,10 @@ body {
 	padding-top: 20px;
 	height: 350px;
 	width: auto;
+	font-size: 36px;
 }
 
 .back p {
 	padding: 20px;
+	overflow: hidden;
 }
