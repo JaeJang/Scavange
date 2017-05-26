@@ -54,7 +54,7 @@ $uN = array();
 				 ?>
 
 				<a class="navLink" href="mobile_aboutus.php"><li class="navBarItem">About Us</li></a>
-				<a class="navLink" href="mobile_affilated.php"><li class="navBarItem">Affiliates</li></a>
+				<a class="navLink" href="mobile_affilated.php"><li class="navBarItem">Affilates</li></a>
 			</ul>
 		</div>
 		<div id="navigationBarAlt">
@@ -155,11 +155,8 @@ $uN = array();
 						$row_indi = mysqli_fetch_assoc($result_indi);
 					}
 				 ?>
-				 <div class="box">
-					<h1 class="myTitle">Recipes</h1>
-				</div>
+				<br><br>
 					<div class="recipeBox">
-						<div class="myRecipeInformation">
 						<table id="recipeHeading" name="recipeHeading">
 							<tr>
 								<?php
@@ -168,7 +165,7 @@ $uN = array();
 									$result_indi_un = mysqli_query($conn, $sql_indi_un);
 									$row_un = mysqli_fetch_assoc($result_indi_un);
 								 ?>
-								<td class="recipeTitle" name="recipeTitle"><?php echo $row_indi['title']; ?></td>
+								<td class="recipeTitle" name="recipeTitle"><!--Title:--><?php echo $row_indi['title']; ?></td>
 								<td class="recipeAuthor" name="recipeAuthor"><?php echo $row_un['username']; ?></td>
 								<!-- rating calculate -->
 								<td class="recipeRating" name="recipeRating">
@@ -186,7 +183,7 @@ $uN = array();
 									$sql_num_voted = "SELECT * FROM recipe_rateT WHERE recipe_id='$recipe_id_indi'";
 									$result_num_voted = mysqli_query($conn, $sql_num_voted);
 									$num_voted = mysqli_num_rows($result_num_voted);
-									echo "<br>($num_voted voted)";
+									echo "($num_voted voted)";
 								 ?>
 								</td>
 							</tr>
@@ -209,9 +206,6 @@ $uN = array();
 						<div class="recipePicture">
 							<img id="recipeMainPicture" src=<?php echo '"'.$row_indi['image_address'].'"'; ?>>
 						</div>
-						</div>
-						<!--Ingredient Section-->
-						<div class="myIngredientSection">
 						<h4 class="ingredientHeading">Ingredients:</h4>
 						<div class="ingredientBox">
 							<table id="ingredientTable" name="ingredientTable">
@@ -225,11 +219,11 @@ $uN = array();
 									if($count % 2 == 1){
 								 ?>
 								 <tr>
-									 <td class="ingredientItem"><?php echo "<span>&middot;</span> " . $row_ingre['ingredient'];
+									 <td class="ingredientItem"><?php echo $count . ". " . $row_ingre['ingredient'];
  									$count++;?></td>
 
 								 <?php } else{ ?>
-									 <td class="ingredientItem"><?php echo "<span>&middot;</span> " . $row_ingre['ingredient'];
+									 <td class="ingredientItem"><?php echo $count . ". " . $row_ingre['ingredient'];
  									$count++;?></td>
 								</tr>
 								<?php } ?>
@@ -239,10 +233,6 @@ $uN = array();
 								}?>
 							</table>
 						</div>
-						</div>
-						
-						<!--Steps Section-->
-						<div class="myStepSection">
 						<h4 class="stepHeading">Directions:</h4>
 						<div class="stepBox">
 							<table id="stepTable" name="stepTable">
@@ -260,7 +250,6 @@ $uN = array();
 									} ?>
 							</table>
 						</div>
-						</div>
 					</div>
 				<?php } ?>
 		</div>
@@ -268,22 +257,10 @@ $uN = array();
 	<footer>
 		<table class="footerNav">
 			<tr>
-				<td><a href="mainFunctionPage.php"><img src="Images/basket-orange.png" width="32" height="32"><br>Home</a></td>
-				<td><a href="mobile_recipe2.php"><img src="Images/recipe.png" width="32" height="32"><br>Recipes</a></td>
-				<?php
-					if(isLoggedIn()){
-				 ?>
-				<td><a href="mobileUpload.php"><img src="Images/share.png" width="32" height="32"><br>Share</a></td>
-				<td><a href="logout.php"><img src="Images/login.png" width="32" height="32"><br>Logout</a></td>
-				<?php } else{ ?>
-					<td><a href="#" onclick="notloggedin()"><img src="Images/share.png" width="32" height="32"onclick="notloggedin()" ><br>Share</a></td>
-					<td><a href="mobile_login.php"><img src="Images/share.png" width="32" height="32"><br>Login</a></td>
-					<?php }
-					echo '<script type="text/javascript">
-						function notloggedin(){
-							alert("Please log in for sharing");
-						}
-					</script>'; ?>
+				<td><img src="Images/basket-orange.png" width="32" height="32"><br>Home</td>
+				<td><img src="Images/recipe.png" width="32" height="32"><br>Recipes</td>
+				<td><img src="Images/share.png" width="32" height="32"><br>Share</td>
+				<td><img src="Images/login.png" width="32" height="32"><br>Login</td>
 			</tr>
 		</table>
 	</footer>
