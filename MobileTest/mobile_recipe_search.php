@@ -126,8 +126,10 @@ $num=1;
 		</div>
 		<div id="contentBox">
     <?php if(empty($_GET['id'])){ ?>
-		<div class="box">
-		<h2>Recipes</h2><br>
+      <div class="box">
+        <h1 class="myTitle">Recipes</h1>
+      </div>
+      <div class="myRecipe">
 			<!-- <table id="recipeList"> -->
 
 				<?php
@@ -296,7 +298,7 @@ $num=1;
         ?>>
         </div>
         <!--  -->
-				
+
         <!--  -->
         <div id=<?php echo'"description'.$num1.'"';?> class="back" onclick=<?php
           $backID = 'description' . $num1;
@@ -324,10 +326,12 @@ $num=1;
         if(mysqli_num_rows($result_indi)==1){
           $row_indi = mysqli_fetch_assoc($result_indi);
         }
-
        ?>
-      <br><br>
+       <div class="box">
+        <h1 class="myTitle">Recipes</h1>
+      </div>
         <div class="recipeBox">
+          <div class="myRecipeInformation">
           <table id="recipeHeading" name="recipeHeading">
             <tr>
               <?php
@@ -354,9 +358,8 @@ $num=1;
                 $sql_num_voted = "SELECT * FROM recipe_rateT WHERE recipe_id='$recipe_id_indi'";
                 $result_num_voted = mysqli_query($conn, $sql_num_voted);
                 $num_voted = mysqli_num_rows($result_num_voted);
-                echo "($num_voted voted)";
+                echo "<br>($num_voted voted)";
                ?>
-              <!-- <img src="Images/star.png"><img src="Images/star.png"><img src="Images/star.png"><img src="Images/star.png"><img src="Images/star.png"> -->
               </td>
             </tr>
           </table>
@@ -372,14 +375,15 @@ $num=1;
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
-
               </select>
-
             </form>
           <?php } ?>
           <div class="recipePicture">
             <img id="recipeMainPicture" src=<?php echo '"'.$row_indi['image_address'].'"'; ?>>
           </div>
+          </div>
+          <!--Ingredient Section-->
+          <div class="myIngredientSection">
           <h4 class="ingredientHeading">Ingredients:</h4>
           <div class="ingredientBox">
             <table id="ingredientTable" name="ingredientTable">
@@ -393,11 +397,11 @@ $num=1;
                 if($count % 2 == 1){
                ?>
                <tr>
-                 <td class="ingredientItem"><?php echo $count . ". " . $row_ingre['ingredient'];
+                 <td class="ingredientItem"><?php echo "<span>&middot;</span> " . $row_ingre['ingredient'];
                 $count++;?></td>
 
                <?php } else{ ?>
-                 <td class="ingredientItem"><?php echo $count . ". " . $row_ingre['ingredient'];
+                 <td class="ingredientItem"><?php echo "<span>&middot;</span> " . $row_ingre['ingredient'];
                 $count++;?></td>
               </tr>
               <?php } ?>
@@ -407,28 +411,54 @@ $num=1;
               }?>
             </table>
           </div>
+          </div>
+
+          <!--Steps Section-->
+          <div class="myStepSection">
           <h4 class="stepHeading">Directions:</h4>
           <div class="stepBox">
             <table id="stepTable" name="stepTable">
               <?php
                 $sql_steps = "SELECT * FROM recipe_detailT WHERE recipe_id = '$recipe_id_indi'";
                 $result_steps = mysqli_query($conn, $sql_steps);
-				$stepCount = 1;
+                $stepCount = 1;
                 while($row_steps = mysqli_fetch_assoc($result_steps)){?>
               <tr>
-			  	<td class="stepNumber"><?php echo $stepCount . ". ";?>
-                <td class="stepItem" style="color:white;"><?php echo $row_steps['detail']; ?></td>
+                <td class="stepNumber"><?php echo $stepCount . ". ";?>
+                <td class="stepItem"><?php echo $row_steps['detail']; ?></td>
+                <!--<td class="stepPicture"><img src="Images/step1.jpg"></td>-->
               </tr>
               <?php $stepCount++;
-				} ?>
-
+                } ?>
             </table>
           </div>
+          </div>
         </div>
-
       <?php } ?>
-		</div>
+  </div>
 	</body>
+  <footer>
+		<table class="footerNav">
+			<tr>
+				<td><a href="mainFunctionPage.php"><img src="Images/basket-orange.png" width="32" height="32"><br>Home</a></td>
+				<td><a href="mobile_recipe2.php"><img src="Images/recipe.png" width="32" height="32"><br>Recipes</a></td>
+				<?php
+					if(isLoggedIn()){
+				 ?>
+				<td><a href="mobileUpload.php"><img src="Images/share.png" width="32" height="32"><br>Share</a></td>
+				<td><a href="logout.php"><img src="Images/login.png" width="32" height="32"><br>Logout</a></td>
+				<?php } else{ ?>
+					<td><a href="#" onclick="notloggedin()"><img src="Images/share.png" width="32" height="32"onclick="notloggedin()" ><br>Share</a></td>
+					<td><a href="mobile_login.php"><img src="Images/share.png" width="32" height="32"><br>Login</a></td>
+					<?php }
+					echo '<script type="text/javascript">
+						function notloggedin(){
+							alert("Please log in for sharing");
+						}
+					</script>'; ?>
+			</tr>
+		</table>
+	</footer>
 	<div class="se-pre-con">
 	</div>
 </html>
