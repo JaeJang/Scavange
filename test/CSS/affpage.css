@@ -1,0 +1,78 @@
+#rightcol0 {
+	float: left;
+	margin-left: 80px;
+}
+
+#leftcol0 {
+	float: left;
+	margin-left: 90px;
+}
+
+/* Size for icons */
+.img1 {
+	width: 200px;
+	height: 200px;
+}
+
+/* The description boxes */
+.content {
+	width: 470px;
+	height: 250px;
+	overflow: auto;
+	font-size: 36px;
+	color: gray;
+	letter-spacing: 2px;
+	padding-top: 20px;
+}
+
+.affiliate h1{
+	text-align: center;
+	padding-top: 50px;
+}
+
+/* The outside frame for box */
+.box {
+	/*border-radius: 25px;
+	border: 3px solid orange;
+	padding: 40px 20px;
+	font-size: 36px;
+	margin-top: 50px;
+	background-color: rgba(0, 0, 0, 0.6);
+	height: 1400px;*/
+	height: 1400px;
+	margin-bottom: 150px;
+	/*margin-bottom: 30px;*/
+	padding: 0px 40px 60px 40px;
+	font-size: 46px;
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+}
+
+/* The Main headings */
+h1 {
+	color: black;
+
+}
+
+/* The subheadings */
+h3 {
+	color: black;
+	padding-bottom: 15px;
+}
+
+/* Stretches image to full */
+html {
+	box-sizing: border-box
+}
+
+body {
+	box-sizing: border-box
+}
+
+td a {
+    display:block;
+    width:100%;
+	text-decoration:none;
+	color:black;
+}
