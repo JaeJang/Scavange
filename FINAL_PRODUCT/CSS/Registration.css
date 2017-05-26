@@ -1,0 +1,109 @@
+/*Size of text inputs*/
+#name, #password, #cPassword, #email {
+	width: 400px;
+	height: 80px;
+	font-size: 1.5em;
+	border-radius: 25px;
+}
+
+label {
+	color: black;
+	font-size: 46px;
+}
+
+.field {
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+.field2 {
+	text-align: center;
+}
+
+.field3 {
+	text-align: center;
+}
+
+.field4 {
+	text-align: center;
+}
+
+#submit0 {
+	padding: 10px 30px 14px 30px;
+	border: none;
+	color: white;
+	background-color: orange;
+	border-radius: 20px;
+	font-size: 36px;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+/*Form input allignment*/
+.labeL {
+	/*float: left;
+	clear: left;
+	margin-left: 100px;*/
+	width: 220px;
+	text-align: right;
+	padding-right: 50px;
+	margin-top: 10px;
+	display: inline;
+	font-size: 46px;
+}
+
+.formBox {
+	text-align: center;
+	padding: 0;
+}
+
+.formBox input[type=text]{
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.error {
+	color: red;
+}
+.jae_1{
+	color: black;
+	text-align: center;
+	padding-bottom: 30px;
+	padding-top: 60px;
+}
+
+/*not a memnber?*/
+.jae_1 a{
+	color: orange;
+}
+
+.jae_title {
+	color: black;
+	font-size: 46px;
+	padding-top: 50px;
+}
+
+.inputField {
+	display: inline;
+}
+
+.myForm {
+	text-align: center;
+}
+
+.loginInfo {
+	width: 80%;
+	margin: auto;
+}
+
+.loginLabel {
+	width: 30%;
+	text-align: left;
+}
+
+.loginInput {
+	width: 70%;
+	text-align: left;
+}
+
+.loginInfo tr:not(:nth-last-of-type(1)) td {
+	padding-bottom: 90px;
+}

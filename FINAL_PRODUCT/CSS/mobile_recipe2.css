@@ -1,0 +1,131 @@
+/* Overall frame */
+#contentBox {
+	margin: 30px 0 150px 0;
+}
+
+/* The outside frame for box */
+.box {
+	padding: 40px 40px;
+	font-size: 46px;
+	color: black;
+	background-color: white;
+	margin-bottom: 30px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* The Main headings */
+.myTitle {
+	color: black;
+	text-align: center;
+	font-size: 46px;
+}
+
+/* The subheadings */
+h3 {
+	color: orange;
+}
+
+/* Stretches image to full */
+html {
+	box-sizing: border-box
+}
+
+body {
+	box-sizing: border-box
+}
+
+#star{color:orange;}
+
+.myRecipe {
+	width: auto;
+}
+
+.recipeTable {
+	width: 100%;
+	background-color: white;
+	margin-bottom: 30px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	padding-bottom: 20px;
+}
+
+.myRecipe table:last-of-type {
+	margin-bottom: 60px;
+}
+
+.recipeTable a {
+	text-decoration: none;
+	color: orange;
+}
+
+.recipeTable td {
+	color: black;
+	font-weight: bold;
+	box-sizing: border-box;
+	padding: 50px 10px;
+}
+
+.recipeTable tr:not(:nth-of-type(1)) .recipeTitle {
+	padding-top: 50px;
+}
+
+.recipeTable tr:not(:nth-of-type(1)) .recipeAuthor {
+	padding-top: 50px;
+}
+
+.recipeTable tr:not(:nth-of-type(1)) .recipeRating {
+	padding-top: 50px;
+	text-align: right;
+}
+
+.recipeAuthorList {
+	text-align: right;
+	vertical-align: middle;
+	font-size: 32px;
+	width: 30%;
+}
+
+.recipeTitleList {
+	text-align: left;
+	vertical-align: middle;
+	font-size: 32px;
+	width: 40%;
+	font-weight: bold;
+}
+
+.recipeRatingList {
+	text-align: right;
+	vertical-align: middle;
+	font-size: 24px;
+	width: 30%;
+}
+
+.recipePicture {
+	height: 350px;
+	overflow: hidden;
+}
+
+.front {
+	background-size: cover;
+	height: 350px;
+	width: auto;
+	overflow: hidden;
+	padding-top: 20px;
+}
+
+.back {
+	overflow: scroll;
+	color: black;
+	background-color: white;
+	padding-top: 20px;
+	height: 350px;
+	width: auto;
+}
+
+.back p {
+	padding: 20px;
+	overflow: scroll;
+	width: 100%;
+	font-size: 24px;
+	box-sizing: border-box;
+	word-break: break-all;
+}

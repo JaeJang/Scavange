@@ -1,0 +1,93 @@
+#contentBox {
+	margin: 30px 0 120px 0;
+}
+
+.formBox {
+	margin-bottom: 30px;
+	padding: 40px 40px;
+	font-size: 36px;
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.ingredientSearch {
+	color: black;
+	font-weight: bold;
+}
+
+#ingredientText {
+	font-size: 52px;
+	width: 87%;
+	height: 50px;
+	border-radius: 15px;
+	font-family: 'Josefin Sans', sans-serif;
+	padding: 20px 0;
+}
+
+#addButton {
+	position: relative;
+	bottom: -1px;
+	font-size: 36px;
+	width: 15%;
+	padding: 12px 5px 5px 5px;
+	background-color: orange;
+	color: white;
+	border: none;
+	float: right;
+	clear: both;
+	border-radius: 20px;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+#add {
+	position: relative;
+	top: 25px;
+}
+
+.subheadingText {
+	color: black;
+	font-size: 46px;
+}
+
+.ingredientListAlt {
+	width: 100%;
+}
+
+.ingredientList {
+	/*background-image: url("../Images/yellowPaper.jpg");*/
+	background-color: #fff2d7;
+	padding: 20px;
+	font-size: 36px;
+	color: black;
+	border-radius: 15px;
+	border: 1px solid orange;
+	overflow: scroll;
+	max-height: 420px;
+}
+
+#submitSection {
+	text-align: center;
+}
+
+#submitButton {
+	font-size: 36px;
+	margin-top: 50px;
+	padding: 10px 30px 14px 30px;
+	border: none;
+	background-color: orange;
+	color: white;
+	border-radius: 20px;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.aboutSection {
+	margin-bottom: 150px;
+	padding: 40px 40px;
+	font-size: 36px;
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.aboutSection p {
+	color: gray;
+}

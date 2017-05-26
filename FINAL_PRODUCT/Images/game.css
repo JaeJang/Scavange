@@ -1,0 +1,15 @@
+#hidden {display:none;}
+
+#control{width:100px;
+height:25px;
+font-size: 20px;}
+
+#controlbox {text-align:center;
+			}
+
+#myCanvas{ background-image: url("../Images/kitchen.jpg");
+		}
+		
+#seperate{width: 80px;
+height: 25px;}	
+
