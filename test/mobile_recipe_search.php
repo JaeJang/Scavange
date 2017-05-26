@@ -128,7 +128,7 @@ $num=1;
     <?php if(empty($_GET['id'])){ ?>
 		<div class="box">
 		<h2>Recipes</h2><br>
-			<table id="recipeList">
+			<!-- <table id="recipeList"> -->
 
 				<?php
 				 	//number of called recipes
@@ -148,10 +148,11 @@ $num=1;
 								$row_userid = mysqli_fetch_assoc($result4);
 
 				 ?>
+         <table class="recipeTable">
 				<tr class="recipeHeading">
-					<td class="recipeTitle">Title:<a href=<?php echo '"mobile_recipe_search.php?id='.$r_id.'">'; echo $row_search['title']; ?></a></td>
-					<td class="recipeAuthor">Author: <?php echo $row_userid['username']; ?></td>
-          <td class="recipeRating" name="recipeRating" style="font-size:25px;">
+					<td class="recipeTitleList"><a href=<?php echo '"mobile_recipe_search.php?id='.$r_id.'">'; echo $row_search['title']; ?></a></td>
+					<td class="recipeAuthorList"><?php echo $row_userid['username']; ?></td>
+          <td class="recipeRatingList" name="recipeRating">
           <?php
             $sql_rate = "SELECT AVG(rate) FROM recipe_rateT WHERE recipe_id='$r_id'";
             $result_rate = mysqli_query($conn, $sql_rate);
@@ -171,16 +172,25 @@ $num=1;
           <!-- <img src="Images/star.png"><img src="Images/star.png"><img src="Images/star.png"><img src="Images/star.png"><img src="Images/star.png"> -->
           </td>
 				</tr>
-				<tr>
-					<td id=<?php echo '"recipeList'.$num1.'"'; ?> class="recipePicture" colspan="3" onclick=<?php echo '"flipper('."'".$num1."'".')"'; ?>>
-						<div class="front"style=<?php echo '"background-image:url('.$row_search['image_address'].')"'; ?>>
-						</div>
-						<div id="description1" class="back" >
-							<?php echo $row_search['description']; ?>
-						</div>
-					</td>
-				</tr>
+        <tr>
+    			<td id=<?php echo '"recipeList'.$num1.'"'; ?> class="recipePicture" colspan="3">
+            <div id=<?php echo'"recipeFront'.$num1.'"';?> class="front" style=<?php echo '"background-image:url('.$row_search['image_address'].');"';?> onclick=<?php
+              $frontID = 'recipeFront' . $num1;
+              echo '"' . 'flip(\'' . $frontID . '\')"';
+            ?>>
+            </div>
+            <!--  -->
 
+            <!--  -->
+            <div id=<?php echo'"description'.$num1.'"';?> class="back" onclick=<?php
+              $backID = 'description' . $num1;
+              echo '"' . 'flip(\'' . $backID . '\')"';
+            ?>>
+              <p><?php echo $row_search['description']; ?></p>
+            </div>
+    			</td>
+    		</tr>
+        </table>
 				<?php
 				$num1++;}
 				}
@@ -196,10 +206,11 @@ $num=1;
 						$row_userid = mysqli_fetch_assoc($result4);
 
 		 ?>
-		<tr class="recipeHeading">
-			<td class="recipeTitle"><a href=<?php echo '"mobile_recipe_search.php?id='.$r_id.'">'; echo $row_search['title']; ?></a></td>
-			<td class="recipeAuthor"><?php echo $row_userid['username']; ?></td>
-      <td class="recipeRating" name="recipeRating" style="font-size:25px;">
+     <table class="recipeTable">
+    <tr class="recipeHeading">
+      <td class="recipeTitleList"><a href=<?php echo '"mobile_recipe_search.php?id='.$r_id.'">'; echo $row_search['title']; ?></a></td>
+      <td class="recipeAuthorList"><?php echo $row_userid['username']; ?></td>
+      <td class="recipeRatingList" name="recipeRating">
       <?php
         $sql_rate = "SELECT AVG(rate) FROM recipe_rateT WHERE recipe_id='$r_id'";
         $result_rate = mysqli_query($conn, $sql_rate);
@@ -220,15 +231,24 @@ $num=1;
       </td>
 		</tr>
 		<tr>
-			<td id=<?php echo '"recipeList'.$num1.'"'; ?> class="recipePicture" colspan="3" onclick=<?php echo '"flipper('."'".$num1."'".')"'; ?>>
-				<div class="front" style=<?php echo '"background-image:url('.$row_search['image_address'].'); width: auto;"'?>>
-				</div>
-				<div id="description1" class="back" style="width: auto;">
-					<?php echo $row_search['description']; ?>
-				</div>
+			<td id=<?php echo '"recipeList'.$num1.'"'; ?> class="recipePicture" colspan="3">
+        <div id=<?php echo'"recipeFront'.$num1.'"';?> class="front" style=<?php echo '"background-image:url('.$row_search['image_address'].');"';?> onclick=<?php
+          $frontID = 'recipeFront' . $num1;
+          echo '"' . 'flip(\'' . $frontID . '\')"';
+        ?>>
+        </div>
+        <!--  -->
+
+        <!--  -->
+        <div id=<?php echo'"description'.$num1.'"';?> class="back" onclick=<?php
+          $backID = 'description' . $num1;
+          echo '"' . 'flip(\'' . $backID . '\')"';
+        ?>>
+          <p><?php echo $row_search['description']; ?></p>
+        </div>
 			</td>
 		</tr>
-
+  </table>
 		<?php
 		$num1++;}
 		}
@@ -244,10 +264,11 @@ $num=1;
 				$row_userid = mysqli_fetch_assoc($result4);
 
 		?>
-		<tr class="recipeHeading">
-		<td class="recipeTitle"><a href=<?php echo '"mobile_recipe_search.php?id='.$r_id.'">'; echo $row_search['title']; ?></a></td>
-		<td class="recipeAuthor"><?php echo $row_userid['username']; ?></td>
-    <td class="recipeRating" name="recipeRating" style="font-size:25px;">
+    <table class="recipeTable">
+   <tr class="recipeHeading">
+     <td class="recipeTitleList"><a href=<?php echo '"mobile_recipe_search.php?id='.$r_id.'">'; echo $row_search['title']; ?></a></td>
+     <td class="recipeAuthorList"><?php echo $row_userid['username']; ?></td>
+     <td class="recipeRatingList" name="recipeRating">
     <?php
       $sql_rate = "SELECT AVG(rate) FROM recipe_rateT WHERE recipe_id='$r_id'";
       $result_rate = mysqli_query($conn, $sql_rate);
@@ -267,22 +288,32 @@ $num=1;
     <!-- <img src="Images/star.png"><img src="Images/star.png"><img src="Images/star.png"><img src="Images/star.png"><img src="Images/star.png"> -->
     </td>
 		</tr>
-		<tr>
-		<td id=<?php echo '"recipeList'.$num1.'"'; ?> class="recipePicture" colspan="3" onclick=<?php echo '"flipper('."'".$num1."'".')"'; ?>>
-		<div class="front" style=<?php echo '"background-image:url('.$row_search['image_address'].')"'; ?>>
-		</div>
-		<div id="description1" class="back" >
-			<?php echo $row_search['description']; ?>
-		</div>
-		</td>
+    <tr>
+			<td id=<?php echo '"recipeList'.$num1.'"'; ?> class="recipePicture" colspan="3">
+        <div id=<?php echo'"recipeFront'.$num1.'"';?> class="front" style=<?php echo '"background-image:url('.$row_search['image_address'].');"';?> onclick=<?php
+          $frontID = 'recipeFront' . $num1;
+          echo '"' . 'flip(\'' . $frontID . '\')"';
+        ?>>
+        </div>
+        <!--  -->
+				
+        <!--  -->
+        <div id=<?php echo'"description'.$num1.'"';?> class="back" onclick=<?php
+          $backID = 'description' . $num1;
+          echo '"' . 'flip(\'' . $backID . '\')"';
+        ?>>
+          <p><?php echo $row_search['description']; ?></p>
+        </div>
+			</td>
 		</tr>
+  </table>
 
 		<?php
 		$num1++;}
 		}
 				//} ?>
 
-			</table>
+			<!-- </table> -->
 		</div>
     <?php } else{ ?>
       <?php
