@@ -207,7 +207,7 @@ $uN = array();
 							</form>
 							<?php if($uid_indi == $_SESSION['USERID']){ ?>
 							<form class="" action="delete.php" method="post">
-							<img src="Images/delete.png" width="64" height="64" style="float:left;" onclick="this.form.submit();">
+							<input type="image" src="Images/delete.png" width="64" height="64" style="float:left;" onclick="this.form.submit();">
 							<input type="hidden" name="recipe_id" value="<?php echo $recipe_id_indi; ?>">
 						</form>
 						<?php }} ?>

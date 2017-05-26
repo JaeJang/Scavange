@@ -377,7 +377,12 @@ $num=1;
                 <option value="5">5</option>
               </select>
             </form>
-          <?php } ?>
+            <?php if($uid_indi == $_SESSION['USERID']){ ?>
+            <form class="" action="delete.php" method="post">
+            <input type="image" src="Images/delete.png" width="64" height="64" style="float:left;" onclick="this.form.submit();">
+            <input type="hidden" name="recipe_id" value="<?php echo $recipe_id_indi; ?>">
+          </form>
+          <?php }} ?>
           <div class="recipePicture">
             <img id="recipeMainPicture" src=<?php echo '"'.$row_indi['image_address'].'"'; ?>>
           </div>
