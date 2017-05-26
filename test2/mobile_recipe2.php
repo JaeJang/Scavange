@@ -205,6 +205,7 @@ $uN = array();
 									<option value="5">5</option>
 								</select>
 							</form>
+							<img src="Images/delete.png" width="64" height="64" style="float:left;">
 						<?php } ?>
 						<div class="recipePicture">
 							<img id="recipeMainPicture" src=<?php echo '"'.$row_indi['image_address'].'"'; ?>>
