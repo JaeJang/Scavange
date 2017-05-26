@@ -23,7 +23,7 @@ $uN = array();
 		<link rel="stylesheet" href="CSS/mobileRecipeIndividualStyle.css">
 		<link rel="stylesheet" href="CSS/loadingStyle.css">
 		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-		
+
 		<!--Javascript-->
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
@@ -85,10 +85,10 @@ $uN = array();
 							while($row = mysqli_fetch_assoc($result_recipesT)){
 						?>
 						<table class="recipeTable">
-						<tr class="recipeHeading">							
+						<tr class="recipeHeading">
 							<!--Display title/link for recipe-->
 							<td class="recipeTitleList"><a href=<?php echo '"mobile_recipe2.php?id='.$row['recipe_id'].'"'?>><?php echo $row['title']; ?></a></td>
-							
+
 							<!--Fetch author recipe-->
 							<?php
 								$recipe_id = $row['recipe_id'];
@@ -97,14 +97,14 @@ $uN = array();
 								$result_userT = mysqli_query($conn, $sql_userT);
 								$row_user = mysqli_fetch_assoc($result_userT);
 							?>
-							
+
 							<!--Display author of recipe-->
 							<td class="recipeAuthorList"><?php echo $row_user['username'];; ?></td>
-							
+
 							<!--Setup rating of recipe-->
 							<td class="recipeRatingList" name="recipeRating">
-							
-							<!--Get recipe rating--> 
+
+							<!--Get recipe rating-->
 							<?php
 								$sql_rate = "SELECT AVG(rate) FROM recipe_rateT WHERE recipe_id='$recipe_id'";
 								$result_rate = mysqli_query($conn, $sql_rate);
@@ -205,8 +205,12 @@ $uN = array();
 									<option value="5">5</option>
 								</select>
 							</form>
-							<img src="Images/delete.png" width="64" height="64" style="float:left;">
-						<?php } ?>
+							<?php if($uid_indi == $_SESSION['USERID']){ ?>
+							<form class="" action="delete.php" method="post">
+							<img src="Images/delete.png" width="64" height="64" style="float:left;" onclick="this.form.submit)();">
+							<input type="hidden" name="recipe_id" value="<?php echo $recipe_id_indi; ?>">
+						</form>
+						<?php }} ?>
 						<div class="recipePicture">
 							<img id="recipeMainPicture" src=<?php echo '"'.$row_indi['image_address'].'"'; ?>>
 						</div>
@@ -241,7 +245,7 @@ $uN = array();
 							</table>
 						</div>
 						</div>
-						
+
 						<!--Steps Section-->
 						<div class="myStepSection">
 						<h4 class="stepHeading">Directions:</h4>
