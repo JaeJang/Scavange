@@ -1,4 +1,4 @@
- CREATE DATABASE scavange CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE scavange CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 USE scavange;
 
