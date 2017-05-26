@@ -155,8 +155,11 @@ $uN = array();
 						$row_indi = mysqli_fetch_assoc($result_indi);
 					}
 				 ?>
-				<br><br>
+				 <div class="box">
+					<h1 class="myTitle">Recipes</h1>
+				</div>
 					<div class="recipeBox">
+						<div class="myRecipeInformation">
 						<table id="recipeHeading" name="recipeHeading">
 							<tr>
 								<?php
@@ -165,7 +168,7 @@ $uN = array();
 									$result_indi_un = mysqli_query($conn, $sql_indi_un);
 									$row_un = mysqli_fetch_assoc($result_indi_un);
 								 ?>
-								<td class="recipeTitle" name="recipeTitle"><!--Title:--><?php echo $row_indi['title']; ?></td>
+								<td class="recipeTitle" name="recipeTitle"><?php echo $row_indi['title']; ?></td>
 								<td class="recipeAuthor" name="recipeAuthor"><?php echo $row_un['username']; ?></td>
 								<!-- rating calculate -->
 								<td class="recipeRating" name="recipeRating">
@@ -183,7 +186,7 @@ $uN = array();
 									$sql_num_voted = "SELECT * FROM recipe_rateT WHERE recipe_id='$recipe_id_indi'";
 									$result_num_voted = mysqli_query($conn, $sql_num_voted);
 									$num_voted = mysqli_num_rows($result_num_voted);
-									echo "($num_voted voted)";
+									echo "<br>($num_voted voted)";
 								 ?>
 								</td>
 							</tr>
@@ -206,6 +209,9 @@ $uN = array();
 						<div class="recipePicture">
 							<img id="recipeMainPicture" src=<?php echo '"'.$row_indi['image_address'].'"'; ?>>
 						</div>
+						</div>
+						<!--Ingredient Section-->
+						<div class="myIngredientSection">
 						<h4 class="ingredientHeading">Ingredients:</h4>
 						<div class="ingredientBox">
 							<table id="ingredientTable" name="ingredientTable">
@@ -219,11 +225,11 @@ $uN = array();
 									if($count % 2 == 1){
 								 ?>
 								 <tr>
-									 <td class="ingredientItem"><?php echo $count . ". " . $row_ingre['ingredient'];
+									 <td class="ingredientItem"><?php echo "<span>&middot;</span> " . $row_ingre['ingredient'];
  									$count++;?></td>
 
 								 <?php } else{ ?>
-									 <td class="ingredientItem"><?php echo $count . ". " . $row_ingre['ingredient'];
+									 <td class="ingredientItem"><?php echo "<span>&middot;</span> " . $row_ingre['ingredient'];
  									$count++;?></td>
 								</tr>
 								<?php } ?>
@@ -233,6 +239,10 @@ $uN = array();
 								}?>
 							</table>
 						</div>
+						</div>
+						
+						<!--Steps Section-->
+						<div class="myStepSection">
 						<h4 class="stepHeading">Directions:</h4>
 						<div class="stepBox">
 							<table id="stepTable" name="stepTable">
@@ -249,6 +259,7 @@ $uN = array();
 								<?php $stepCount++;
 									} ?>
 							</table>
+						</div>
 						</div>
 					</div>
 				<?php } ?>
