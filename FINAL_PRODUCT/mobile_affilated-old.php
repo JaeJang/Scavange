@@ -66,23 +66,24 @@ session_start();
 		</div>
 			<table class="relationTable">
 				<tr>
-					<td class="relationPicture"><a href="http://refrigedate.me/#/"><img src="Images/Refrigedate.png" class="img1"></a></td>
-					<td class="relationDescription"><h3>Refrigedate</h3><hr>
+					<td><a href="http://refrigedate.me/#/"><img src="Images/Refrigedate.png" class="img1"></a></td>
+					<td><h3>Refrigedate</h3><hr>
 						<div class="content">Refrigedate is a handy web app that is targeted mainly at families, those with roommates, or anyone that shares a fridge. Refrigedate keeps track of everyones leftovers that are in the fridge and shows what everything is, when it's from, and who it belongs to. By allowing multiple users to easily add, remove, and keep track of whats in their fridge they can make sure that no food goes bad and ultimately goes to waste. </div>
 					</td>
 				</tr>
 				<tr>
-					<td class="relationPicture"><a href="http://xyz-online.xyz/"><img src="Images/Freshness.png" class="img1"></a></td>
-					<td class="relationDescription"><h3>Freshness</h3><hr>
+					<td><a href="http://xyz-online.xyz/"><img src="Images/Freshness.png" class="img1"></a></td>
+					<td><h3>Freshness</h3><hr>
 						<div class="content">Provides food preservation methods for you to keep your food fresh as long as you can!! A great way to preserve your soon expiring leftovers. </div>
 					</td>
 				</tr>
 				<tr>
-					<td class="relationPicture"><a href="https://wastebook-2e70b.firebaseapp.com/"><img src="Images/group5.png" class="img1"></a></td>
-					<td class="relationDescription"><h3>WasteBook</h3><hr>
+					<td><a href="https://wastebook-2e70b.firebaseapp.com/"><img src="Images/group5.png" class="img1"></a></td>
+					<td><h3>WasteBook</h3><hr>
 						<div class="content">Food waste manager for fruits and vegetables. Users can track your waste usage. Compete with other users in a quest to become the number one non food waster!! Gives statistics and feedback based on your inputs.</div>
 					</td>
 				</tr>
+				
 			</table>
 		
 		<!--
