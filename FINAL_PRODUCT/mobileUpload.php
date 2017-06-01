@@ -121,10 +121,10 @@ session_start();
 					if(isLoggedIn()){
 				 ?>
 				<td><a href="mobileUpload.php"><img src="Images/share.png" width="32" height="32"><br>Share</a></td>
-				<td><a href="logout.php"><img src="Images/login.png" width="32" height="32"><br>Logout</a></td>
+				<td><a href="logout.php"><img src="Images/logout.png" width="32" height="32"><br>Logout</a></td>
 				<?php } else{ ?>
 					<td><a href="#" onclick="notloggedin()"><img src="Images/share.png" width="32" height="32"><br>Share</a></td>
-					<td><a href="mobile_login.php"><img src="Images/share.png" width="32" height="32"><br>Login</a></td>
+					<td><a href="mobile_login.php"><img src="Images/login.png" width="32" height="32"><br>Login</a></td>
 					<?php }
 					echo '<script type="text/javascript">
 						function notloggedin(){
