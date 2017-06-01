@@ -53,7 +53,8 @@ h1 {
 	position: absolute;
 	z-index: 1;
 	display: none;
-	width: calc(100% - 30px);
+	width: 100%;
+	/*width: calc(100% - 30px);*/
 }
 
 .navBarList {
@@ -74,14 +75,11 @@ h1 {
 }
 
 .navBarItem {
-	/*background-color: rgba(86, 79, 71, 1);*/
 	background-color: #f0efed;
 	color: black;
 	height: 200px;
-	width: 100%;
 	line-height: 200px;
 	vertical-align: middle;
-	/*margin-top: 1px;*/
 	border-top: 1px solid gray;
 	padding-left: 30px;
 }
