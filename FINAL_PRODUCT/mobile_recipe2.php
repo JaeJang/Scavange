@@ -53,6 +53,7 @@ $uN = array();
 					}
 				 ?>
 				<a class="navLink" href="mobile_affilated.php"><li class="navBarItem">Affiliates</li></a>
+				<a class="navLink" href="mobile_aboutUs2.php"><li class="navBarItem">About Us &amp; Credits</li></a>
 			</ul>
 		</div>
 		<div id="navigationBarAlt">
@@ -69,6 +70,7 @@ $uN = array();
 				 ?>
 				<a class="navLink" href="mobile_aboutus.php"><li class="navBarItemAlt">About Us</li></a>
 				<a class="navLink" href="mobile_affilated.php"><li class="navBarItem">Affilates</li></a>
+				<a class="navLink" href="mobile_aboutUs2.php"><li class="navBarItem">About Us &amp; Credits</li></a>
 			</ul>
 		</div>
 		<div id="contentBox">

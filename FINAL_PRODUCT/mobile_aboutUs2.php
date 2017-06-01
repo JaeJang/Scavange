@@ -12,6 +12,7 @@ session_start();
 		<link rel="stylesheet" href="CSS/mainFunctionStyle.css">
 		<link rel="stylesheet" href="CSS/Registration.css">
 		<link rel="stylesheet" href="CSS/loadingStyle.css">
+		<link rel="stylesheet" href="CSS/aboutUs2.css">
 		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
@@ -62,24 +63,25 @@ session_start();
 		</div>
 		<div id="contentBox">
 			<div class="formBox">
-			<h1 class="jae_title">Login</h1><br><br>
-			<form class="myForm" action="login.php" method="post">
-				<table class="loginInfo">
-					<tr>
-						<td class="loginLabel"><label class="labeL" for="name">*Username:</label></td>
-						<td class="loginInput"><input type="text" name="myName" id="name" placeholder="" class="inputField" required="required"></td>
-					</tr>
-					<tr>
-						<td class="loginLabel"><label class="labeL" for="password">*Password:</label></td>
-						<td class="loginInput"><input type="password" name="myPword" id="password" class="inputField" required="required" minlength="8"></td>
-					</tr>
-				</table>
-				<br><br>
-				<div class="field">
-					<input type="submit" name="" value="Submit" id="submit0">
+				<h1 class="jae_title">About Us</h1><br><br>
+				<div class="aboutContent">
+					Hi! This is <span style="color: orange">Carole</span>, <span style="color: orange">Hannah</span>, <span style="color: orange">Jae</span>, <span style="color: orange">Sam</span>, and <span style="color: orange">Simon</span>.<br><br>
+					We are a group of first year (first term!) students from BCIT. We made this web application in hopes of helping people reduce their food waste by suggesting recipes that work with the food our users have on-hand (thereby decreasing the need to buy more). We hope that as you use our webapp, you can also share any recipes you might know with us so we can work towards reducing food waste together!
 				</div>
-				<p class="jae_1"> Not a member? <a href="mobile_register.php">SIGN UP</a></p>
-			</form>
+			</div>
+			<div class="creditBox">
+				<h1 class="jae_title">Credits</h1><br><br>
+				<div>Icons made by <a href="http://www.flaticon.com/authors/gregor-cresnar" title="Gregor Cresnar">Gregor Cresnar</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+				<br>
+				<div>Icons made by <a href="http://www.flaticon.com/authors/simpleicon" title="SimpleIcon">SimpleIcon</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+				<br>
+				<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+				<br>
+				<div>Icons made by <a href="http://www.flaticon.com/authors/madebyoliver" title="Madebyoliver">Madebyoliver</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+				<br>
+				<div>Icons made by <a href="http://www.flaticon.com/authors/maxim-basinski" title="Maxim Basinski">Maxim Basinski</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+				<br>
+				<div>Icons made by <a href="http://www.flaticon.com/authors/eleonor-wang" title="Eleonor Wang">Eleonor Wang</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 			</div>
 		</div>
 	</body>

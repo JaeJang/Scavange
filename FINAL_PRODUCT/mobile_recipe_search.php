@@ -105,6 +105,7 @@ $num=1;
 				 ?>
 
 				<a class="navLink" href="mobile_affilated.php"><li class="navBarItem">Affilates</li></a>
+				<a class="navLink" href="mobile_aboutUs2.php"><li class="navBarItem">About Us &amp; Credits</li></a>
 			</ul>
 		</div>
 		<div id="navigationBarAlt">
@@ -120,6 +121,7 @@ $num=1;
 					}
 				 ?>
 				<a class="navLink" href="mobile_affilated.php"><li class="navBarItem">Affilates</li></a>
+				<a class="navLink" href="mobile_aboutUs2.php"><li class="navBarItem">About Us &amp; Credits</li></a>
 			</ul>
 		</div>
 		<div id="contentBox">
