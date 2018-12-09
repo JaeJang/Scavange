@@ -12,6 +12,8 @@ We tried to slove this problem by sharing recipes from user's experience and by 
 <br>
 
 *You can search recipes with what you have*
+<br>
+<br>
 ![home](https://user-images.githubusercontent.com/25515692/49695489-ab053200-fb50-11e8-92e8-6f815840e447.JPG)
 <br>
 <br>
