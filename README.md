@@ -19,15 +19,21 @@ We tried to slove this problem by sharing recipes from user's experience and by 
 <br>
 
 *Result of searching*
+<br>
+<br>
 ![search](https://user-images.githubusercontent.com/25515692/49695494-b48e9a00-fb50-11e8-9b41-be2d8b86cc84.JPG)
 <br>
 <br>
 
 *Recipe page*
 *You can rate if they like it*
+<br>
+<br>
 ![recidpe_1](https://user-images.githubusercontent.com/25515692/49695495-b6585d80-fb50-11e8-8e11-3554509a7857.JPG)
 <br>
 <br>
 
 *You can share your recipes too*
+<br>
+<br>
 ![upload](https://user-images.githubusercontent.com/25515692/49695496-b7898a80-fb50-11e8-81e2-149a4327bde2.JPG)
